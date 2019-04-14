@@ -1,0 +1,32 @@
+/**
+# Navigation styles........................
+=============================================================================================================
+ */
+.navbar {
+  height: 4rem;
+  border-bottom: $primary-color 3px solid;
+  opacity: 0.8;
+  .navbar-nav {
+    z-index: 9999;
+  }
+}
+
+/** NAV */
+.nav-link {
+  padding: 0.5rem 1rem;
+}
+.nav-link .disabled {
+  color: #868e96;
+}
+.nav-pills .nav-link {
+  border-radius: 0;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.nav-pills .nav-link:hover {
+  color: #fff !important;
+  background-color: #efb925;
+}
+.nav-pills .nav-link {
+  border-radius: 0;
+}

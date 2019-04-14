@@ -1,0 +1,49 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import '~admin-lte/dist/css/adminlte.css';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+@import '~select2/src/scss/core.scss';
+
+@import 'icheck';
+@import "buttons";
+@import "tables";
+@import "pagination";
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.profile-avatar {
+  width: 30px;
+  height: 30px;
+  margin-left: -10px;
+  padding: 5px;
+}
+
+.nav-header {
+  text-transform: uppercase;
+}
+
+.select2-selection__choice {
+  background-color: #007bff !important;
+  border: 1px solid #007bff !important;
+  border-radius: 4px;
+  cursor: default;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  padding: 0 5px;
+}

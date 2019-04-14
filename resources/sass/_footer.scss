@@ -1,0 +1,99 @@
+/*
+# Footer
+ */
+footer.footer {
+  padding: 60px 0;
+  padding-bottom: 0;
+  background: #555;
+  color: #fff;
+}
+
+footer.footer a {
+  color: inherit;
+  color: #eee;
+}
+
+footer.footer h4 {
+  color: #eee;
+  margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+footer.footer p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+footer.footer hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  background: none;
+}
+
+footer.footer .footer-blog-list li {
+  margin-bottom: 20px;
+}
+
+footer.footer .image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+footer.footer .text {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+footer.footer .text a {
+  font-size: 0.8rem;
+}
+
+footer.footer .photo-stream li {
+  margin: 0;
+}
+
+footer.footer .photo-stream a {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  display: block;
+}
+
+footer.footer .copyrights {
+  padding: 20px 0;
+  background: #333;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+footer.footer .copyrights a {
+  color: #4fbfa8;
+}
+
+footer.footer .copyrights p {
+  color: inherit;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  footer.footer .photo-stream a {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer.footer .photo-stream li {
+    width: 32%;
+    margin-bottom: 10px;
+  }
+  footer.footer .photo-stream a {
+    width: 100%;
+    height: auto;
+  }
+}

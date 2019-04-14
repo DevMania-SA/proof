@@ -1,0 +1,44 @@
+.pagination {
+  margin-top: 20px;
+}
+
+#pagination .pagination {
+  margin-bottom: 40px;
+}
+
+.dataTables_paginate {
+  display: inline;
+  width: 350px;
+  text-align: right;
+  float: right;
+  padding: 5px;
+}
+
+.paging_simple_numbers .paginate_button {
+  color: #ededed;
+  padding: 5px;
+}
+
+.paging_simple_numbers .previous {
+  background-color: #1d68a7;
+  margin-right: 3px;
+  padding: 5px;
+}
+
+.paging_simple_numbers .next {
+  background-color: #1d68a7;
+  margin-left: 3px;
+  padding: 5px;
+}
+
+.paging_simple_numbers .disabled {
+  background: #6c757d;
+  color: #3d4852;
+  text-decoration: none;
+}
+
+.paging_simple_numbers .current {
+  background-color: #6c757d;
+  color: #1d68a7;
+  padding: 5px;
+}

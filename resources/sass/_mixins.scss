@@ -1,0 +1,18 @@
+@mixin clearfix {
+  *zoom:1;
+
+  &:after {
+      content : " ";
+      clear   : both;
+      display : block;
+      overflow: hidden;
+      height  : 0;
+  }
+}
+
+@mixin centerer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+}

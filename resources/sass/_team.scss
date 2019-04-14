@@ -1,0 +1,40 @@
+/** Team */
+.team-member {
+  margin-bottom: 40px;
+}
+
+.team-member .image {
+  margin-bottom: 1rem;
+}
+
+.team-member a {
+  color: #333;
+}
+
+.team-member a:hover {
+  color: #333;
+}
+
+.team-member h3 {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 5px;
+}
+
+.team-member p.role {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 0;
+}
+
+.team-member p {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.team-member-detail p:not(.lead) {
+  color: #555;
+  font-size: 0.9rem;
+}
