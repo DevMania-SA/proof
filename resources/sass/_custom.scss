@@ -113,6 +113,50 @@ a, a:hover, a:visited, a:active, a:link {
 }
 
 /**
+* About Us Page
+*/
+.aboutus-section {
+    
+    .fa {
+        color: $black;
+        background: $primary-color;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: $icon-size;
+    }
+    .about-img {
+        display: block;
+        background: url('/images/about-us.jpg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        -webkit-box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
+        -moz-box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
+        box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
+    }
+}
+
+.actual-offer-section {
+    .fa {
+        color: $primary-color;
+        background: #fff;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: $icon-size;
+    }
+
+    .offer-img {
+        display: block;
+        background: url('/images/offer-img.jpg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 300px;
+        -webkit-box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
+        -moz-box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
+        box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
+    }
+}
+
+/**
 * Services Section
 */
 #service-section {
@@ -134,6 +178,8 @@ a, a:hover, a:visited, a:active, a:link {
         padding-top: 150px;
     }
 }
+
+
 
 // ::-webkit-input-placeholder
 // {

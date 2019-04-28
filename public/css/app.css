@@ -34986,6 +34986,45 @@ a:link {
 }
 
 /**
+* About Us Page
+*/
+
+.aboutus-section .fa {
+  color: #333333;
+  background: #008ed6;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 30px;
+}
+
+.aboutus-section .about-img {
+  display: block;
+  background: url("/images/about-us.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  -webkit-box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
+  box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
+}
+
+.actual-offer-section .fa {
+  color: #008ed6;
+  background: #fff;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 30px;
+}
+
+.actual-offer-section .offer-img {
+  display: block;
+  background: url("/images/offer-img.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 300px;
+  -webkit-box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
+  box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
+}
+
+/**
 * Services Section
 */
 

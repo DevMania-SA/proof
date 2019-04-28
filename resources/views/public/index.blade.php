@@ -92,12 +92,13 @@
                             Explore
                         </h1>
                         <p class="lead">
-                            We are a 100% youth production company, our mission is creating multiple media platforms, and
-                            recruiting the best hardworking talented professionals in South Africa, irrespective of the race,
-                            gender, age and religion in order to be a trend setting organization in the Southern region of
-                            Africa.
+                            PDMG has developed a variety of customized mobile solutions and value added 
+                            services that is in line with the Protection of Personal Information Act. We 
+                            consistently hone our teams’ skills and strive to provide a service that’s 
+                            client specific to deliver maximized results that build and sustain your 
+                            business.
                         </p>
-                        <a href="{{ route('about') }}" class="btn btn-outline-secondary">Find Out More</a>
+                        <a href="{{ route('services') }}" class="btn btn-outline-secondary">Find Out More</a>
                     </div>
                 </div>
             </div>
@@ -113,17 +114,16 @@
                 <div class="col-md-6">
                     <h3>Explore &amp; Connect</h3>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, eaque ea nemo unde, magnam autem 
-                        animi nihil, consequuntur ullam sed laborum nulla totam asperiores itaque mollitia. Deleniti tempora 
-                        possimus deserunt.
+                        To make a living as a creator, you don’t need to stockpile a million customers, go viral as a 
+                        brand, or top the bestseller lists. You just need a good, core set of people who say “shut up 
+                        and take my money” when you launch new products. Here’s how to get there.
                     </p>
                     <div class="d-flex flex-row">
                         <div class="p-4 align-self-start">
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-4 align-self-end">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dolor commodi fugiat in 
-                            cupiditate amet ipsam sed quod reiciendis ratione!
+                            Revamp Your Content Strategy
                         </div>
                     </div>
                     <div class="d-flex flex-row">
@@ -131,8 +131,16 @@
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-4 align-self-end">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dolor commodi fugiat in 
-                            cupiditate amet ipsam sed quod reiciendis ratione!
+                            Build an Engaged Community Around Core Problems Your Products Solve
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            Talk to Your Fans, Then Deliver Value and Solicit Feedback
                         </div>
                     </div>
                 </div>
@@ -195,7 +203,7 @@
                             that businesses can make use of immediately in order to bring down the barriers of 
                             making use of cellular technology in marketing strategies.
                         </p>
-                        <a href="{{ route('about') }}" class="btn btn-outline-light">Find Out More</a>
+                        <a href="{{ route('services') }}" class="btn btn-outline-light">Find Out More</a>
                     </div>
                 </div>
             </div>
@@ -208,17 +216,17 @@
                 <div class="col-md-6">
                     <h3>Offers</h3>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, eaque ea nemo unde, magnam autem 
-                        animi nihil, consequuntur ullam sed laborum nulla totam asperiores itaque mollitia. Deleniti tempora 
-                        possimus deserunt.
+                        Offers, Join thousands of businesses and organizations, from all industry sectors, using 
+                        us to find new prospects, increase sales and develop exceptional brand loyalty.
                     </p>
                     <div class="d-flex flex-row">
                         <div class="p-4 align-self-start">
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-4 align-self-end">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dolor commodi fugiat in 
-                            cupiditate amet ipsam sed quod reiciendis ratione!
+                            PDMG offers Bulk SMS for (SALES, MARKETING, CUSTOMER BIRTHDAYS, CUSTOMER CARE & INFORMATION 
+                            SMS’s) your next SMS campaign could be delivered straight into the hands of your prospects 
+                            and customers. (Online SMS Program – No Installation required)
                         </div>
                     </div>
                     <div class="d-flex flex-row">
@@ -226,8 +234,9 @@
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-4 align-self-end">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dolor commodi fugiat in 
-                            cupiditate amet ipsam sed quod reiciendis ratione!
+                            PDMG offers digital marketing strategies to sell, and distribute goods as well as music via 
+                            sms gateway systems. The mobile phone also provides companies with a unique and direct means 
+                            of extracting payments from customers.
                         </div>
                     </div>
                 </div>
@@ -270,13 +279,13 @@
                         <img src="{{ asset('images/explore.jpg') }}" alt="Explore" class="img-fluid mb-3 rounded-circle">
                     </div>
                 </div>
+
                 <div class="col-md-6">
                     <div class="row">
                         <div class="media col-md-12">
                             <i class="fa fa-music mr-4" aria-hidden="true"></i>
                             <div class="media-body">
-                                <h5 class="mt-0">MUSIC SERVICES</h5>
-                                Buy Songs with a single SMS
+                                <h5 class="mt-0">EXPAND YOUR DIGITAL MARKETING STRATEGY</h5>
                             </div>
                         </div>
                     </div>
@@ -285,11 +294,7 @@
                         <div class="media col-md-12">
                             <i class="fa fa-rocket mr-4" aria-hidden="true"></i>
                             <div class="media-body">
-                                <h5 class="mt-0">ADVERTISING</h5>
-                                When creating an online marketing strategy for our clients, we consider budget, 
-                                reach and company requirements deciding and implementing avenues such as, 
-                                SEO – Search Engine Optimization, Google AdWords and paid advertising, Email 
-                                Newsletters, Email signature click throughs and Lead Generation.
+                                <h5 class="mt-0">LEVARAGE YOUR CUSTOMER DATABASE AND CRM MANAGEMENT</h5>
                             </div>
                         </div>
                     </div>
@@ -298,12 +303,7 @@
                         <div class="media col-md-12">
                             <i class="fa fa-users mr-4" aria-hidden="true"></i>
                             <div class="media-body">
-                                <h5 class="mt-0">CAMPAIGN MANAGEMENT</h5>
-                                PDMG offers account management services delivered by our enthusiastic and 
-                                detail-oriented account and campaign managers. Our account management company 
-                                follows a thorough process which is as follows; an account manager meets with 
-                                you to gather data that informs and provides a clear understanding of your 
-                                business goals.
+                                <h5 class="mt-0">WE SUPPORT CORPORATE AND STRATEGIC DEVELOPMENT</h5>
                             </div>
                         </div>
                     </div>
@@ -312,12 +312,7 @@
                         <div class="media col-md-12">
                             <i class="fas fa-user-check mr-4" aria-hidden="true"></i>
                             <div class="media-body">
-                                <h5 class="mt-0">MARKERTING CONSULTANTS</h5>
-                                Whether you need to bounce your thinking off an objective third-party, or are starting 
-                                a new business from scratch, a marketing consultation is useful at all stages of the 
-                                development of your brand. With experience in strategic business planning, web design 
-                                &amp; development, content creation, social media management and search engine 
-                                optimization, we can help you achieve your goals.
+                                <h5 class="mt-0">WE DEVELOP OMNI CHANNEL BRAND MANAGEMENT STRATEGY</h5>
                             </div>
                         </div>
                     </div>

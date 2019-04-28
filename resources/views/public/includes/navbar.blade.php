@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
     <div class="container">
         <a href="{{ url('/') }}" class="navbar-brand">
-            {{ config('app.name') }}
+            <img src="{{ asset('images/logo-main.png') }}" class="nav-logo" alt="{{ config('app.name') }}" style="height: 50px; width: 70px;" />
         </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -17,10 +17,21 @@
                         About
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('services') }}" class="nav-link">
-                        Services
+                <li class="nav-item dropdown">
+                    <a href="{{ route('services') }}" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+                        Solutions
                     </a>
+
+                    <div class="dropdown-menu bg-dark">
+                        <a href="#" class="dropdown-item">DMS</a>
+                        <a href="#" class="dropdown-item">ProofSMS</a>
+                        <a href="#" class="dropdown-item">ProofSMS Mobile</a>
+                        <a href="#" class="dropdown-item">CRM</a>
+                        <a href="#" class="dropdown-item">Sales Strategies</a>
+                        <a href="#" class="dropdown-item">Campaign Management</a>
+                        <a href="#" class="dropdown-item">Omni Channel Brand Management</a>
+                        <a href="#" class="dropdown-item">Digital Marketing Strategies</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('blog') }}" class="nav-link">
