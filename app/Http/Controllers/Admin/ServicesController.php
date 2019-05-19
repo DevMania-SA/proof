@@ -15,7 +15,8 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        //
+        $services = Service::latest()->get();
+        return view('admin.services.index')->with(compact('services'));
     }
 
     /**
@@ -25,7 +26,7 @@ class ServicesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.services.create');
     }
 
     /**
@@ -36,7 +37,23 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->isMethod('post')){
+            $data = $request->all();
+            // echo "<pre>"; print_r($data); die;
+
+            $slug = str_slug($data['name']);
+
+            $service = new Service;
+            $service->parent_id = 0;
+            $service->name = $data['name'];
+            $service->description = $data['description'];
+            $service->slug = $slug;
+            $service->status = 1;
+            $service->save();
+
+            return redirect()->route('solutions.index')->with('success','Service is successfully created');
+
+        }
     }
 
     /**
@@ -47,7 +64,7 @@ class ServicesController extends Controller
      */
     public function show($id)
     {
-        //
+        $service =  Service::where('id', $id)->first();
     }
 
     /**

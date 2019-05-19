@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Services -->
-    <header class="service-section mb-3" id="service-section">
+    <header class="service-section" id="service-section">
         <div class="dark-overlay">
             <div class="service-inner">
                 <div class="container">
@@ -12,7 +12,7 @@
                         <div class="col-md-12">
                             <div class="d-flex flex-row justify-content-center">
                                 <h1 class="display-4">
-                                    Our Services
+                                    Services
                                 </h1>
                             </div>
                             <div class="d-flex flex-row justify-content-center">
@@ -28,7 +28,7 @@
     </header>
 
     <!-- Explore Section -->
-    <section id="explore-head-section" class="bg-primary">
+    <!-- <section id="explore-head-section" class="bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="bg-light">
         <div class="container">
@@ -53,6 +53,16 @@
                 <div class="col-md-7 text-center heading-section mt-5">
                     <span class="subheading text-muted">Our Services</span>
                     <h2>{{ config('app.name') }} provides a fully featured digital marketing services platform</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-grey" id="services">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-md-4">
+                    
                 </div>
             </div>
         </div>

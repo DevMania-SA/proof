@@ -34,7 +34,6 @@
                     </a>
                 </li>
 
-                @if(Auth::user()->can('isAuthor') || Auth::user()->can('isAdmin'))
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-newspaper"></i>
@@ -52,7 +51,6 @@
                         </li>
                     </ul>
                 </li>
-                @endif
 
                 <li class="nav-item">
                     <a href="{{ route('category.index') }}" class="nav-link">
@@ -86,54 +84,54 @@
                     </a>
                 </li>
 
-                
-                <li class="nav-header">Administration</li>
-                
+                @role('superadministrator')
+                    <li class="nav-header">Administration</li>
+                    
 
-                
-                <li class="nav-item">
-                    <a href="{{ route('users.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>
-                            Manage Users
-                        </p>
-                    </a>
-                </li>
+                    
+                    <li class="nav-item">
+                        <a href="{{ route('users.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>
+                                Manage Users
+                            </p>
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
-                        Roles &amp; Permissions
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-users"></i>
+                            Roles &amp; Permissions
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a href="{{ route('artist.index') }}" class="nav-link">
-                        <i class="nav-icon fa fa-users-cog"></i>
-                        <p>
-                            Manage Artists
-                        </p>
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a href="{{ route('artist.index') }}" class="nav-link">
+                            <i class="nav-icon fa fa-users-cog"></i>
+                            <p>
+                                Manage Artists
+                            </p>
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a href="{{ route('settings') }}" class="nav-link">
-                        <i class="nav-icon fa fa-cog"></i>
-                        <p>
-                            Settings
-                        </p>
-                    </a>
-                </li>
-                {{--
-                <li class="nav-item">
-                    <a href="/dashboard" class="nav-link">
-                        <i class="nav-icon fas fa-cogs"></i>
-                        <p>
-                            Settings
-                        </p>
-                    </a>
-                </li>
-                --}}
+                    <li class="nav-item">
+                        <a href="{{ route('solutions.index') }}" class="nav-link">
+                            <i class="nav-icon fa fa-pencil"></i>
+                            <p>
+                                Manage Services
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('settings') }}" class="nav-link">
+                            <i class="nav-icon fa fa-cog"></i>
+                            <p>
+                                Settings
+                            </p>
+                        </a>
+                    </li>
+                @endrole
                 
             </ul>
         </nav>

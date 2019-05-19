@@ -13,7 +13,7 @@
                     {!! Form::open(['method' => 'POST', 'route' => ['category.store'], 'files' => true,]) !!}
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" name="name" class="form-control">
+                            <input type="text" name="name" class="form-control" id="name">
                         </div>
 
                         <button type="submit" class="btn btn-success">Save</button>

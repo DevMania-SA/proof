@@ -111,6 +111,9 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
     // Artists Management
     Route::resource('artist', 'Admin\ArtistsController');
 
+    // Services 
+    Route::resource('solutions', 'Admin\ServicesController');
+
     // Settings
     Route::get('/settings', 'Admin\DashboardController@settings')->name('settings');
 });

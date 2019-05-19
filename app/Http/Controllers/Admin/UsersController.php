@@ -51,9 +51,6 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        if (! Gate::allows('user_create')) {
-            return abort(401);
-        }
 
         if($request->isMethod('post')){
             $data = $request->all();
@@ -77,9 +74,6 @@ class UsersController extends Controller
      */
      public function show($id)
      {
-         if (!Gate::allows('user_view')) {
-             return abort(401);
-         }
 
          $user = User::findOrFail($id);
          return view('admin.users.show', compact('user'));
