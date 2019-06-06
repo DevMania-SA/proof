@@ -75,7 +75,8 @@ class ServicesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $service = Service::where('id', $id)->first();
+        return view('admin.services.edit')->with(compact('service'));
     }
 
     /**

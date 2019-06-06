@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Model\Artist;
 use App\Model\Event;
 use Carbon\Carbon;
 use Mail;
-use Illuminate\Http\Request;
+use App\Model\Service;
+
 
 class PagesController extends Controller
 {
@@ -61,8 +63,11 @@ class PagesController extends Controller
         return view('public.artists.show', compact('artist'));
     }
 
-    public function services() 
+    public function services()
     {
-        return view('public.services.list-all');
+        $data = [
+            'services' => Service::all()
+        ];
+        return view('public.services.list-all')->with($data);
     }
 }
