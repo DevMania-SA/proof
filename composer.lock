@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0df136a59c4162cdc921b76f71ff591",
+    "content-hash": "34b626d76fc4f381a3094b682546a264",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -3137,6 +3137,64 @@
                 "spatie"
             ],
             "time": "2018-10-10T13:05:23+00:00"
+        },
+        {
+            "name": "spatie/laravel-googletagmanager",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-googletagmanager.git",
+                "reference": "8e58e47767df0484055b415ec49dc7ef42bc3a9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-googletagmanager/zipball/8e58e47767df0484055b415ec49dc7ef42bc3a9c",
+                "reference": "8e58e47767df0484055b415ec49dc7ef42bc3a9c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Spatie\\GoogleTagManager\\GoogleTagManagerServiceProvider"
+                    ],
+                    "aliases": {
+                        "GoogleTagManager": "Spatie\\GoogleTagManager\\GoogleTagManagerFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\GoogleTagManager\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Google Tag Manager integration for Laravel",
+            "homepage": "https://github.com/spatie/laravel-googletagmanager",
+            "keywords": [
+                "Google Tag Manager",
+                "laravel",
+                "laravel-googletagmanager",
+                "spatie"
+            ],
+            "time": "2018-10-29T10:21:45+00:00"
         },
         {
             "name": "spatie/laravel-medialibrary",

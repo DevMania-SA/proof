@@ -1,11 +1,5 @@
-
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url("https://fonts.gstatic.com");
-@import url("https://fonts.googleapis.com/css?family=Nunito");
-
 // Variables
-@import 'variables';
+@import './helpers/helpers';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -16,10 +10,12 @@
 @import '~@fortawesome/fontawesome-free/scss/brands.scss';
 @import '~select2/src/scss/core.scss';
 
-@import 'icheck';
-@import "buttons";
-@import "tables";
-@import "pagination";
+@import './base/base';
+// @import 'icheck';
+// @import "buttons";
+// @import "tables";
+// @import "pagination";
+
 
 .navbar-laravel {
   background-color: #fff;

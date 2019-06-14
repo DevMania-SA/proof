@@ -1,0 +1,56 @@
+
+// Body
+$bg-color: #333;
+// $body-bg: #f8fafc;
+
+// ************************************
+// BREAKPOINTS
+// ************************************
+$breakpoint-desktop: 1200px;
+$breakpoint-laptop: 950px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 400px;
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+$font-color: #fff;
+
+// Colors
+$base-clr: #7fe5a3;
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66D9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+$fa-font-path: "../webfonts";
+$primary-color: #008ed6;
+
+$dark-overlay: rgba(0,0,0,0.5);
+$light-overlay: rgba(0,0,255,0.5);
+$black: #333333;
+
+// Icons
+$icon-size: 30px;
+
+
+/*font Variables*/
+$pop: 'Poppins', sans-serif;
+$play: 'Playfair Display', serif;
+/*Color Variables*/
+
+$baseColor: #2bc0a4;
+$dip: #232d37;
+//$gray: #757575;
+$pfont: #51545f;
+
+.col-md-offset-right-1,.col-lg-offset-right-1{
+    margin-right: 8.33333333%;
+}

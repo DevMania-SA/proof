@@ -5,9 +5,10 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
-@import 'mixins';
-@import 'helpers';
+// @import 'variables';
+// @import 'mixins';
+// @import 'helpers';
+@import './helpers/helpers';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -15,29 +16,34 @@
 // Bootstrap Vue Components
 // @import '~bootstrap-vue/src/index.scss';
 
-@import '~admin-lte/dist/css/adminlte.css';
+// @import '~admin-lte/dist/css/adminlte.css';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';
 @import '~@fortawesome/fontawesome-free/scss/brands.scss';
-@import '~select2/src/scss/core.scss';
+// @import '~select2/src/scss/core.scss';
 
-@import "colors";
-@import "buttons";
-@import "icons";
-@import "navbar";
-@import "slider";
-@import 'icheck';
-@import 'sign';
-@import "media";
-@import "breadcrumbs";
-@import "tables";
-@import "pagination";
-@import "team";
-@import "blog";
-@import "contact";
-@import "footer";
-@import 'custom';
-@import "responsive";
+@import './base/base';
+@import './layout/layout';
+@import './modules/modules';
+@import './templates/templates';
+
+// @import "colors";
+// @import "buttons";
+// @import "icons";
+// @import "navbar";
+// @import "slider";
+// @import 'icheck';
+// @import 'sign';
+// @import "media";
+// @import "breadcrumbs";
+// @import "tables";
+// @import "pagination";
+// @import "team";
+// @import "blog";
+// @import "contact";
+// @import "footer";
+// @import 'custom';
+// @import "responsive";
 
 .navbar-laravel {
   background-color: #fff;

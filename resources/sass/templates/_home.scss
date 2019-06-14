@@ -1,0 +1,56 @@
+/*******************************************************
+    HOME PAGE
+*******************************************************/
+#home-section {
+    background: url("/images/home.jpg") no-repeat;
+    min-height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .dark-overlay {
+        background-color: $dark-overlay;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .home-inner {
+        padding-top: 220px;
+    }
+}
+
+#explore-section {
+    img {
+        margin-top: 40px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    .fa {
+        color: $primary-color;
+        background: #333;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: $icon-size;
+    }
+}
+
+#offer-section {
+    .fa {
+        color: $black;
+        background: $primary-color;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: $icon-size;
+    }
+
+    img {
+        margin-top: 80px;
+    }
+}
+
+

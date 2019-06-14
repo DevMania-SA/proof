@@ -21,6 +21,7 @@
         "league/oauth2-server": "^6.0",
         "mews/purifier": "^2.1",
         "santigarcor/laratrust": "5.0.*",
+        "spatie/laravel-googletagmanager": "^2.6",
         "spatie/laravel-medialibrary": "^7.0.0",
         "spatie/laravel-newsletter": "^4.2"
     },
