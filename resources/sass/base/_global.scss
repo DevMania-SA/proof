@@ -100,3 +100,8 @@ a:link {
     float: right;
 }
 
+.rounded-circle {
+    -webkit-box-shadow: 0px 4px 13px -4px rgba(74,90,120,1);
+    -moz-box-shadow: 0px 4px 13px -4px rgba(74,90,120,1);
+    box-shadow: 0px 4px 13px -4px rgba(74,90,120,1);
+}
