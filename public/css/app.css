@@ -17925,8 +17925,9 @@ a:link {
   }
 
   #explore-section .image .rounded-circle {
-    margin: 0;
+    margin-top: 0px;
     border-radius: 0px !important;
+    box-shadow: 0px 4px 13px -4px #4a5a78;
   }
 
   #explore-section .contents h3 {
@@ -17943,16 +17944,17 @@ a:link {
   }
 
   #explore-section .contents .p-4 {
-    padding: 10px;
+    padding: 10px 10px !important;
+    margin: 0;
   }
 
   #explore-section .contents .fa {
     color: #008ed6;
     background: #333;
-    padding: 2px;
+    padding: 4px;
     margin-top: 10px;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 20px;
   }
 
   #offer-head-section .p-5 {
@@ -17962,6 +17964,7 @@ a:link {
 
   #offer-head-section .p-5 .display-4 {
     font-size: 30px;
+    margin: 20px 0px 5px 0px;
   }
 
   #offer-head-section .lead {
@@ -17969,21 +17972,90 @@ a:link {
     text-align: justify;
   }
 
+  #offer-head-section .btn {
+    margin-bottom: 10px;
+  }
+
   #offer-section {
     font-size: 16px;
-    text-align: justify;
+    text-align: left;
+    padding: 15px 0px !important;
+  }
+
+  #offer-section .display-4 {
+    margin: 20px 0px !important;
+    font-size: 30px;
+  }
+
+  #offer-section .d-flex {
+    padding: 0px;
+    margin: 0px !important;
+  }
+
+  #offer-section .p-4 {
+    padding: 10px 10px !important;
+    margin: 0;
   }
 
   #offer-section .fa {
     color: #0c120c;
     background: #008ed6;
     padding: 4px;
+    margin-top: 15px;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 20px;
   }
 
-  #offer-section img {
-    margin-top: 90px;
+  #offer-section .rounded-circle {
+    margin-top: 0px;
+    border-radius: 0px !important;
+    box-shadow: 0px 4px 13px -4px #4a5a78;
+  }
+
+  #choose-head-section {
+    font-size: 16px;
+  }
+
+  #choose-head-section .p-5 {
+    padding: 0px 0px !important;
+    margin: 20px 0px !important;
+  }
+
+  #choose-head-section .p-5 .display-4 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  #choose-head-section .p-5 .lead {
+    text-align: justify;
+  }
+
+  #choose-section {
+    padding: 15px 0px !important;
+    font-size: 16px;
+  }
+
+  #choose-section .rounded-circle {
+    margin-top: 0px;
+    border-radius: 0px !important;
+    box-shadow: 0px 4px 13px -4px #4a5a78;
+  }
+
+  #choose-section .media {
+    margin-top: 10px;
+  }
+
+  #choose-section .media .fa,
+  #choose-section .media .fas {
+    width: 43px;
+    border: 2px solid #3490dc;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  #choose-section .media .media-body {
+    padding-top: 1px;
+    font-size: 14px !important;
   }
 }
 
