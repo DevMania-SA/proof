@@ -22,8 +22,9 @@
 }
 
 #explore-section {
+    font-size: 16px;
     img {
-        margin-top: 40px;
+        margin-top: 60px;
     }
 
     h3 {
@@ -40,6 +41,8 @@
 }
 
 #offer-section {
+    font-size: 16px;
+
     .fa {
         color: $black;
         background: $primary-color;
@@ -49,8 +52,142 @@
     }
 
     img {
-        margin-top: 80px;
+        margin-top: 90px;
     }
 }
 
+#choose-section {
+    font-size: 16px;
 
+    .media {
+        margin-top: 20px;
+        .fa, .fas {
+            width: 60px;
+            border: 2px solid $blue;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        .media-body {
+            padding-top: 10px;
+        }
+    }
+}
+
+/*****************************************************************
+    MEDIA QUERIES
+*****************************************************************/
+@media screen and (max-width: $breakpoint-tablet){
+    #home-section {
+        min-height: 250px;
+
+        .dark-overlay {
+            min-height: 250px;
+        }
+
+        .home-inner {
+            padding-top: 120px;
+
+            .display-4 {
+                font-size: 30px;
+            }
+        }
+    }
+
+    #explore-head-section {
+        .display-4 {
+            font-size: 30px;
+            padding-bottom: 10px;
+        }
+        .lead {
+            font-size: 16px;
+            text-align: justify;
+        }
+    }
+
+    #explore-section {
+        font-size: 16px;
+        .image {
+            margin-top: 20px;
+
+            img {
+                margin-top: 0px;
+            }
+
+            .rounded-circle {
+                margin: 0;
+                border-radius: 0px !important;
+            }
+
+        }
+        
+        .contents {
+            h3 {
+                font-size: 30px;
+            }
+
+            .lead {
+                font-size: 16px;
+            }
+
+            .d-flex {
+                padding: 0px;
+                margin: 0px !important;
+            }
+            .p-4 {
+                padding: 10px;
+            }
+
+            .fa {
+                color: $primary-color;
+                background: #333;
+                padding: 2px;
+                margin-top: 10px;
+                border-radius: 5px;
+                font-size: $icon-size;
+            }
+        }
+    }
+
+    #offer-head-section {
+        .p-5 {
+            padding: 0px !important;
+            margin: 15px 0px;
+            .display-4 {
+                font-size: 30px;
+            }
+        }
+
+        .lead {
+            font-size: 16px;
+            text-align: justify;
+        }
+    }
+
+    #offer-section {
+        font-size: 16px;
+        text-align: justify;
+    
+        .fa {
+            color: $black;
+            background: $primary-color;
+            padding: 4px;
+            border-radius: 5px;
+            font-size: $icon-size;
+        }
+    
+        img {
+            margin-top: 90px;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-tablet){
+    #home-section {
+        .home-inner {
+            .display-4 {
+                font-size: 24px;
+            }
+        }
+    }
+}

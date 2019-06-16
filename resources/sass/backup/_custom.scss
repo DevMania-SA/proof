@@ -107,45 +107,6 @@ a, a:hover, a:visited, a:active, a:link {
     float: right;
 }
 
-#home-section {
-    background: url("/images/home.jpg") no-repeat;
-    min-height: 600px;
-    background-size: cover;
-    background-attachment: fixed;
-
-    .dark-overlay {
-        background-color: $dark-overlay;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        min-height: 600px;
-    }
-
-    .home-inner {
-        padding-top: 250px;
-    }
-}
-
-#explore-section {
-    .fa {
-        color: $primary-color;
-        background: #333;
-        padding: 4px;
-        border-radius: 5px;
-        font-size: $icon-size;
-    }
-}
-
-#offer-section {
-    .fa {
-        color: $black;
-        background: $primary-color;
-        padding: 4px;
-        border-radius: 5px;
-        font-size: $icon-size;
-    }
-}
 
 /**
 * About Section
@@ -173,46 +134,7 @@ a, a:hover, a:visited, a:active, a:link {
 /**
 * About Us Page
 */
-.aboutus-section {
 
-    .fa {
-        color: $black;
-        background: $primary-color;
-        padding: 4px;
-        border-radius: 5px;
-        font-size: $icon-size;
-    }
-    .about-img {
-        display: block;
-        background: url('/images/about-us.jpg') no-repeat;
-        background-size: cover;
-        background-position: center center;
-        -webkit-box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
-        -moz-box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
-        box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
-    }
-}
-
-.actual-offer-section {
-    .fa {
-        color: $primary-color;
-        background: #fff;
-        padding: 4px;
-        border-radius: 5px;
-        font-size: $icon-size;
-    }
-
-    .offer-img {
-        display: block;
-        background: url('/images/offer-img.jpg') no-repeat;
-        background-size: cover;
-        background-position: center center;
-        min-height: 300px;
-        -webkit-box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
-        -moz-box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
-        box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
-    }
-}
 
 /**
 * Services Section

@@ -106,23 +106,28 @@
     <section id="offer-head-section" class="bg-primary">
         <div class="container">
             <div class="row">
-                <div class="col text-center">
+                <div class="col-md-12 text-center">
                     <div class="p-5">
                         <h1 class="display-4">
                             Vision &amp; Mission
                         </h1>
-                        <p class="lead">
-                            Our mission is to use our knowledge of digital and mobile methods to define new markets 
-                            for digital services and always be at the forefront of the digital revolution in South 
-                            Africa.
-                        </p>
 
-                        <p class="lead mb-5">
-                            Our vision is to create value for our clients using Mobile Value Added Service methods 
-                            and content to enhance their core business focus.
-                        </p>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <p class="lead">
+                                    Our mission is to use our knowledge of digital and mobile methods to define new markets 
+                                    for digital services and always be at the forefront of the digital revolution in South 
+                                    Africa.
+                                </p>
+                            </div>
 
-                        <a href="{{ route('services') }}" class="btn btn-outline-light">Find Out More</a>
+                            <div class="col-md-6">
+                                <p class="lead">
+                                    Our vision is to create value for our clients using Mobile Value Added Service methods 
+                                    and content to enhance their core business focus.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a href="{{ url('/') }}" class="navbar-brand">
             <img src="{{ asset('images/logo-main.png') }}" class="nav-logo" alt="{{ config('app.name') }}" style="height: 50px; width: 70px;" />

@@ -5,9 +5,9 @@
 @section('content')
 
     <!-- Services -->
-    <header class="service-section mb-3" id="service-section">
+    <header class="contact-section" id="contact-section">
         <div class="dark-overlay">
-            <div class="service-inner">
+            <div class="contact-inner">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -17,8 +17,12 @@
                                 </h1>
                             </div>
                             <div class="d-flex flex-row justify-content-center">
-                                <div class="p-4">
-                                    
+                                <div class="mt-4 text-center">
+                                    You're not going to hit a ridiculously long phone 
+                                    menu when you call us. Your email isn't going to 
+                                    the inbox abyss, never to be seen or heard from 
+                                    again. At PDMG, we provide the exceptional 
+                                    service we'd want to experience ourselves!
                                 </div>
                             </div>
                         </div>
@@ -27,6 +31,31 @@
             </div>
         </div>
     </header>
+
+    <section id="contact-details" class="contact-details bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3 class="dispplay-4">
+                        PDMG strives to provide the best service possible with 
+                        every contact! 
+                    </h3>
+                    <p class="mt-3">
+                        We operate in an industry built on trust. This can only be achieved 
+                        through communication and experienced support – from the first contact 
+                        past your ten-year anniversary.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="direct-contact">
+                        <h3 class="display-5">Direct Contact</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
 
 
 

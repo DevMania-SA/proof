@@ -24,64 +24,6 @@
         </div>
     </header>
 
-    {{-- <div class="container main-point">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card">
-                    <i class="fa fa-envelope mt-3" aria-hidden="true"></i>
-                    <div class="card-body">
-                        <h4>Bulk SMS</h4>
-                        <p>
-                            Join thousands of businesses and organizations, from all industry sectors, 
-                            using us to find new prospects, increase sales and develop exceptional 
-                            brand loyalty
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <i class="fas fa-calendar-alt mt-3" aria-hidden="true"></i>
-                    <div class="card-body">
-                        <h4>Mobile Markerting Solutions</h4>
-                        <p>
-                            The fast-paced digital world requires businesses to have a strong online 
-                            marketing presence in order to reach their target consumers
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <i class="fas fa-users mt-3" aria-hidden="true"></i>
-                    <div class="card-body">
-                        <h4>CRM (Customer Relation Management)</h4>
-                        <p>
-                            At PDMG we believe that the real value in mobile marketing lies in its 
-                            ability to deliver highly effective and inexpensive customer relationship 
-                            management, which ultimately results in loyalty and sales.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <i class="fas fa-thumbs-up mt-3" aria-hidden="true"></i>
-                    <div class="card-body">
-                        <h4>Knowledge &amp; Business Intel</h4>
-                        <p>
-                            The mobile phone provides companies with a unique and direct means of 
-                            extracting payments from customers.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
     <!-- Explore Section -->
     <section id="explore-head-section" class="mb-3">
         <div class="container">
@@ -108,10 +50,10 @@
     <section id="explore-section" class="bg-light text-muted">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 my-5">
+                <div class="col-md-6 image">
                     <img src="{{ asset('images/explore.jpg') }}" alt="Explore" class="img-fluid mb-3 rounded-circle">
                 </div>
-                <div class="col-md-6 my-5">
+                <div class="col-md-6 contents">
                     <h3 class="mb-3">Explore &amp; Connect</h3>
                     <p class="lead">
                         To make a living as a creator, you don’t need to stockpile a million customers, go viral as a 
@@ -148,48 +90,11 @@
         </div>
     </section>
 
-    {{-- <div class="container about-us mt-5">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h4>ABOUT US</h4>
-                <div class="underline"></div>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-12 text-center">
-                <p>
-                   
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mb-5">
-        <div class="row mt-5">
-            <div class="col-md-8">
-                <h1>WHO WE ARE</h1>
-                <div class="underline-left"></div>
-                <p class="mt-3 text-justify about-text">
-                    Established in 2019, Proof Digital Media Group is a full-service digital marketing 
-                    company based in Mpumalanga, Secunda. We boast a team of highly enthusiastic digital 
-                    marketers with a refined skills base to handle all the aspects of digital marketing. 
-                    We are fast, flexible, reliable experts, dedicated to connecting our clients to their 
-                    customers through excellent client service and innovative strategies focused on 
-                    achieving only the best results.
-                </p>
-          <a href="{{ route('contact') }}" class="btn btn-custom btn-lg">CONTACT US</a>
-            </div>
-            <div class="col-md-4">
-                <img src="{{asset('images/img%20(3).jpg')}}" alt="about us" class="img-fluid">
-            </div>
-        </div>
-    </div> --}}
-
     <!-- Offer Head Section -->
     <section id="offer-head-section" class="bg-primary">
         <div class="container">
             <div class="row">
-                <div class="col text-center">
+                <div class="col-md-12 text-center">
                     <div class="p-5">
                         <h1 class="display-4">
                             What We Offer?
@@ -322,40 +227,4 @@
             </div>
         </div>
     </section>
-
-
-
-    {{-- <div class="container-fluid achivements" data-stellar-background-ratio="0.5">
-        <div class="container mt-5">
-            <div class="row">
-                <div class="text-center col-md-12">
-                    <h4>OUR ACHIEVEMENTS</h4>
-                    <div class="underline mt-3"></div>
-                </div>
-            </div>
-            <p class="text-center mt-3" style=" font-size: 20px;">
-                LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING
-                INDUSTRY
-            </p>
-
-            <div class="row">
-
-            </div>
-        </div>
-    </div> --}}
-
-    {{-- <section class="bar bg-gray no-mb mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="heading text-center">
-                        <h3>Our Partners</h3>
-                    </div>
-                    <ul class="list-unstyled owl-carousel customers no-mb">
-                        <li class="item"><img src="{{ asset('images/partners/octs.png') }}" alt="OCTS" class="img-fluid"></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> --}}
 @endsection

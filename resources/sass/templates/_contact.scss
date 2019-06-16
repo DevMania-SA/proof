@@ -1,0 +1,26 @@
+#contact-section {
+    background: url("/images/home.jpg") no-repeat;
+    min-height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 16px;
+
+    .dark-overlay {
+        background-color: $dark-overlay;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .contact-inner {
+        padding-top: 200px;
+    }
+}
+
+#contact-details {
+    color: #303030;
+    padding: 35px;
+    font-size: 16px;
+}

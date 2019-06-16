@@ -22,8 +22,10 @@
         "mews/purifier": "^2.1",
         "santigarcor/laratrust": "5.0.*",
         "spatie/laravel-googletagmanager": "^2.6",
+        "spatie/laravel-image-optimizer": "^1.4",
         "spatie/laravel-medialibrary": "^7.0.0",
-        "spatie/laravel-newsletter": "^4.2"
+        "spatie/laravel-newsletter": "^4.2",
+        "torann/laravel-meta-tags": "^3.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

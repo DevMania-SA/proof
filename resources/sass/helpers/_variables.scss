@@ -18,7 +18,7 @@ $line-height-base: 1.6;
 $font-color: #fff;
 
 // Colors
-$base-clr: #7fe5a3;
+$black: #0c120c;
 $blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;
@@ -26,16 +26,18 @@ $pink: #f66D9b;
 $red: #e3342f;
 $orange: #f6993f;
 $yellow: #ffed4a;
-$green: #38c172;
+$green: #7fe5a3;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
-
-$fa-font-path: "../webfonts";
 $primary-color: #008ed6;
-
 $dark-overlay: rgba(0,0,0,0.5);
 $light-overlay: rgba(0,0,255,0.5);
-$black: #333333;
+$base-clr: $green;
+
+$fa-font-path: "../webfonts";
+
+
+
 
 // Icons
 $icon-size: 30px;

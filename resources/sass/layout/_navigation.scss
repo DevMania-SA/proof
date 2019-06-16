@@ -1,26 +1,24 @@
 /****************************************************************
     NAVIGATION
 ****************************************************************/
-.navbar {
+.navbar-dark {
+    background: #0c120c;
     height: 4rem;
-    border-bottom: $primary-color;
+    border-bottom: 3px solid $primary-color;
+
+    a:hover {
+        color: rgb(180, 180, 180);
+    }
 
     .navbar-nav {
+        color: $white;
         z-index: 9999;
-
+        .nav-link {
+            color: rgba($color: $white, $alpha: 0.5);
+            padding: 0.5rem 1rem;
+        }
         .dropdown-menu {
             color: #fff;
         }
     }
-}
-
-/****************************************************************
-    NAV
-****************************************************************/
-.nav-link {
-    padding: 0.5rem 1rem;
-}
-
-.nav-link .disabled {
-    color: #868e96;
 }
