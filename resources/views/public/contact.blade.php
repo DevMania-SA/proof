@@ -116,7 +116,7 @@
                 <div class="col-12 col-lg-6">
                     <!-- Google Maps -->
                     <div class="map-area mb-5">
-                        {!! Mapper::render() !!}
+                        {{-- {!! Mapper::render() !!} --}}
                         {{-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://maps.googleapis.com/maps/api/staticmap?center=40.714%2c%20-73.998&zoom=12&size=400x400&key=AIzaSyDzog-OOtDAUW_S2FPg3CXDtNrHpqnhS1E&signature=36Rx0XJn5jTe4TiXxTQ-GtjcrFo=" allowfullscreen></iframe> --}}
                     </div>
                 </div>
