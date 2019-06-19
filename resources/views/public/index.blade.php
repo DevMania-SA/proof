@@ -50,10 +50,10 @@
     <section id="explore-section" class="bg-light text-muted">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 image">
+                <div class="col-lg-6 image">
                     <img src="{{ asset('images/explore.jpg') }}" alt="Explore" class="img-fluid mb-3 rounded-circle">
                 </div>
-                <div class="col-md-6 contents">
+                <div class="col-lg-6 contents">
                     <h3 class="mb-3">Explore &amp; Connect</h3>
                     <p class="lead">
                         To make a living as a creator, you don’t need to stockpile a million customers, go viral as a 
@@ -118,7 +118,7 @@
     <section id="offer-section" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <h3 class="display-4 mb-3">Offers</h3>
                     <p>
                         Join thousands of businesses and organizations, from all industry sectors, using 
@@ -146,7 +146,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <img src="{{ asset('images/explore.jpg') }}" alt="Explore" class="img-fluid mb-3 rounded-circle">
                 </div>
             </div>
@@ -179,13 +179,13 @@
     <section id="choose-section" class="bg-light text-muted py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="d-flex flex-column align-content-center">
                         <img src="{{ asset('images/explore.jpg') }}" alt="Explore" class="img-fluid mb-3 rounded-circle">
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="row">
                         <div class="media col-md-12">
                             <i class="fa fa-music mr-4" aria-hidden="true"></i>

@@ -22,7 +22,7 @@
                         Solutions
                     </a>
 
-                    <div class="dropdown-menu bg-dark">
+                    <div class="dropdown-menu dropdown-menu-right animate slideIn">
                         <a href="#" class="dropdown-item">DMS</a>
                         <a href="#" class="dropdown-item">ProofSMS</a>
                         <a href="#" class="dropdown-item">ProofSMS Mobile</a>

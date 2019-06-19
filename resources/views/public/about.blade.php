@@ -103,7 +103,7 @@
     </section>
 
 
-    <section id="offer-head-section" class="bg-primary">
+    <section id="vision-mission-section" class="bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -112,20 +112,20 @@
                             Vision &amp; Mission
                         </h1>
 
-                        <div class="row mt-3">
+                        <div class="row mt-3 justify-content-center">
                             <div class="col-md-6">
-                                <p class="lead">
+                                {{-- <p class="lead">
                                     Our mission is to use our knowledge of digital and mobile methods to define new markets 
                                     for digital services and always be at the forefront of the digital revolution in South 
                                     Africa.
-                                </p>
+                                </p> --}}
                             </div>
 
                             <div class="col-md-6">
-                                <p class="lead">
+                                {{-- <p class="lead">
                                     Our vision is to create value for our clients using Mobile Value Added Service methods 
                                     and content to enhance their core business focus.
-                                </p>
+                                </p> --}}
                             </div>
                         </div>
                     </div>

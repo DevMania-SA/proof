@@ -16,6 +16,8 @@ $font-family-sans-serif: "Nunito", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 $font-color: #fff;
+$pop: 'Poppins', sans-serif;
+$play: 'Playfair Display', serif;
 
 // Colors
 $black: #0c120c;
@@ -26,30 +28,25 @@ $pink: #f66D9b;
 $red: #e3342f;
 $orange: #f6993f;
 $yellow: #ffed4a;
-$green: #7fe5a3;
+$green: #2bc0a4;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 $primary-color: #008ed6;
 $dark-overlay: rgba(0,0,0,0.5);
 $light-overlay: rgba(0,0,255,0.5);
 $base-clr: $green;
-
-$fa-font-path: "../webfonts";
-
-
-
+$baseColor: $green;
+$dip: #232d37;
 
 // Icons
+$fa-font-path: "../webfonts";
 $icon-size: 30px;
 
-
 /*font Variables*/
-$pop: 'Poppins', sans-serif;
-$play: 'Playfair Display', serif;
+
 /*Color Variables*/
 
-$baseColor: #2bc0a4;
-$dip: #232d37;
+
 //$gray: #757575;
 $pfont: #51545f;
 

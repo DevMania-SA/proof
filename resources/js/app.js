@@ -21,6 +21,7 @@ window.owlCarousel = require('owl.carousel');
 // Vue.use(BootstrapVue);
 
 require('./custom');
+require('./contact');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

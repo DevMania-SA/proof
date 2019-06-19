@@ -1,9 +1,16 @@
 /****************************************************************
     NAVIGATION
 ****************************************************************/
+// .navbar{background:#222222;}
+// .nav-item::after{content:'';display:block;width:0px;height:2px;background:#fec400;transition: 0.2s;}
+// .nav-item:hover::after{width:100%;}
+// .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{color:#fec400;}
+// .nav-link{padding:15px 5px;transition:0.2s;}
+// .dropdown-item.active, .dropdown-item:active{color:#212529;}
+// .dropdown-item:focus, .dropdown-item:hover{background:#fec400;}
 .navbar-dark {
-    background: #0c120c;
-    height: 4rem;
+    background: rgba($color: $black, $alpha: 0.7) !important;
+    min-height: 4rem;
     border-bottom: 3px solid $primary-color;
 
     a:hover {
@@ -18,7 +25,56 @@
             padding: 0.5rem 1rem;
         }
         .dropdown-menu {
-            color: #fff;
+            margin-top: 5px;
+            background: rgba($color: $black, $alpha: 0.7);
+            .dropdown-item {
+                color: $white !important;
+            }
         }
     }
-}
+} 
+
+
+@media (min-width: 992px) {
+    .animate {
+      animation-duration: 0.3s;
+      -webkit-animation-duration: 0.3s;
+      animation-fill-mode: both;
+      -webkit-animation-fill-mode: both;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+    100% {
+      transform:translateY(0rem);
+      opacity: 1;
+    }
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes slideIn {
+    0% {
+      -webkit-transform: transform;
+      -webkit-opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      -webkit-opacity: 1;
+    }
+    0% {
+      -webkit-transform: translateY(1rem);
+      -webkit-opacity: 0;
+    }
+  }
+  
+  .slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+  }

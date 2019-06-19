@@ -1,5 +1,5 @@
-<p style="text-align:center; margin: 50px auto;">
-    <img src="./public/images/logo.png" width="90" height="100" style="text-align:center; margin: 50px auto;" />
+<p style="text-align:center; margin: 1px auto;">
+    <img src="./public/images/logo.png" width="90" height="" style="text-align:center; margin: 10px auto;" />
 </p>
 
 # Proof Digital Media Group
@@ -14,7 +14,7 @@ git clone https://github.com/octs-SA/fossil.git
 
 ### Step 2: Installing Components
 <p>
-Before you run this command make sure you installed composer on your machine or you can get it here <a href="https://composer.org/downloads"></a>[composer]
+Before you run this command make sure you installed composer on your machine or you can get it here <a href="https://composer.org/downloads">Composer</a>
 Now you need to get all components used in this project as follows:
 </p>
 
@@ -44,19 +44,19 @@ Run:
 cp .env.example .env 
 ```
 
-once done then add encryption file
+once done then add encryption key
 
 ``` 
-php artisan key:generate 
+php artisan key:generate
 ```
 
-now add database information:
+now add database information to .env file as follows:
 
 ``` 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=prooftv
+DB_DATABASE=proof
 DB_USERNAME=root
 DB_PASSWORD=
 ```
@@ -72,3 +72,9 @@ Then now you can run it if you set virtual environment for it or you can simply 
 ```
 php artisan serve
 ```
+
+Or 
+
+If you have local server set-up then navigate to this site according to your server configuration
+
+# Support

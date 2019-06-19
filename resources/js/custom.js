@@ -424,11 +424,13 @@ $(document).ready( function () {
         frameLooper();
     }
 
+
+
     /**
      * frameLooper() animates any style of graphics
      * you wish to the audio frequency.
      * Looping at the default frame rate that the browser provides (apprx. 60FPS
-     */
+    */
     function frameLooper(){
         window.webkitRequestAnimationFrame(frameLooper);
         fbc_array = new fnArraySwitch(analyser.frequencyBinCount);
@@ -444,4 +446,10 @@ $(document).ready( function () {
             ctx.fillRect(bar_x, canvas.height, bar_width, bar_height);
         }
     }
+
+    /**
+     * Contact Page with ajax inputs validations
+     *
+     */
+    
 });
