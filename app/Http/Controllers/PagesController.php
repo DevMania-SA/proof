@@ -8,6 +8,7 @@ use App\Model\Event;
 use Carbon\Carbon;
 use Mail;
 use App\Model\Service;
+use Mapper;
 
 
 class PagesController extends Controller
@@ -24,9 +25,11 @@ class PagesController extends Controller
 
     public function contact()
     {
+        Mapper::map(-26.270759, 28.112268);
         $data = [
             'title' => 'Contact Us'
         ];
+
         return view('public.contact')->with($data);
     }
 

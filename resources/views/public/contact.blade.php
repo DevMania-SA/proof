@@ -18,10 +18,10 @@
                             </div>
                             <div class="d-flex flex-row justify-content-center">
                                 <div class="mt-4 text-center">
-                                    You're not going to hit a ridiculously long phone 
-                                    menu when you call us. Your email isn't going to 
-                                    the inbox abyss, never to be seen or heard from 
-                                    again. At PDMG, we provide the exceptional 
+                                    You're not going to hit a ridiculously long phone
+                                    menu when you call us. Your email isn't going to
+                                    the inbox abyss, never to be seen or heard from
+                                    again. At PDMG, we provide the exceptional
                                     service we'd want to experience ourselves!
                                 </div>
                             </div>
@@ -34,28 +34,97 @@
 
     <section id="contact-details" class="contact-details bg-light">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h3 class="dispplay-4">
-                        PDMG strives to provide the best service possible with 
-                        every contact! 
-                    </h3>
-                    <p class="mt-3">
-                        We operate in an industry built on trust. This can only be achieved 
-                        through communication and experienced support – from the first contact 
-                        past your ten-year anniversary.
-                    </p>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-lg-6">
+                    <div class="contact-thumbnail" id="contac-img">
+                        <img src="{{ asset('images/contact-img.jpg') }}" alt="Contact Us" class="img-fluid">
+                    </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-12 col-lg-5">
                     <div class="direct-contact">
-                        <h3 class="display-5">Direct Contact</h3>
+                        <div class="direct-header">
+                            <h3 class="display-5">Contact Us</h3>
+                            <p>
+                                We are improving our services to serve you better.
+                            </p>
+                        </div>
+
+                        <div class="direct-contents">
+                            <p class="address">
+                                Address:
+                            </p>
+
+                            <p class="phone">
+                                Phone:
+                            </p>
+
+                            <p class="email">
+                                Email:
+                            </p>
+
+                            <p class="open-hours">
+                                Open hours:
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
+    <section class="contact-area bg-light text-muted">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-lg-5">
+                    <div class="section-heading">
+                        <h2>GET IN TOUCH</h2>
+                        <p class="my-3">Send us a message, we will call back later</p>
+                    </div>
+
+                    <!-- Contact Form Area -->
+                    <div class="contact-form-area mb-5">
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="contact-name" placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="contact-email" placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="contact-subject" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-success mt-3">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <!-- Google Maps -->
+                    <div class="map-area mb-5">
+                        {!! Mapper::render() !!}
+                        {{-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://maps.googleapis.com/maps/api/staticmap?center=40.714%2c%20-73.998&zoom=12&size=400x400&key=AIzaSyDzog-OOtDAUW_S2FPg3CXDtNrHpqnhS1E&signature=36Rx0XJn5jTe4TiXxTQ-GtjcrFo=" allowfullscreen></iframe> --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
 
 
@@ -65,17 +134,17 @@
                 <div class="col-lg-6 contact_col">
                     <div class="contact_contents">
                         <h1>@yield('title')</h1>
-            
+
                         <p>
                             There are many ways to contact us. You may drop us a line, give us a call or send an email,
                             choose what suits you the most.
                         </p>
-        
+
                         <div>
                             <p>(+27)71 234-5678</p>
                             <p>info@fossilrecordscorp.co.za</p>
                         </div>
-        
+
                         <div>
                             <p>
                                 13/25 New Avenue<br />
@@ -88,7 +157,7 @@
                             <p>Saturday: Closed</p>
                             <p>Sunday: Closed</p>
                         </div>
-            
+
                         <div class="follow_us_contents">
                             <h1>Follow Us</h1>
                             <ul class="social d-flex flex-row">
@@ -116,15 +185,15 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="col-lg-6 get_in_touch_col">
                     <div class="get_in_touch_contents mt-4">
                         <h1>Get In Touch With Us!</h1>
-        
+
                         <p>Have any question? Please fill out the form below</p>
-        
+
                         @include('public.includes.message')
-        
+
                         <form method="post" action="{{route('contact.store')}}">
                         @csrf
                             <div>
@@ -140,7 +209,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="row mt-5 bg-light">
                 <div class="col">
                     <div id="google_map">

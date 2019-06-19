@@ -102248,6 +102248,8 @@ try {
 
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
 
+  __webpack_require__(/*! ./preloader */ "./resources/js/preloader.js");
+
   __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 
   __webpack_require__(/*! admin-lte */ "./node_modules/admin-lte/dist/js/adminlte.min.js");
@@ -103006,6 +103008,27 @@ $(document).ready(function () {
    */
 
 });
+
+/***/ }),
+
+/***/ "./resources/js/preloader.js":
+/*!***********************************!*\
+  !*** ./resources/js/preloader.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function ($) {
+  'use strict';
+
+  var browserWindow = $(window); // :: 1.0 Preloader Active Code
+
+  browserWindow.on('load', function () {
+    $('.preloader').fadeOut('slow', function () {
+      $(this).remove();
+    });
+  });
+})(jQuery);
 
 /***/ }),
 

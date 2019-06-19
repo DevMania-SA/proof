@@ -12,6 +12,7 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    require('./preloader');
     require('moment');
     require('admin-lte');
     require('sweetalert2');

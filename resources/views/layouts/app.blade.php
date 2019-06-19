@@ -26,6 +26,14 @@
 </head>
 <body>
     <div id="app">
+        <!-- Preloader -->
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img">
+                <img src="img/core-img/leaf.png" alt="">
+            </div>
+        </div>
+        
         <!-- Google Tag Manager (noscript) -->
         <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8945NV" height="0" width="0" style="display:none;visibility:hidden"></iframe>

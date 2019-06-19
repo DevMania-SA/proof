@@ -25,7 +25,8 @@
         "spatie/laravel-image-optimizer": "^1.4",
         "spatie/laravel-medialibrary": "^7.0.0",
         "spatie/laravel-newsletter": "^4.2",
-        "torann/laravel-meta-tags": "^3.0"
+        "torann/laravel-meta-tags": "^3.0",
+        "cornford/googlmapper": "2.*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
