@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <section class="bg-light" id="services">
+    {{-- <section class="bg-light" id="services">
         <div class="container">
             <div class="row">
                 @foreach ($services as $service)
@@ -70,69 +70,31 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <section>
-        <div class="container">
-        
-            
-                <div class="row mbr-justify-content-center">
-        
-                    <div class="col-lg-6 mbr-col-md-10">
-                        <div class="wrap">
-                            <div class="ico-wrap">
-                                <span class="mbr-iconfont fa-volume-up fa"></span>
-                            </div>
-                            <div class="text-wrap vcenter">
-                                <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Stay <span>Successful</span></h2>
-                                <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mbr-col-md-10">
-                        <div class="wrap">
-                            <div class="ico-wrap">
-                                <span class="mbr-iconfont fa-calendar fa"></span>
-                            </div>
-                            <div class="text-wrap vcenter">
-                                <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Create
-                                    <span>An Effective Team</span>
-                                </h2>
-                                <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+    <!-- Services section -->
+    <section id="what-we-do" class="bg-light text-muted">
+        <div class="container-fluid">
+            <h2 class="section-title mb-2 h1">What we do</h2>
+            <p class="text-center text-muted h5">Having and managing a correct marketing strategy is crucial in a fast moving market.</p>
+            <div class="row mt-5">
+                @foreach ($services as $service)
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                        <div class="card">
+                            <div class="card-block block-1">
+                                <h3 class="card-title">{{ $service->name }}</h3>
+                                <p class="card-text">
+                                    {!! str_limit($service->description, $limit = 75, $end = '...') !!}
+                                </p>
+                                <a href="{{ route('service.slug', $service->slug) }}" title="Read more" class="read-more" >
+                                    Read more<i class="fa fa-angle-double-right ml-2"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 mbr-col-md-10">
-                        <div class="wrap">
-                            <div class="ico-wrap">
-                                <span class="mbr-iconfont fa-globe fa"></span>
-                            </div>
-                            <div class="text-wrap vcenter">
-                                <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Launch
-                                    <span>A Unique Project</span>
-                                </h2>
-                                <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mbr-col-md-10">
-                        <div class="wrap">
-                            <div class="ico-wrap">
-                                <span class="mbr-iconfont fa-trophy fa"></span>
-                            </div>
-                            <div class="text-wrap vcenter">
-                                <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Achieve <span>Your Targets</span></h2>
-                                <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-                            </div>
-                        </div>
-                    </div>
-        
-                    
-        
-                    
-                </div>
-        
+                @endforeach
+            </div>
         </div>
-        
-        </section>
+    </section>
+    <!-- /Services section -->
 @endsection

@@ -73,4 +73,10 @@ class PagesController extends Controller
         ];
         return view('public.services.list-all')->with($data);
     }
+
+    public function service($slug) {
+        $service = Service::where('slug', $slug)->first();
+
+        return view('public.services.service')->with(compact('service'));
+    }
 }

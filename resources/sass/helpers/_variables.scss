@@ -17,23 +17,18 @@ $breakpoint-sm: 'only screen and (min-width:576px) and (max-width:767px)';
 $breakpoint-xs: 'only screen and (max-width:767px)';
 $breakpoint-xs-landscape: 'only screen and (min-width:480px) and (max-width:767px)';
 
-// Typography
-$font-family-sans-serif: "Nunito", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
-$font-color: #fff;
-$pop: 'Poppins', sans-serif;
-$play: 'Playfair Display', serif;
-
-// Colors
+// *************************************
+// COLOURS
+// *************************************
 $bg-gray: #857d7d;
+$gray: #c9c9c9;
 $black: #000000;
 $white: #ffffff;
 $blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66D9b;
-$red: #e3342f;
+$red: #b1aeae;
 $orange: #f6993f;
 $yellow: #ffed4a;
 $green: #2bc0a4;
@@ -46,6 +41,16 @@ $base-clr: $green;
 $baseColor: $green;
 $dip: #232d37;
 $bg-default: #c2c2c2;
+
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+$font-color: $gray;
+$pop: 'Poppins', sans-serif;
+$play: 'Playfair Display', serif;
+
 
 // Icons
 $fa-font-path: "../webfonts";

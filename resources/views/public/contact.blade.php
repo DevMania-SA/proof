@@ -106,7 +106,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-success mt-3">Send Message</button>
+                                    <button type="submit" class="btn btn-success mt-3" id="contact-submit">Send Message</button>
                                 </div>
                             </div>
                         </form>

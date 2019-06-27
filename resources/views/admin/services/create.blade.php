@@ -3,7 +3,7 @@
 @section('title', 'Add New Service')
 
 @section('content')
-    <div class="row">
+    <div class="row text-muted">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">

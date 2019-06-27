@@ -17,6 +17,7 @@ Route::get('/about', 'PagesController@about')->name('about');
 
 // Services
 Route::get('/services', 'PagesController@services')->name('services');
+Route::get('/service/{slug}', 'PagesController@service')->name('service.slug');
 
 // Music
 Route::get('/tracks', 'MusicController@index')->name('tracks');
@@ -111,7 +112,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
     // Artists Management
     Route::resource('artist', 'Admin\ArtistsController');
 
-    // Services 
+    // Services
     Route::resource('solutions', 'Admin\ServicesController');
 
     // Settings

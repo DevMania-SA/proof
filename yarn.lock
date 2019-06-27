@@ -3149,6 +3149,11 @@ font-awesome@^4.7.0:
   resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
   integrity sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=
 
+fontawesome-iconpicker@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/fontawesome-iconpicker/-/fontawesome-iconpicker-3.2.0.tgz#48b535ec1cc077f00b8d63b659eb03da7d72d972"
+  integrity sha512-faI7fhGmO61u1WnYpFoHZ1OiL1xQo8KfX3ranq50KkDz5Jh/klaVjf8vhedQIJquVV28GJ61e/MChRTpQ6POTw==
+
 fontkit@^1.0.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/fontkit/-/fontkit-1.8.0.tgz#deb9351619e90ddc91707b6156a9f14c8ab11554"

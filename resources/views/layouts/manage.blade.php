@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ asset('js/datatables/dataTables.bootstrap4.css') }}">
 </head>
 <body class="hold-transition sidebar-mini">
-    <div id="app">
+    <div id="app" class="text-muted">
         <!-- Site wrapper -->
         <div class="wrapper">
             @include('admin.includes.topbar')
