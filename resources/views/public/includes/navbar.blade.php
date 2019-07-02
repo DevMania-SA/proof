@@ -3,6 +3,7 @@
         <a href="{{ url('/') }}" class="navbar-brand">
             <img src="{{ asset('images/logo-main.png') }}" class="nav-logo" alt="{{ config('app.name') }}" style="height: 50px; width: 70px;" />
         </a>
+        
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -92,7 +93,7 @@
 
                             @guest
                                 <li class="account">
-                                    
+
                                     <a href="#">
                                         My Account
                                         <i class="fa fa-angle-down"></i>
@@ -115,7 +116,7 @@
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                             <img src="{{asset('images/avatar.png')}}" alt="..." class="img-fluid rounded-circle" style="height: 30px; width: 30px;"> {{ Auth::user()->name }} <span class="caret"></span>
                                     </a>
-            
+
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a href="{{ route('profile') }}" class="dropdown-item">Profile</a>
                                         <a href="#" class="dropdown-item">Notifications</a>
@@ -125,7 +126,7 @@
                                                             document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
-            
+
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf
                                         </form>

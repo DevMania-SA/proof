@@ -11,7 +11,13 @@
 .navbar-dark {
     background: rgba($color: $black, $alpha: 0.7) !important;
     min-height: 4rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
     border-bottom: 3px solid $primary-color;
+    z-index: 997;
 
     a:hover {
         color: rgb(180, 180, 180);
@@ -28,12 +34,23 @@
             margin-top: 5px;
             background: rgba($color: $black, $alpha: 0.7);
             .dropdown-item {
-                color: $white !important;
+                color: $gray !important;
+
+                &:hover {
+                    margin: 0px;
+                    background: rgba($color: $primary-color, $alpha: 0.9);
+                    color: $white !important;
+                }
             }
         }
     }
-} 
+}
 
+.header-scrolled {
+    background: rgba($color: $black, $alpha: 0.9);
+    padding: 20px 0;
+    transition: all 0.5s;
+}
 
 @media (min-width: 992px) {
     .animate {
@@ -43,7 +60,7 @@
       -webkit-animation-fill-mode: both;
     }
   }
-  
+
   @keyframes slideIn {
     0% {
       transform: translateY(1rem);
@@ -58,7 +75,7 @@
       opacity: 0;
     }
   }
-  
+
   @-webkit-keyframes slideIn {
     0% {
       -webkit-transform: transform;
@@ -73,7 +90,7 @@
       -webkit-opacity: 0;
     }
   }
-  
+
   .slideIn {
     -webkit-animation-name: slideIn;
     animation-name: slideIn;

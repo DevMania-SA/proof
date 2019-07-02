@@ -1,4 +1,4 @@
-<aside class="col-lg-4">
+<aside class="col-md-3">
     <!-- Widget [Search Bar Widget]-->
     <div class="widget search">
         <header>
@@ -6,8 +6,8 @@
         </header>
         <form action="#" class="search-form">
             <div class="form-group">
-                <input type="search" placeholder="What are you looking for?">
-                <button type="submit" class="submit"><i class="icon-search fa fa-search"></i></button>
+                <input type="search" class="form-control" placeholder="What are you looking for?">
+                <button type="submit" class="btn btn-sucess"><i class="icon-search fa fa-search"></i></button>
             </div>
         </form>
     </div>
@@ -48,8 +48,9 @@
         @foreach ($categories as $category)
             <div class="item d-flex justify-content-between">
                 <a href="{{ route('blog.category', $category->slug) }}">
-                    {{ $category->name }}
-                </a><span>{{ count($category->posts) }}</span>
+                    {{ ucfirst($category->name) }}
+                </a>
+                <span>{{ count($category->posts) }}</span>
             </div>
         @endforeach
     </div>
@@ -63,7 +64,7 @@
             @foreach ($tags as $tag)
                 <li class="list-inline-item">
                     <a href="{{ route('tag.post', $tag->slug) }}" class="tag">
-                        #{{ ucfirst($tag->name) }}
+                        <i class="fa fa-tag"></i>{{ ucfirst($tag->name) }}
                     </a>
                 </li>
             @endforeach
