@@ -36,7 +36,7 @@
                             <div class="col-md-6">
                                 <div class="blog">
 
-                                    <img src="{{ asset('images/blog/medium/'.$post->image) }}" class="img-fluid" alt="{{ $post->title }}">
+                                    <img src="{{ asset('storage/'.$post->image) }}" class="img-fluid" alt="{{ $post->title }}">
 
                                     <div class="contents">
                                         <h3>
@@ -93,7 +93,7 @@
 
 
                 @include('public.includes.blog-side')
-                
+
                 <!-- Latest Posts -->
                 {{-- <div class="posts-listing col-lg-8">
                     <div class="container">

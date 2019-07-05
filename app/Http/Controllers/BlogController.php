@@ -13,8 +13,8 @@ class BlogController extends Controller
     public function index()
     {
         $data = [
-            'posts' => Post::latest()->approved()->published()->paginate(5),
-            'latestPosts' => Post::latest()->approved()->published()->limit(3)->get(),
+            'posts' => Post::latest()->paginate(5),
+            'latestPosts' => Post::latest()->limit(3)->get(),
             'categories' => Category::with('posts')->get(),
             'tags' => Tag::all()
         ];
@@ -24,13 +24,13 @@ class BlogController extends Controller
     public function singlePost($slug)
     {
         $data = [
-            'post' => Post::where(['slug' => $slug])->approved()->published()->first(),
-            'latestPosts' => Post::latest()->approved()->published()->limit(3)->get(),
+            'post' => Post::where(['slug' => $slug])->first(),
+            'latestPosts' => Post::latest()->limit(3)->get(),
             'categories' => Category::with('posts')->get(),
             'tags' => Tag::all()
         ];
 
-        $postss = Post::where(['slug' => $slug])->approved()->published()->first();
+        $postss = Post::where(['slug' => $slug])->first();
 
         $blogKey = 'blog_' . $postss->id;
 
@@ -51,7 +51,7 @@ class BlogController extends Controller
 
         $data = [
             'category' => Category::where('slug', $slug)->with('posts')->first(),
-            'latestPosts' => Post::latest()->approved()->published()->limit(3)->get(),
+            'latestPosts' => Post::latest()->limit(3)->get(),
             'categories' => Category::with('posts')->get(),
             'tags' => Tag::all()
         ];
