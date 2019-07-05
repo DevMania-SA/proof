@@ -82,7 +82,8 @@ class PostsController extends Controller
             'slug' => $slug,
             'description' => $request->description,
             'body' => $request->body,
-            'image' => $image
+            'image' => $image,
+            'published_at' => $request->published_at
         ])->tags()->sync($request->tags, false);
 
         // $subscribers = Subscriber::all();
