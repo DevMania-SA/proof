@@ -19,8 +19,6 @@ try {
     require('datatables.net');
     require('icheck');
     require('select2');
-    // require('jplayer');
-    // require('plyr');
 } catch (e) {}
 
 /**

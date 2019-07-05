@@ -16,9 +16,7 @@ window.iCheck = require('icheck');
 import 'owl.carousel/dist/assets/owl.carousel.css';
 window.owlCarousel = require('owl.carousel');
 
-// import BootstrapVue from 'bootstrap-vue';
-
-// Vue.use(BootstrapVue);
+import flatpickr from "flatpickr";
 
 require('./custom');
 require('./contact');

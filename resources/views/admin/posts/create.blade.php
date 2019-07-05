@@ -61,7 +61,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="description">Description</label>
-                                            <textarea name="description" class="form-control" id="description" cols="5" rows="5"></textarea>
+                                            <textarea name="description" class="form-control" id="description" cols="5" rows="3"></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label for="Body">Body</label>
@@ -82,4 +82,18 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    {{-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> --}}
+    <script>
+        flatpickr("#published_at", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+        });
+    </script>
+@endsection
+
+@section('css')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 @endsection

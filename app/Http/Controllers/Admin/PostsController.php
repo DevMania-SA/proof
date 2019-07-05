@@ -131,8 +131,6 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //$data = $request->all();
-        //echo "<pre>"; print_r($data); die;
 
         $this->validate($request,[
             'title' => 'required',
@@ -149,77 +147,16 @@ class PostsController extends Controller
         $post->user_id = Auth::id();
         $post->title = $request->title;
         $post->slug = $slug;
-        if(isset($image)) {
-            if ($request->hasFile('image')) {
-                $image_tmp = Input::file('image');
-                if($image_tmp->isValid()) {
-                    // Make unique name for the image
-                    $currentDate = Carbon::now()->toDateString();
-                    $filename = $slug . '-' . $currentDate . '-' . uniqid() . '.' . $image_tmp->getClientOriginalExtension();
 
-                    $large_image_path = 'images/blog/large/' . $filename;
-                    $medium_image_path = 'images/blog/medium/' . $filename;
-                    $small_image_path = 'images/blog/small/' . $filename;
-                    $original_image_path = 'images/blog/' . $filename;
-
-                    // Resize Images
-                    Image::make($image_tmp)->resize(1024, 767)->save($large_image_path);
-                    Image::make($image_tmp)->resize(512, 383)->save($medium_image_path);
-                    Image::make($image_tmp)->resize(256, 141)->save($small_image_path);
-                    Image::make($image_tmp)->save($original_image_path);
-
-                    //Storeimage name in posts table
-                    $post->image = $filename;
-                }
-            } else {
-                $post->image = "default.png";
-            }
-        }
         $post->body = $request->body;
-        if(isset($request->status))
-        {
-            $post->status = true;
-        }else {
-            $post->status = false;
-        }
-        $post->is_approved = true;
 
-        $post->save();
+
+        $post->update();
 
         $post->categories()->sync($request->categories);
         $post->tags()->sync($request->tags);
 
-        //Toastr::success('Post Successfully Updated :)','Success');
-        return redirect()->route('posts.index');
-    }
-
-    public function pending()
-    {
-        $posts = Post::where('is_approved', false)->get();
-        return view('admin.post.pending', compact('posts'));
-    }
-
-    public function approval($id)
-    {
-        $post = Post::find($id);
-        if ($post->is_approved == false)
-        {
-            $post->is_approved = true;
-            $post->save();
-            $post->user->notify(new AuthorPostApproved($post));
-
-            $subscribers = Subscriber::all();
-            foreach ($subscribers as $subscriber)
-            {
-                Notification::route('mail',$subscriber->email)
-                    ->notify(new NewPostNotify($post));
-            }
-
-            // Toastr::success('Post Successfully Approved :)','Success');
-        } else {
-            Toastr::info('This Post is already approved','Info');
-        }
-        return redirect()->back();
+        return redirect()->route('posts.index')->with('success', 'Post have successfully been uypdated');
     }
 
     /**
@@ -233,6 +170,7 @@ class PostsController extends Controller
         $post = Post::withTrashed()->where('id', $id)->firstOrFail();
 
         if ($post->trashed()) {
+            Storage::delete($post->image);
             $post->forceDelete();
             return redirect()->back()->with('success', 'Post Successfully Deleted Permanently');
         } else {
