@@ -15,6 +15,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    @yield('css')
     <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('js/datatables/dataTables.bootstrap4.css') }}">
 </head>
@@ -73,7 +74,7 @@
     <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
     <script>
     		tinymce.init({
-      			selector: 'textarea',
+      			selector: '#body',
       			theme: "modern",
                   height: 300,
                   plugins: [
@@ -87,8 +88,6 @@
                   image_advtab: true
     		});
     </script>
-
-    {!! Toastr::message() !!}
 
     @yield('scripts')
 </body>

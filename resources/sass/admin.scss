@@ -5,16 +5,16 @@
 @import '~bootstrap/scss/bootstrap';
 
 @import '~admin-lte/dist/css/adminlte.css';
+
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';
 @import '~@fortawesome/fontawesome-free/scss/brands.scss';
+
 @import '~select2/src/scss/core.scss';
 
 @import './base/base';
-// @import 'icheck';
-// @import "buttons";
-// @import "tables";
-// @import "pagination";
+@import './templates/login';
+@import './modules/tables';
 
 
 .navbar-laravel {

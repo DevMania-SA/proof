@@ -83,6 +83,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
     Route::group(['prefix' => 'manage-posts'], function () {
         Route::get('/', 'Admin\PostsController@redirect');
         Route::resource('posts', 'Admin\PostsController');
+        Route::get('trashed-posts', 'Admin\PostsController@trashed')->name('trashed-posts.index');
         Route::get('/pending/post', 'Admin\PostsController@pending')->name('post.pending');
         Route::get('/post/{id}/approve', 'Admin\PostsController@approval')->name('post.approve');
     });

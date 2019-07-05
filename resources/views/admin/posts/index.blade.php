@@ -22,10 +22,12 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>Image</th>
                                             <th>Title</th>
                                             <th>Body</th>
                                             <th>Created On</th>
                                             <th>Modify</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
 
@@ -33,26 +35,29 @@
                                         @foreach ($posts as $post)
                                         <tr>
                                             <td>{{ $post->id }}</td>
+                                            <td>
+                                                <img src="{{ asset('storage/'.$post->image) }}" width="100px" height="60px" class="img-fluid" alt="{{ $post->title }}">
+                                            </td>
                                             <td>{{ $post->title }}</td>
                                             <td>{!! str_limit($post->body, $limit = 27, $end = '...') !!}</td>
                                             <td>{{ $post->created_at->toFormattedDateString() }}</td>
+
+                                            @if (!$post->trashed())
+                                                <td>
+                                                    <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-info">
+                                                        Edit
+                                                    </a>
+                                                </td>
+                                            @endif
                                             <td>
-                                                <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-success">
-                                                    <i class="fas fa-edit"></i>
-                                                </a>
-
-                                                <form action="{{ route('posts.destroy', $post->id) }}" method="POST" id="delete-post-{{ $post->id }}" style="display: none;">
+                                                <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
                                                     @csrf
+                                                    @method('DELETE')
 
-                                                    {{ method_field('DELETE') }}
+                                                    <button type="submit" class="btn btn-danger btn-sm">
+                                                        {{ $post->trashed() ? 'Delete' : 'Trash' }}
+                                                    </button>
                                                 </form>
-                                                <a href="" onclick="
-                                                    if(confirm('Are you sure you want to delete this post?')){
-                                                        event.preventDefault();
-                                                        document.getElementById('#delete-post-{{ $post->id }}').submit();
-                                                    } else { event.preventDefault(); }" class="btn btn-sm btn-danger">
-                                                    <i class="fas fa-trash"></i>
-                                                </a>
                                             </td>
                                         </tr>
                                         @endforeach
@@ -70,3 +75,4 @@
         </div>
     </div>
 @endsection
+

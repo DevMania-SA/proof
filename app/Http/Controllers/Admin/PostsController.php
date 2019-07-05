@@ -4,18 +4,18 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Model\Post;
-use App\Model\Category;
-use App\Notifications\AuthorPostApproved;
-use App\Notifications\NewPostNotify;
-use App\Model\Subscriber;
-use App\Model\Tag;
-use Brian2694\Toastr\Facades\Toastr;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\Admin\Post\CreatePostRequest;
+use App\Model\Post;
+use App\Model\Category;
+use App\Model\Tag;
+use Carbon\Carbon;
+use App\Notifications\AuthorPostApproved;
+use App\Notifications\NewPostNotify;
+use App\Model\Subscriber;
 use Image;
 
 class PostsController extends Controller
@@ -66,71 +66,29 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreatePostRequest $request)
     {
-        $this->validate($request, [
-            'title'       => 'required|string|max:255',
-            'image'       => 'required|mimes:jpeg,jpg,png',
-            'category_id' => 'required|integer',
-            'tags'        => 'required',
-            'body'        => 'required'
-        ]);
-
-        //$data = $request->all();
-        //echo "<pre>"; print_r($data); die;
+        // dd(Auth::user()->id);
+        // Upload the image to storage
+        $image = $request->image->store('posts');
 
         $slug = str_slug($request->title);
 
-        $post = new Post();
-        $post->user_id = Auth::id();
-        $post->category_id = $request->category_id;
-        $post->title = $request->title;
-        $post->slug = $slug;
-
-        if ($request->hasFile('image')) {
-            $image_tmp = Input::file('image');
-            if($image_tmp->isValid()) {
-                // Make unique name for the image
-                $currentDate = Carbon::now()->toDateString();
-                $filename = $slug . '-' . $currentDate . '-' . uniqid() . '.' . $image_tmp->getClientOriginalExtension();
-
-                $large_image_path = 'images/blog/large/' . $filename;
-                $medium_image_path = 'images/blog/medium/' . $filename;
-                $small_image_path = 'images/blog/small/' . $filename;
-                $original_image_path = 'images/blog/' . $filename;
-
-                // Resize Images
-                Image::make($image_tmp)->resize(1280, 852)->save($large_image_path);
-                Image::make($image_tmp)->resize(640, 426)->save($medium_image_path);
-                Image::make($image_tmp)->resize(320, 213)->save($small_image_path);
-                Image::make($image_tmp)->save($original_image_path);
-
-                //Storeimage name in posts table
-                $post->image = $filename;
-            }
-        } else {
-            $post->image = "default.png";
-        }
-
-        $post->body = $request->body;
-        if (isset($request->status)) {
-            $post->status = true;
-        } else {
-            $post->status = null;
-        }
-
-        $post->is_approved = true;
-
-        $post->save();
-
-        $post->tags()->sync($request->tags, false);
+        // Create the post
+        Post::create([
+            'user_id' => Auth::user()->id,
+            'category_id' => $request->category_id,
+            'title' => $request->title,
+            'slug' => $slug,
+            'description' => $request->description,
+            'body' => $request->body,
+            'image' => $image
+        ])->tags()->sync($request->tags, false);
 
         // $subscribers = Subscriber::all();
         // foreach ($subscribers as $subscriber) {
         //     Notification::route('mail', $subscriber->email)->notify(new NewPostNotify($post));
         // }
-
-        //Toastr::success('Post Successfully Saved :)', 'Success');
 
         return redirect()->route('posts.index')->with('success','Post have successfully been created');
     }
@@ -257,7 +215,7 @@ class PostsController extends Controller
                     ->notify(new NewPostNotify($post));
             }
 
-            Toastr::success('Post Successfully Approved :)','Success');
+            // Toastr::success('Post Successfully Approved :)','Success');
         } else {
             Toastr::info('This Post is already approved','Info');
         }
@@ -272,23 +230,26 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        $post = Post::where('id', $id)->first();
+        $post = Post::withTrashed()->where('id', $id)->firstOrFail();
 
-        $large_image_path = 'images/blog/large/'.$post->image;
-        $medium_image_path = 'images/blog/medium/'.$post->image;
-        $small_image_path = 'images/blog/small/'.$post->image;
-        $original_image_path = 'images/blog/'.$post->image;
+        if ($post->trashed()) {
+            $post->forceDelete();
+            return redirect()->back()->with('success', 'Post Successfully Deleted Permanently');
+        } else {
+            $post->delete();
+            return redirect()->back()->with('success', 'Post Successfully Trashed');
+        }
+    }
 
-        if (file_exists($large_image_path)) {}
+    /**
+     * Display the list of all trashed posts
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function trashed()
+    {
+        $trashed = Post::withTrashed()->get();
 
-        if (file_exists($medium_image_path)) {}
-
-        if (file_exists($small_image_path)) {}
-
-        if (file_exists($original_image_path)) {}
-
-        $post->delete();
-        // Toastr::success('Post Successfully Deleted :)','Success');
-        return redirect()->back()->with('success', 'Post Successfully Deleted');
+        return view('admin.posts.index')->withPosts($trashed);
     }
 }

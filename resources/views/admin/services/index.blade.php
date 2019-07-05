@@ -36,9 +36,22 @@
                                     <td><a title="{{ route('solutions.show', $service->id) }}"><i class="slug">{{ $service->slug }}</i></a></td>
                                     <td>{{ $service->created_at->diffForHumans() }}</td>
                                     <td class="center">
-                                        Edit
-                                        |
-                                        Delete
+                                        <a href="{{ route('solutions.edit', $service->id) }}" class="btn btn-primary btn-sm">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+
+                                        <form action="{{ route('solutions.destroy', $service->id) }}" method="POST" id="delete-service-{{ $service->id }}" style="display: none;">
+                                            @csrf
+
+                                            {{ method_field('DELETE') }}
+                                        </form>
+                                        <a href="" onclick="
+                                            if(confirm('Are you sure you want to delete this post?')){
+                                                event.preventDefault();
+                                                document.getElementById('#delete-service-{{ $service->id }}').submit();
+                                            } else { event.preventDefault(); }" class="btn btn-sm btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             @endforeach

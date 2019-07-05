@@ -34,22 +34,22 @@
                     </a>
                 </li>
 
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-newspaper"></i>
-                        <p>
-                            Blog Posts
-                            <i class="right fa fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('posts.index') }}" class="nav-link">
-                                <i class="nav-icon fas fa-book-open"></i>
-                                <p>View Posts</p>
-                            </a>
-                        </li>
-                    </ul>
+                <li class="nav-item">
+                    <li class="nav-item">
+                        <a href="{{ route('posts.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-book-open"></i>
+                            <p>Posts</p>
+                        </a>
+                    </li>
+                </li>
+
+                <li class="nav-item">
+                    <li class="nav-item">
+                        <a href="{{ route('trashed-posts.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-book-open"></i>
+                            <p>Trashed Posts</p>
+                        </a>
+                    </li>
                 </li>
 
                 <li class="nav-item">
@@ -86,9 +86,9 @@
 
                 @role('superadministrator')
                     <li class="nav-header">Administration</li>
-                    
 
-                    
+
+
                     <li class="nav-item">
                         <a href="{{ route('users.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-users"></i>
@@ -132,7 +132,7 @@
                         </a>
                     </li>
                 @endrole
-                
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

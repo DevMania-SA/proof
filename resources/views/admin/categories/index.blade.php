@@ -4,15 +4,15 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Categories</h3>
-                    <div class="card-tools">
+                    {{-- <div class="card-tools">
                         <a href="{{ route('category.create') }}" class="btn btn-outline-success">
                             <i class="fa fa-plus"></i> Add New
                         </a>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="card-body">
                     <table id="datatable" class="table table-hover">
@@ -33,23 +33,13 @@
                                         <i>{{ url('/blog/category/'. $category->slug) }}</i>
                                     </td>
                                     <td>
-                                        <a href="{{ route('category.edit', $category->id) }}" class="btn btn-sm btn-primary">
+                                        <a href="{{ route('category.edit', $category->id) }}" class="btn btn-sm btn-info">
                                             <i class="fa fa-pen"></i>
                                         </a>
 
-                                        <form id="delete-form-{{ $category->id }}" method="post" action="{{ route('category.destroy', $category->id) }}" style="display: none;">
-                                            @csrf
-                                            {{ method_field('DELETE') }}
-                                        </form>
-                                        <a href="" onclick="
-                                            if (confirm('Are you sure? You want to delete this?')) {
-                                                event.preventDefault();
-                                                document.getElementById('delete-form-{{ $category->id }}').submit();
-                                            } else {
-                                                event.preventDefault();
-                                            }" class="btn btn-sm btn-danger">
-                                            <i class="fa fa-trash"></i>
-                                        </a>
+                                        <button type="button" onclick="handleDelete({{ $category->id }})" class="btn btn-danger btn-sm" {{--data-toggle="modal" data-target="#deleteModal"--}}>
+                                            <div class="fa fa-trash"></div>
+                                        </button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -58,5 +48,37 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Create Category</h3>
+                </div>
+                <div class="card-body">
+                    {!! Form::open(['method' => 'POST', 'route' => ['category.store'], 'files' => true,]) !!}
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="form-control" id="name">
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Add Category</button>
+                    {!! Form::close() !!}
+                </div>
+            </div>
+        </div>
+
+        @include('admin.includes.modals.delete-category')
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        function handleDelete(id) {
+            var form = document.getElementById('deleteCategoryForm');
+
+            form.action = '/manage/category/' + id
+
+            $('#deleteModal').modal('show');
+        }
+    </script>
 @endsection

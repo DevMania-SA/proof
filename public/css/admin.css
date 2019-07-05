@@ -31125,20 +31125,29 @@ readers do not read off random characters that represent icons */
     GENERAL STYLES
 ***********************************************************/
 
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+[class*=fontawesome-]:before {
+  font-family: "FontAwesome", sans-serif;
+}
+
+body {
+  background: #333;
+  color: #acacacc4;
+  font-type: "Poppins", sans-serif;
+}
+
 ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  text-decoration: none;
-  outline: none;
 }
 
 .row .m0 {
@@ -31147,12 +31156,6 @@ a:focus {
 
 .p0 {
   padding: 0px;
-}
-
-body {
-  line-height: 26px;
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
 }
 
 body,
@@ -31167,11 +31170,6 @@ h6 {
   padding: 0px;
 }
 
-body {
-  background: #333;
-  color: #acacacc4;
-}
-
 iframe {
   border: none;
 }
@@ -31180,29 +31178,23 @@ i:before {
   margin-left: 0px !important;
 }
 
-* {
-  box-sizing: border-box;
+button {
+  cursor: pointer;
 }
 
 a {
   transition: all 0.3s !important;
   display: inline-block;
+  text-decoration: none;
 }
 
-button {
-  cursor: pointer;
-}
-
-div {
-  box-sizing: border-box;
-}
-
-a,
 a:hover,
+a:focus,
 a:visited,
 a:active,
 a:link {
   text-decoration: none;
+  outline: none;
   -webkit-font-smoothing: antialiased;
   -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
@@ -31218,6 +31210,16 @@ a:link {
   color: #FF6347;
 }
 
+.btn-danger {
+  background: #FF6347;
+  transition: all 0.3s !important;
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+  background: #eb2300;
+}
+
 .float_left {
   float: left;
 }
@@ -31228,6 +31230,52 @@ a:link {
 
 .rounded-circle {
   box-shadow: 0px 4px 13px -4px #4a5a78;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.login-box .login-logo {
+  max-height: 100px;
+}
+
+.login-box .login-logo .sign-logo {
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.login-box .card {
+  padding: 20px !important;
+}
+
+.login-box .card .card-body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.login-box .card .card-body form .checkbox label {
+  display: inline-block;
+  vertical-align: center;
+  padding-bottom: 10px;
+}
+
+.login-box .card .card-body form .checkbox label input {
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  background: #008ed6;
 }
 
 .navbar-laravel {

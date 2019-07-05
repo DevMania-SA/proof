@@ -1,10 +1,11 @@
 @if (count($errors) > 0)
-    @foreach ($errors->all() as $error)
-        <div class="alert alert-danger alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <p><i class="icon fa fa-check"></i> {{ $error }}</p>
-        </div>
-    @endforeach
+    <ul class="list-group">
+        @foreach ($errors->all() as $error)
+            <li class="list-group-item text-danger">
+                <i class="icon fa fa-check"></i> {{ $error }}
+            </li>
+        @endforeach
+    </ul>
 @endif
 
 @if (session('success'))
@@ -15,10 +16,11 @@
 @endif
 
 @if (session('error'))
-    <div class="alert alert-danger alert-dismissible">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <p><i class="icon fa fa-check"></i> {{ session('error') }}</p>
-    </div>
+    <ul class="list-group">
+        <li class="list-group-item text-danger">
+            <i class="icon fa fa-check"></i> {{ session('error') }}
+        </li>
+    </ul>
 @endif
 
 @if (Session::has('flash_message'))

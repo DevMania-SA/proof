@@ -23,6 +23,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 <body>
     <div id="app">
@@ -33,7 +34,7 @@
                 <img src="img/core-img/leaf.png" alt="">
             </div>
         </div>
-        
+
         <!-- Google Tag Manager (noscript) -->
         <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8945NV" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -54,6 +55,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    {!! Toastr::message() !!}
+    @yield('scripts')
 </body>
 </html>

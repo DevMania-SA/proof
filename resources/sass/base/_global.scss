@@ -1,18 +1,32 @@
+@charset "utf-8";
+
 /***********************************************************
     GENERAL STYLES
 ***********************************************************/
+* {
+    box-sizing: border-box;
+//     margin:0px auto;
+
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+body {
+    background: $bg-color;
+    color: $font-color;
+    font-type: $pop;
+}
+
 ul {
     list-style: none;
     margin: 0px;
     padding: 0px;
-}
-
-a {
-    text-decoration:none;
-    &:hover, &:focus {
-       text-decoration:none;
-       outline: none;
-    }
 }
 
 .row .m0 {
@@ -23,28 +37,19 @@ a {
     padding: 0px;
 }
 
-body {
-    line-height: 26px;
-    font-size: 14px;
-    font-family: $pop;
-}
 
-body, 
-p, 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
     margin: 0px;
     padding: 0px;
 }
 
-body {
-    background: $bg-color;
-    color: $font-color;
-}
 
 iframe {
     border: none;
@@ -56,40 +61,38 @@ i {
     }
 }
 
-* {
-    box-sizing: border-box;
+button {
+    cursor: pointer;
 }
+
 
 a {
     -webkit-transition: all 0.3s !important;
     transition: all 0.3s !important;
     display: inline-block;
-}
-
-button {
-    cursor: pointer;
-}
-
-div {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-a, 
-a:hover, 
-a:visited, 
-a:active, 
-a:link {
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
-    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    text-decoration:none;
+    &:hover, &:focus, &:visited, &:active, &:link {
+        text-decoration:none;
+        outline: none;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+        text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    }
 }
 
 ::selection {
     background: #fde0db;
     color: #FF6347;
+}
+
+.btn-danger {
+    background: #FF6347;
+    -webkit-transition: all 0.3s !important;
+    transition: all 0.3s !important;
+    
+    &:hover, &:focus {
+        background: rgb(235, 35, 0);
+    }
 }
 
 .float_left {
@@ -104,4 +107,18 @@ a:link {
     -webkit-box-shadow: 0px 4px 13px -4px rgba(74,90,120,1);
     -moz-box-shadow: 0px 4px 13px -4px rgba(74,90,120,1);
     box-shadow: 0px 4px 13px -4px rgba(74,90,120,1);
+}
+
+.clearfix {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+      content: ' ';
+      display: table;
+    }
+
+    &:after {
+      clear: both;
+    }
 }

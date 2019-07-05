@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Model\Category;
-use Brian2694\Toastr\Toastr;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+use App\Http\Requests\Admin\CreateCategoryRequest;
+use App\Model\Category;
 use Image;
 
 class CategoryController extends Controller
@@ -40,14 +40,9 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateCategoryRequest $request)
     {
-        $this->validate($request, [
-           'name' => 'required|unique:categories',
-        ]);
 
-        // Get form image
-        //$image = $request->file('image');
         $slug = str_slug($request->name);
 
         $category = new Category();
@@ -78,7 +73,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::find($id);
+        $category = Category::where('id', $id)->first();
         return view('admin.categories.edit', compact('category'));
     }
 
@@ -103,7 +98,6 @@ class CategoryController extends Controller
         $category->slug = $slug;
 
         $category->save();
-        // Toastr::success('Category Successfully Updated :)' ,'Success');
         return redirect()->route('category.index')->with('success', 'Category Successfully Updated');
 
     }
@@ -114,11 +108,9 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Category $category)
     {
-        $category = Category::find($id);
         $category->delete();
-        // Toastr::success('Category Successfully Deleted :)','Success');
         return redirect()->back()->with('success', 'Category successfully deleted');
     }
 }

@@ -3,45 +3,6 @@
 @section('title', 'Login')
 
 @section('content')
-{{-- <div class="main">
-    
-    
-    <div class="container">
-<center>
-<div class="middle">
-      <div id="login">
-
-        <form action="javascript:void(0);" method="get">
-
-          <fieldset class="clearfix">
-
-            <p ><span class="fa fa-user"></span><input type="text"  Placeholder="Username" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-            <p><span class="fa fa-lock"></span><input type="password"  Placeholder="Password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-            
-             <div>
-                                <span style="width:48%; text-align:left;  display: inline-block;"><a class="small-text" href="#">Forgot
-                                password?</a></span>
-                                <span style="width:50%; text-align:right;  display: inline-block;"><input type="submit" value="Sign In"></span>
-                            </div>
-
-          </fieldset>
-<div class="clearfix"></div>
-        </form>
-
-        <div class="clearfix"></div>
-
-      </div> <!-- end login -->
-      <div class="logo">LOGO
-          
-          <div class="clearfix"></div>
-      </div>
-      
-      </div>
-</center>
-    </div>
-
-</div> --}}
-
     <div class="{{ url()->current() == url('/login') ? 'login' : 'register' }}-box">
         <div class="login-logo">
             <a href="{{ url('/') }}">
@@ -79,7 +40,7 @@
                         @endif
                     </div>
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-md-8">
                             <div class="checkbox icheck">
                                 <label>
                                     <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
@@ -94,7 +55,7 @@
                     </div>
                 </form>
 
-                <div class="social-auth-links text-center mb-3">
+                {{-- <div class="social-auth-links text-center mb-3">
                     <p>- OR -</p>
                     <a href="{{url('/login/facebook')}}" class="btn btn-block btn-primary">
                         <i class="fas fa-facebook mr-2"></i> Sign in using Facebook
@@ -102,7 +63,7 @@
                     <a href="#" class="btn btn-block btn-danger">
                         <i class="fas fa-google-plus-g mr-2"></i> Sign in using Google+
                     </a>
-                </div>
+                </div> --}}
                 <!-- /.social-auth-links -->
 
                 <p class="mb-1">
