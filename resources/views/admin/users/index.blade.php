@@ -22,28 +22,35 @@
                     <thead>
                         <tr>
                             <th>#</th>
+                            <th>Avatar</th>
                             <th>Name</th>
-                            <th>Email</th>
                             <th>Role</th>
-                            <th>Registered At</th>
-                            <th>Modify</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($users as $user)
                             <tr>
                                 <td>{{ $user->id }}</td>
+                                <td>
+                                    @if (!Auth::user()->avatar == null)
+                                        <img src="{{ Auth::user()->getMedia('avatars')->first()->getUrl('thumb') }}" alt="..." class="img-fluid" style="height: 30px; width: 30px;">
+                                    @else
+                                        <img src="{{ asset('images/avatar.png') }}" alt="..." class="img-fluid" style="height: 30px; width: 30px;">
+                                    @endif
+                                </td>
                                 <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
                                 <td>{{ $user->role }}</td>
-                                <td>{{ $user->created_at->diffForHumans() }}</td>
-                                <td> 
+                                <td></td>
+                                <td>
                                     <a href="{{ route('users.edit', $user->id) }}" class="btn btn-sm btn-primary">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                      
 
-                                    @can('user_delete')
+
+
                                         {{--<form id="delete-form-{{ $user->id }}" method="post" action="{{ route('users.destroy',$user->id) }}" style="display: none">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
@@ -51,14 +58,16 @@
                                         <a href="" id="deleteUser" class="btn btn-sm btn-danger">
                                             <i class="fa fa-trash"></i>
                                         </a>--}}
-                                        {!! Form::open(array(
-                                            'style' => 'display: inline-block;',
-                                            'method' => 'DELETE',
-                                            'onsubmit' => "return confirm('Are you sure?');",
-                                            'route' => ['users.destroy', $user->id])) !!}
-                                        {!! Form::submit('Delete', array('class' => 'btn btn-sm btn-danger')) !!}
-                                        {!! Form::close() !!}
-                                    @endcan
+
+                                </td>
+                                <td>
+                                    {!! Form::open(array(
+                                        'style' => 'display: inline-block;',
+                                        'method' => 'DELETE',
+                                        'onsubmit' => "return confirm('Are you sure?');",
+                                        'route' => ['users.destroy', $user->id])) !!}
+                                    {!! Form::submit('Delete', array('class' => 'btn btn-sm btn-danger')) !!}
+                                    {!! Form::close() !!}
                                 </td>
                             </tr>
                         @endforeach

@@ -11,7 +11,11 @@
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-              <img src="{{asset('images/avatar.png')}}" class="img-circle elevation-2" alt="User Image">
+                @if (!Auth::user()->avatar == null)
+                    <img src="{{ Auth::user()->getMedia('avatars')->first()->getUrl('thumb') }}" alt="..." class="img-fluid rounded-circle elevation-2" style="height: 30px; width: 30px;">
+                @else
+                    <img src="{{ asset('images/avatar.png') }}" alt="..." class="img-fluid rounded-circle elevation-2" style="height: 30px; width: 30px;">
+                @endif
             </div>
             <div class="info">
               <a href="#" class="d-block">{!! Auth::user()->name !!}</a>

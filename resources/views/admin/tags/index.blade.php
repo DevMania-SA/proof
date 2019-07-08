@@ -15,7 +15,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
-                                <th>URL</th>
+                                <th>Posts Count</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -25,7 +25,7 @@
                                     <td>{{ $tag->id }}</td>
                                     <td>{{ ucfirst($tag->name) }}</td>
                                     <td>
-                                        <i>{{ url('/blog/tag/'.$tag->slug) }}</i>
+                                        <i>{{ $tag->posts->count() }}</i>
                                     </td>
                                     <td>
                                         <a href="" class="btn btn-sm btn-primary">
@@ -60,12 +60,12 @@
                 </div>
                 <div class="card-body">
                     {!! Form::open(['method' => 'POST', 'route' => ['tags.store'], 'files' => true,]) !!}
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" class="form-control">
-                    </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="form-control">
+                        </div>
 
-                    <button type="submit" class="btn btn-success">Save</button>
+                        <button type="submit" class="btn btn-success">Save</button>
                     {!! Form::close() !!}
                 </div>
             </div>

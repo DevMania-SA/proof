@@ -104,6 +104,12 @@ class TagController extends Controller
     public function destroy($id)
     {
         $tag = Tag::find($id);
+
+        if ($tag->posts->count() > 0) {
+            session()->flash('error', 'Tag cannot be deleted because it is associated with some posts.');
+            return redirect()->back();
+        }
+
         $tag->delete();
 
         return redirect()->route('tags.index')->with('success', 'Tag was deleted successfully');

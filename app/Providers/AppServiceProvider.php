@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 
+use App\Model\Post;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**

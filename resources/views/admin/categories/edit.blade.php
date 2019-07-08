@@ -19,7 +19,7 @@
                                     <input type="text" name="name" class="form-control" value="{{ $category->name }}">
                                 </div>
 
-                                <button type="submit" class="btn btn-success">Save</button>
+                                <button type="submit" class="btn btn-success">Update Category</button>
                             {!! Form::close() !!}
                         </div>
                     </div>

@@ -32,10 +32,12 @@
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <div class="form-line {{ $errors->has('categories') ? 'focused error' : '' }}">
-                                                <label for="category_id">Select Category</label>
-                                                <select name="category_id" id="category_id" class="form-control show-tick select2" data-live-search="true" data-placeholder="Select a Category">
+                                                <label for="category">Select Category</label>
+                                                <select name="category" id="category" class="form-control show-tick select2" data-live-search="true" data-placeholder="Select a Category">
                                                     @foreach ($categories as $category)
-                                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                        <option value="{{ $category->id }}">
+                                                            {{ $category->name }}
+                                                        </option>
                                                     @endforeach
                                                 </select>
                                             </div>

@@ -8,10 +8,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Laratrust\Traits\LaratrustUserTrait;
+use Spatie\MediaLibrary\Models\Media;
 
 class User extends Authenticatable implements HasMedia
 {
-    use Notifiable, HasMediaTrait, LaratrustUserTrait;
+    use Notifiable;
+    use HasMediaTrait;
+    use LaratrustUserTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -64,8 +67,11 @@ class User extends Authenticatable implements HasMedia
         return $this->hasMany('App\Comment');
     }
 
-    public function scopeAuthors($query)
+
+    public function registerMediaConversions(Media $media = null)
     {
-        
+        $this->addMediaConversion('thumb')
+             ->width(30)
+             ->height(30);
     }
 }

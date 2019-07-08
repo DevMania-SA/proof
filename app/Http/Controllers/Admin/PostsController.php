@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\Admin\Post\CreatePostRequest;
+use App\Http\Requests\Admin\Post\UpdatePostRequest;
 use App\Model\Post;
 use App\Model\Category;
 use App\Model\Tag;
@@ -27,7 +28,7 @@ class PostsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('verifyCategoriesCount')->only(['create', 'store']);
     }
 
     public function redirect()
@@ -75,16 +76,20 @@ class PostsController extends Controller
         $slug = str_slug($request->title);
 
         // Create the post
-        Post::create([
+        $post = Post::create([
             'user_id' => Auth::user()->id,
-            'category_id' => $request->category_id,
+            'category_id' => $request->category,
             'title' => $request->title,
             'slug' => $slug,
             'description' => $request->description,
             'body' => $request->body,
             'image' => $image,
             'published_at' => $request->published_at
-        ])->tags()->sync($request->tags, false);
+        ]);
+
+        if ($request->tags) {
+            $post->tags()->attach($request->tags);
+        }
 
         // $subscribers = Subscriber::all();
         // foreach ($subscribers as $subscriber) {
@@ -113,7 +118,7 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::with('tags', 'categories')->where('id', $id)->first();
+        $post = Post::with('tags', 'category')->where('id', $id)->first();
 
         //echo "<pre>"; print_r($post); die;
 
@@ -130,34 +135,31 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdatePostRequest $request, $id)
     {
-
-        $this->validate($request,[
-            'title' => 'required',
-            'image' => 'image',
-            'categories' => 'required',
-            'tags' => 'required',
-            'body' => 'required',
-        ]);
-        $image = $request->file('image');
-        $slug = str_slug($request->title);
-
         $post = Post::where('id', $id)->first();
 
-        $post->user_id = Auth::id();
-        $post->title = $request->title;
-        $post->slug = $slug;
+        $data = $request->only(['title','description', 'published_at', 'body']);
 
-        $post->body = $request->body;
+        // Check if new image
+        if ($request->hasFile('image')) {
+            // Update it
+            $image = $request->image->store('posts');
 
+            // Delete old one
+            $post->deleteImage();
 
-        $post->update();
+            $data['image'] = $image;
+        }
 
-        $post->categories()->sync($request->categories);
+        $slug = str_slug($post->title);
+        // Update attributes
+        $post->update([$data]);
+
+        // $post->category()->sync($request->categories);
         $post->tags()->sync($request->tags);
 
-        return redirect()->route('posts.index')->with('success', 'Post have successfully been uypdated');
+        return redirect()->route('posts.index')->with('success', 'Post have successfully been updated');
     }
 
     /**
@@ -171,7 +173,7 @@ class PostsController extends Controller
         $post = Post::withTrashed()->where('id', $id)->firstOrFail();
 
         if ($post->trashed()) {
-            Storage::delete($post->image);
+            $post->deleteImage();
             $post->forceDelete();
             return redirect()->back()->with('success', 'Post Successfully Deleted Permanently');
         } else {
@@ -187,8 +189,23 @@ class PostsController extends Controller
      */
     public function trashed()
     {
-        $trashed = Post::withTrashed()->get();
+        $trashed = Post::onlyTrashed()->get();
 
         return view('admin.posts.index')->withPosts($trashed);
+    }
+
+    /**
+     * Restore trashed post
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function restore($id)
+    {
+        $post = Post::withTrashed()->where('id', $id)->firstOrFail();
+
+        $post->restore();
+
+        return redirect()->back()->with('success', 'Post have been successfully restored');
     }
 }

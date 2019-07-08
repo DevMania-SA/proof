@@ -24,7 +24,12 @@
         <!-- Messages Dropdown Menu -->
         <li class="nav-item dropdown">
             <a id="profile" class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="{{asset('images/avatar.png')}}" alt="..." class="img-fluid rounded-circle" style="height: 30px; width: 30px;"> {!! Auth::user()->name !!}
+                @if (!Auth::user()->avatar == null)
+                    <img src="{{ Auth::user()->getMedia('avatars')->first()->getUrl('thumb') }}" alt="..." class="img-fluid rounded-circle" style="height: 30px; width: 30px;">
+                @else
+                    <img src="{{ asset('images/avatar.png') }}" alt="..." class="img-fluid rounded-circle" style="height: 30px; width: 30px; margin-right:5px;">
+                @endif
+                {!! Auth::user()->name !!}
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <a href="{{ route('profile') }}" class="dropdown-item">

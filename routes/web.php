@@ -80,12 +80,13 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
     Route::post('/spatie/media/remove', 'Admin\SpatieMediaController@destroy')->name('media.remove');
 
     // Posts Management
-    Route::group(['prefix' => 'manage-posts'], function () {
+    Route::prefix('manage-posts')->middleware('role:superadministrator|administrator|editor|author')->group(function () {
         Route::get('/', 'Admin\PostsController@redirect');
         Route::resource('posts', 'Admin\PostsController');
         Route::get('trashed-posts', 'Admin\PostsController@trashed')->name('trashed-posts.index');
         Route::get('/pending/post', 'Admin\PostsController@pending')->name('post.pending');
         Route::get('/post/{id}/approve', 'Admin\PostsController@approval')->name('post.approve');
+        Route::put('restore-post/{post}', 'Admin\PostsController@restore')->name('post.restore');
     });
 
     // Categories

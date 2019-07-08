@@ -24,7 +24,7 @@
                                             <th>#</th>
                                             <th>Image</th>
                                             <th>Title</th>
-                                            <th>Body</th>
+                                            <th>Category</th>
                                             <th>Created On</th>
                                             <th>Modify</th>
                                             <th></th>
@@ -39,7 +39,7 @@
                                                 <img src="{{ asset('storage/'.$post->image) }}" width="100px" height="60px" class="img-fluid" alt="{{ $post->title }}">
                                             </td>
                                             <td>{{ $post->title }}</td>
-                                            <td>{!! str_limit($post->body, $limit = 27, $end = '...') !!}</td>
+                                            <td>{{ ucfirst($post->category->name) }}</td>
                                             <td>{{ $post->created_at->toFormattedDateString() }}</td>
 
                                             @if (!$post->trashed())
@@ -47,6 +47,16 @@
                                                     <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-info">
                                                         Edit
                                                     </a>
+                                                </td>
+
+                                            @else
+                                                <td>
+                                                    <form action="{{ route('post.restore', $post->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('PUT')
+
+                                                        <button type="submit" class="btn btn-sm btn-primary">Restore</button>
+                                                    </form>
                                                 </td>
                                             @endif
                                             <td>

@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin\Post;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreatePostRequest extends FormRequest
+class UpdatePostRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,12 +25,9 @@ class CreatePostRequest extends FormRequest
     {
         return [
             'category_id' => 'required',
-            'title'       => 'required|unique:posts',
+            'title' => 'required',
             'description' => 'required',
-            'image'       => 'required|image',
-            'category_id' => 'required|integer',
-            'tags'        => 'required',
-            'body'        => 'required'
+            'body' => 'required',
         ];
     }
 }

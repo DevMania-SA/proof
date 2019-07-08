@@ -20,7 +20,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
-                                <th>URL</th>
+                                <th>Posts Count</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -28,9 +28,9 @@
                             @foreach($categories as $category)
                                 <tr>
                                     <td>{{ $category->id }}</td>
-                                    <td>{{ $category->name }}</td>
+                                    <td>{{ ucfirst($category->name) }}</td>
                                     <td>
-                                        <i>{{ url('/blog/category/'. $category->slug) }}</i>
+                                        {{ $category->posts->count() }}
                                     </td>
                                     <td>
                                         <a href="{{ route('category.edit', $category->id) }}" class="btn btn-sm btn-info">

@@ -153,4 +153,19 @@ class UsersController extends Controller
             }
         }
     }
+
+    /**
+     * Edit user profile
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+
+     public function editProfile(Request $request, $id)
+     {
+         $user = User::where('id', $id)->findOrFail();
+         if (isset($request->avatar)) {
+             $user->addMediaFromRequest('avatar')->toMediaCollection('avatars');
+         }
+     }
 }
