@@ -19,13 +19,13 @@
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs12">
                                         <div class="form-group">
                                             {{ Form::label('title',  'Title') }}
-                                            <input type="text" name="title" class="form-control" id="title">
+                                            <input type="text" name="title" class="form-control" id="title" value="{{ old('title') }}">
                                         </div>
 
                                         <div class="form-group">
                                             {{ Form::label('image', 'Featured Image') }}
                                             <div class="input-group">
-                                                <input type="file" name="image" class="form-control" id="image">
+                                                <input type="file" name="image" class="form-control" id="image" value="{{ old('image') }}">
                                             </div>
                                         </div>
                                     </div>
@@ -59,15 +59,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <label for="published_at">Published At</label>
-                                            <input type="text" name="published_at" class="form-control" id="published_at">
+                                            <input type="text" name="published_at" class="form-control" id="published_at" value="{{ old('published_at') }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="description">Description</label>
-                                            <textarea name="description" class="form-control" id="description" cols="5" rows="3"></textarea>
+                                            <textarea name="description" class="form-control" id="description" cols="5" rows="3">{{ old('description') }}</textarea>
                                         </div>
                                         <div class="form-group">
                                             <label for="Body">Body</label>
-                                            <textarea name="body" id="body" class="form-control"></textarea>
+                                            <textarea name="body" id="body" class="form-control">{{ old('body') }}</textarea>
                                         </div>
                                     </div>
                                 </div>

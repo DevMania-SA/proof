@@ -24,11 +24,10 @@ class CreatePostRequest extends FormRequest
     public function rules()
     {
         return [
-            'category_id' => 'required',
             'title'       => 'required|unique:posts',
             'description' => 'required',
             'image'       => 'required|image',
-            'category_id' => 'required|integer',
+            'category'    => 'required|integer',
             'tags'        => 'required',
             'body'        => 'required'
         ];

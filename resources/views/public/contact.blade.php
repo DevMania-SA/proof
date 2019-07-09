@@ -32,93 +32,76 @@
         </div>
     </header>
 
-    <section id="contact-details" class="contact-details bg-light">
+    <section class="Material-contact-section section-padding section-dark">
         <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-12 col-lg-6">
-                    <div class="contact-thumbnail" id="contac-img">
-                        <img src="{{ asset('images/contact-img.jpg') }}" alt="Contact Us" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-5">
-                    <div class="direct-contact">
-                        <div class="direct-header">
-                            <h3 class="display-5">Contact Us</h3>
-                            <p>
-                                We are improving our services to serve you better.
-                            </p>
-                        </div>
-
-                        <div class="direct-contents">
-                            <p class="address">
-                                Address:
-                            </p>
-
-                            <p class="phone">
-                                Phone:
-                            </p>
-
-                            <p class="email">
-                                Email:
-                            </p>
-
-                            <p class="open-hours">
-                                Open hours:
-                            </p>
-                        </div>
-                    </div>
+            <div class="row">
+                <!-- Section Titile -->
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="section-title">Love to Hear From You</h1>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="row">
+                <!-- Section Titile -->
+                <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content
+                        of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                        more-or-less normal distribution of letters, as opposed to using Content.
+                    </p>
 
-    <section class="contact-area bg-light text-muted">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-12 col-lg-5">
-                    <div class="section-heading">
-                        <h2>GET IN TOUCH</h2>
-                        <p class="my-3">Send us a message, we will call back later</p>
+                    <div class="find-widget">
+                        Company:  <a href="https://proofdigitalmediagroup.co.za">Proof Digital Media Group (Pty) Ltd</a>
+                    </div>
+                    <div class="find-widget">
+                        Address: <a href="#">1234 Maunde Street</a>
+                    </div>
+                    <div class="find-widget">
+                        Phone:  <a href="#">+27 71-234-5678</a>
                     </div>
 
-                    <!-- Contact Form Area -->
-                    <div class="contact-form-area mb-5">
-                        <form action="#" method="post">
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="contact-name" placeholder="Your Name">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="contact-email" placeholder="Your Email">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="contact-subject" placeholder="Subject">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-success mt-3" id="contact-submit">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="find-widget">
+                        Website:  <a href="https://proofdigitalmediagroup.co.za">www.proofdigitalmediagroup.co.za</a>
+                    </div>
+                    <div class="find-widget">
+                        Program: <a href="#">Mon to Sat: 09:30 AM - 10.30 PM</a>
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-6">
-                    <!-- Google Maps -->
-                    <div class="map-area mb-5">
-                        {{-- {!! Mapper::render() !!} --}}
-                        {{-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://maps.googleapis.com/maps/api/staticmap?center=40.714%2c%20-73.998&zoom=12&size=400x400&key=AIzaSyDzog-OOtDAUW_S2FPg3CXDtNrHpqnhS1E&signature=36Rx0XJn5jTe4TiXxTQ-GtjcrFo=" allowfullscreen></iframe> --}}
-                    </div>
+                <!-- contact form -->
+                <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                    <form action="{{route('contact.store')}}" class="shake" role="form" method="POST" id="contactForm" name="contact-form" data-toggle="validator">
+                        @csrf
+                        <!-- Name -->
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="name">Name</label>
+                            <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- email -->
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="email">Email</label>
+                            <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Subject -->
+                        <div class="form-group label-floating">
+                            <label class="control-label">Subject</label>
+                            <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Message -->
+                        <div class="form-group label-floating">
+                            <label for="message" class="control-label">Message</label>
+                            <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Form Submit -->
+                        <div class="form-submit mt-5">
+                            <button class="btn btn-common" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
