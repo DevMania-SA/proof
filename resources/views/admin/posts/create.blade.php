@@ -66,8 +66,8 @@
                                             <textarea name="description" class="form-control" id="description" cols="5" rows="3">{{ old('description') }}</textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label for="Body">Body</label>
-                                            <textarea name="body" id="body" class="form-control">{{ old('body') }}</textarea>
+                                            <label for="editor">Body</label>
+                                            <textarea name="body" id="editor" class="form-control">{{ old('body') }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -87,6 +87,16 @@
 @endsection
 
 @section('scripts')
+    <script src="https://cdn.ckeditor.com/ckeditor5/12.3.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+
+
     {{-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> --}}
     <script>
         flatpickr("#published_at", {

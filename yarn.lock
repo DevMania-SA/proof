@@ -6935,6 +6935,11 @@ tiny-inflate@^1.0.0, tiny-inflate@^1.0.2:
   resolved "https://registry.yarnpkg.com/tiny-inflate/-/tiny-inflate-1.0.2.tgz#93d9decffc8805bd57eae4310f0b745e9b6fb3a7"
   integrity sha1-k9nez/yIBb1X6uQxDwt0Xptvs6c=
 
+tinymce@^5.0.11:
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/tinymce/-/tinymce-5.0.11.tgz#71589a6bea1fbc4affbf47578f2a18cb23e51d18"
+  integrity sha512-V3wRlxsaEOrbh1T3bW0/buR/L+eXsz8w+hJa6E8tfitJNtO9haKqdFCG16oyBEbwpQq9Zc97tHLF2Cx3IX/62w==
+
 to-arraybuffer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/to-arraybuffer/-/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"
@@ -6986,6 +6991,11 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
+
+trix@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/trix/-/trix-1.1.1.tgz#ca8a3fab4d23d960a17e88441d601cb22a86f5d5"
+  integrity sha512-dNHTcryRK0EmwCyJDOBrG6OznL8HNEVVlecq/xzxLj3M9Eht5DV4yl+eCYX8RKyfrtBcNki+mpKIxESgXaGGZA==
 
 tslib@^1.9.0:
   version "1.10.0"

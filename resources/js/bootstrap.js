@@ -19,6 +19,8 @@ try {
     require('datatables.net');
     require('icheck');
     require('select2');
+    // require('tinymce');
+    require('trix');
 } catch (e) {}
 
 /**
