@@ -69,34 +69,34 @@ class PostsController extends Controller
      */
     public function store(CreatePostRequest $request)
     {
-        dd($request->category);
-        // // Upload the image to storage
-        // $image = $request->image->store('posts');
+        // dd($request->category);
+        // Upload the image to storage
+        $image = $request->image->store('posts');
 
-        // $slug = str_slug($request->title);
+        $slug = str_slug($request->title);
 
-        // // Create the post
-        // $post = Post::create([
-        //     'user_id' => Auth::user()->id,
-        //     'category_id' => $request->category,
-        //     'title' => $request->title,
-        //     'slug' => $slug,
-        //     'description' => $request->description,
-        //     'body' => $request->body,
-        //     'image' => $image,
-        //     'published_at' => $request->published_at
-        // ]);
+        // Create the post
+        $post = Post::create([
+            'user_id' => Auth::user()->id,
+            'category_id' => $request->category,
+            'title' => $request->title,
+            'slug' => $slug,
+            'description' => $request->description,
+            'body' => $request->body,
+            'image' => $image,
+            'published_at' => $request->published_at
+        ]);
 
-        // if ($request->tags) {
-        //     $post->tags()->attach($request->tags);
+        if ($request->tags) {
+            $post->tags()->attach($request->tags);
+        }
+
+        // $subscribers = Subscriber::all();
+        // foreach ($subscribers as $subscriber) {
+        //     Notification::route('mail', $subscriber->email)->notify(new NewPostNotify($post));
         // }
 
-        // // $subscribers = Subscriber::all();
-        // // foreach ($subscribers as $subscriber) {
-        // //     Notification::route('mail', $subscriber->email)->notify(new NewPostNotify($post));
-        // // }
-
-        // return redirect()->route('posts.index')->with('success','Post have successfully been created');
+        return redirect()->route('posts.index')->with('success','Post have successfully been created');
     }
 
     /**

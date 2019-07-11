@@ -18,6 +18,8 @@ window.owlCarousel = require('owl.carousel');
 
 import flatpickr from "flatpickr";
 
+require('./editor');
+
 require('./custom');
 require('./contact');
 
@@ -48,3 +50,66 @@ $(document).ready( function () {
     $('input.filled-in').iCheck(); // initialise iCheck
 });
 
+function MyUploadAdapterPlugin( editor ) {
+    editor.plugins.get( 'FileRepository' ).createUploadAdapter = function( loader ) {
+        // ...
+    };
+}
+
+// Load the custom upload adapter as a plugin of the editor.
+ClassicEditor
+.create( document.querySelector( '#editor' ), {
+    extraPlugins: [ MyUploadAdapterPlugin ],
+    // The plugins are now passed directly to .create().
+    plugins: [
+        Essentials,
+        UploadAdapter,
+        Autoformat,
+        Bold,
+        Italic,
+        BlockQuote,
+        EasyImage,
+        Heading,
+        Image,
+        ImageCaption,
+        ImageStyle,
+        ImageToolbar,
+        ImageUpload,
+        Link,
+        List,
+        Paragraph,
+        Alignment
+    ],
+
+    // So is the rest of the default configuration.
+    toolbar: [
+        'heading',
+        '|',
+        'alignment',                                                 // <--- ADDED
+        'bold',
+        'italic',
+        'link',
+        'bulletedList',
+        'numberedList',
+        'imageUpload',
+        'blockQuote',
+        'undo',
+        'redo'
+    ],
+    image: {
+        toolbar: [
+            'imageStyle:full',
+            'imageStyle:side',
+            '|',
+            'imageTextAlternative'
+        ]
+    },
+    // This value must be kept in sync with the language defined in webpack.config.js.
+    language: 'en'
+} )
+.then( editor => {
+    console.log( 'Editor was initialized', editor );
+} )
+.catch( error => {
+    console.error( error.stack );
+} );
