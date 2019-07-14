@@ -4,7 +4,86 @@
 @section('title', $titleTag)
 
 @section('content')
-    <div class="container">
+    <header class="post-section" id="post-section" style="background: url({{ asset('storage/'.$post->image) }})">
+        <div class="dark-overlay">
+            <div class="post-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-flex flex-row justify-content-center">
+                                <h1 class="display-4">
+                                    {{ $post->title }}
+                                </h1>
+                            </div>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-4">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="single-post" class=" bg-light p-5">
+        <div class="container">
+            <div class="row">
+                <div class="post blog-post col-md-8 col-lg-8">
+                    <div class="container">
+                        <div class="post-single">
+                            {{-- <div class="post-thumbnail">
+                                <img src="{{ asset('storage/'.$post->image) }}" alt="{{ $post->title }}" class="img-fluid">
+                            </div> --}}
+
+                            <div class="post-details">
+                                <div class="post-meta d-flex justify-content-between">
+                                    <div class="category">
+                                        <a href="#">{{ $post->category->name }}</a>
+                                    </div>
+                                </div>
+
+                                <h1>{{ $post->title }}</h1>
+
+                                <div class="post-footer d-flex align-items-center flex-column flex-sm-row">
+                                    <a href="#" class="author d-flex align-items-center flex-wrap">
+                                        <div class="avatar">
+                                            <img src="{{ asset('images/avatar.png') }}" alt="{{ $post->user->name }}" class="img-fluid">
+                                        </div>
+                                        <div class="title">
+                                            <span>{{ $post->user->name }}</span>
+                                        </div>
+                                    </a>
+                                    <div class="d-flex align-items-center flex-wrap">
+                                        <div class="date">
+                                            <i class="icon-clock fas fa-clock"></i> {{ $post->published_at->diffForHumans() }}
+                                        </div>
+
+                                        <div class="views">
+                                            <i class="icon-eye fas fa-eye"></i> {{ $post->view_count }}
+                                        </div>
+
+                                        <div class="comments meta-last">
+                                            <i class="icon-comment fas fa-comment"></i> {{ $post->comments()->count() }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="post-body">
+                                    {!! $post->body !!}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @include('public.includes.blog-side')
+            </div>
+        </div>
+    </section>
+
+    {{-- <div class="container">
         <div class="row">
             <!-- Latest Posts -->
             <div class="post blog-post col-lg-8">
@@ -92,5 +171,5 @@
 
             @include('public.includes.blog-side')
         </div>
-    </div>
+    </div> --}}
 @endsection
