@@ -11,10 +11,23 @@ class Post extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'user_id', 'category_id','title', 'slug','description', 'body', 'image', 'view_count', 'like', 'dislike', 'published_at'
+        'user_id',
+        'category_id',
+        'title',
+        'slug',
+        'description',
+        'body',
+        'image',
+        'view_count',
+        'like',
+        'dislike'
     ];
 
-    protected $dates =  ['deleted_at'];
+    protected $dates =  [
+        'published_at',
+        'created_at',
+        'deleted_at'
+    ];
 
     /**
      * Delete post image from storage

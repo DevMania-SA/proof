@@ -76,8 +76,8 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="Body">Body</label>
-                                            <textarea name="body" id="body" class="form-control">{{ $post->body }}</textarea>
+                                            <label for="editor">Body</label>
+                                            <textarea name="body" id="editor" class="form-control">{{ $post->body }}</textarea>
                                         </div>
 
                                         @if (isset($post))
@@ -105,4 +105,28 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script src="https://cdn.ckeditor.com/ckeditor5/12.3.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+
+
+    {{-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> --}}
+    <script>
+        flatpickr("#published_at", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+        });
+    </script>
+@endsection
+
+@section('css')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 @endsection

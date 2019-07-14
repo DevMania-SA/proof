@@ -30,64 +30,54 @@
         <div class="container">
             <div class="row">
                 {{-- Blog Listing --}}
-                <div class="col-md-9" id="blog-listing">
-                    <div class="row">
-                        @foreach ($posts as $post)
-                            <div class="col-md-6">
-                                <div class="blog">
+                <div class="col-md-8 posts-listing" id="blog-listing">
+                    <div class="container">
+                        <div class="row">
+                            @foreach ($posts as $post)
+                                <div class="post col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="post-thumbnail">
+                                        <a href="{{ route('blog.post', $post->slug) }}">
+                                            <img src="{{ asset('storage/'.$post->image) }}" class="img-fluid" alt="{{ $post->title }}">
+                                        </a>
+                                    </div>
 
-                                    <img src="{{ asset('storage/'.$post->image) }}" class="img-fluid" alt="{{ $post->title }}">
-
-                                    <div class="contents">
-                                        <h3>
-                                            {{ $post->title }}
-                                        </h3>
-                                        <div class="date-meta">
-                                            <p class="date">
-                                                Posted {{ $post->created_at->diffForHumans() }} /
-                                                By <a href="#">{{ $post->user->name }}</a>
-                                            </p>
-
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fab fa-github"></i>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fab fa-twitter"></i>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fab fa-facebook"></i>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fab fa-linkedin"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                    <div class="post-details">
+                                        <div class="post-meta d-flex justify-content-between">
+                                            <div class="date meta-last">
+                                                {{ $post->created_at->diffForHumans() }}
+                                            </div>
+                                            <div class="category">
+                                                <a href="#">
+                                                    {{ $post->category->name }}
+                                                </a>
+                                            </div>
                                         </div>
-
-                                        <div class="clearfix"></div>
-
-                                        <p class="intro">
-                                            {!! str_limit($post->body, $limit = 100, $end = '...') !!}
+                                        <a href="{{ route('blog.post', $post->slug) }}">
+                                            <h3 class="h4">
+                                                {{ $post->title }}
+                                            </h3>
+                                        </a>
+                                        <p class="text-muted">
+                                            {{-- {!! str_limit($post->body, $limit = 100, $end = '...') !!} --}}
                                         </p>
-
-                                        <p class="read-more">
-                                            <a href="{{ route('blog.post', $post->slug) }}">Continue reading</a>
-                                        </p>
+                                        <footer class="post-footer d-flex align-items-center">
+                                            <div class="avatar">
+                                                <img src="{{ asset('images/avatar.png') }}" alt="{{ $post->user->name }}" class="img-fluid">
+                                            </div>
+                                            <div class="title">
+                                                <span>{{ $post->user->name }}</span>
+                                            </div>
+                                            <div class="date">
+                                                <i class="fa fa-clock"></i> {{ $post->published_at->diffForHumans() }}
+                                            </div>
+                                            <div class="views meta-last">
+                                                <i class="fas fa-eye"></i> {{ $post->view_count }}
+                                            </div>
+                                        </footer>
                                     </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
                 </div>
 

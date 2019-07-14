@@ -1,4 +1,4 @@
-<aside class="col-md-3">
+<aside class="col-md-4">
     <!-- Widget [Search Bar Widget]-->
     <div class="widget search">
         <header>
@@ -6,11 +6,14 @@
         </header>
         <form action="#" class="search-form">
             <div class="form-group">
-                <input type="search" class="form-control" placeholder="What are you looking for?">
-                <button type="submit" class="btn btn-sucess"><i class="icon-search fa fa-search"></i></button>
+                <input type="search" placeholder="What are you looking for?">
+                <button type="submit" class="submit">
+                    <i class="icon-search fas fa-search"></i>
+                </button>
             </div>
         </form>
     </div>
+
     <!-- Widget [Latest Posts Widget]        -->
     <div class="widget latest-posts">
         <header>
@@ -21,16 +24,16 @@
                 <a href="{{ route('blog.post', $post->slug) }}">
                     <div class="item d-flex align-items-center">
                         <div class="image">
-                            <img src="{{ asset('images/blog/small/'.$post->image) }}" alt="{{ $post->title }}" class="img-fluid">
+                            <img src="{{ asset('storage/'.$post->image) }}" alt="{{ $post->title }}" class="img-fluid">
                         </div>
                         <div class="title">
                             <strong>{{ $post->title }}</strong>
                             <div class="d-flex align-items-center">
                                 <div class="views">
-                                    <i class="icon-eye fa fa-eye"></i> {{ $post->view_count }}
+                                    <i class="icon-eye fas fa-eye"></i> {{ $post->view_count }}
                                 </div>
                                 <div class="comments">
-                                    <i class="icon-comment fa fa-comment"></i> {{ $post->comments()->count() }}
+                                    <i class="icon-comment fas fa-comment"></i> {{ $post->comments()->count() }}
                                 </div>
                             </div>
                         </div>
