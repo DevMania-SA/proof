@@ -21,6 +21,7 @@ try {
     require('select2');
     // require('tinymce');
     require('trix');
+    require('parsleyjs');
 } catch (e) {}
 
 /**

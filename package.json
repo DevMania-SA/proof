@@ -56,6 +56,7 @@
         "jszip": "^3.1.5",
         "moment": "^2.22.2",
         "owl.carousel": "^2.3.4",
+        "parsleyjs": "^2.9.1",
         "pdfmake": "^0.1.38",
         "plyr": "^3.4.6",
         "select2": "^4.0.6-rc.1",
