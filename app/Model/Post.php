@@ -20,12 +20,12 @@ class Post extends Model
         'image',
         'view_count',
         'like',
-        'dislike'
+        'dislike',
+        'published_at'
     ];
 
     protected $dates =  [
         'published_at',
-        'created_at',
         'deleted_at'
     ];
 

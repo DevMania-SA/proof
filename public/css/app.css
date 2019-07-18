@@ -19184,7 +19184,33 @@ section .section-title {
 
 #single-post .blog-post .post-single .post-details .post-footer {
   margin-top: 20px;
-  font-size: 0.8em;
+  font-size: 1em;
+}
+
+#single-post .blog-post .post-single .post-details .post-footer a {
+  margin-right: 200px;
+}
+
+#single-post .blog-post .post-single .post-details .post-footer a .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#single-post .blog-post .post-single .post-details .post-footer a .avatar img {
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+#single-post .blog-post .post-single .post-details .post-footer a .title {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+#single-post .blog-post .post-single .post-details .post-footer .stats .views {
+  margin-right: 10px;
+  font-size: 1em;
 }
 
 #single-post .blog-post .post-single .post-details .post-body {
@@ -19197,10 +19223,6 @@ section .section-title {
 #single-post .blog-post .post-single .post-details .post-body h5,
 #single-post .blog-post .post-single .post-details .post-body h6 {
   color: #333;
-}
-
-#single-post .blog-post .post-single .post-details .post-body p {
-  margin-bottom: 30px;
 }
 
 #single-post .blog-post .post-single .post-details .post-body p:not(.lead) {
@@ -19322,7 +19344,7 @@ section .section-title {
   margin-bottom: 30px;
 }
 
-#single-post .blog-post blockquote.blockquote {
+#single-post .blog-post blockquote {
   font-size: 1.05em;
   line-height: 1.7em;
   border-color: #999;
@@ -19334,7 +19356,7 @@ section .section-title {
   margin-bottom: 30px;
 }
 
-#single-post .blog-post blockquote.blockquote p {
+#single-post .blog-post blockquote p {
   margin-bottom: 15px !important;
 }
 

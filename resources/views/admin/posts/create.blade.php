@@ -101,7 +101,7 @@
     <script>
         flatpickr("#published_at", {
             enableTime: true,
-            dateFormat: "Y-m-d H:i",
+            enableSeconds: true
         });
     </script>
 @endsection

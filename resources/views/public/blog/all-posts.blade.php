@@ -44,7 +44,7 @@
                                     <div class="post-details">
                                         <div class="post-meta d-flex justify-content-between">
                                             <div class="date meta-last">
-                                                {{ $post->created_at->diffForHumans() }}
+                                                {{ $post->created_at }}
                                             </div>
                                             <div class="category">
                                                 <a href="#">
@@ -68,7 +68,7 @@
                                                 <span>{{ $post->user->name }}</span>
                                             </div>
                                             <div class="date">
-                                                <i class="fa fa-clock"></i> {{ $post->published_at->diffForHumans() }}
+                                                <i class="fa fa-clock"></i> {{ $post->published_at }}
                                             </div>
                                             <div class="views meta-last">
                                                 <i class="fas fa-eye"></i> {{ $post->view_count }}
