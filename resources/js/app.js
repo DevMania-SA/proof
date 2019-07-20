@@ -13,12 +13,13 @@ window.Dropzone = require('dropzone');
 window.iCheck = require('icheck');
 // var Inputmask = require('inputmask');
 
-import 'owl.carousel/dist/assets/owl.carousel.css';
-window.owlCarousel = require('owl.carousel');
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// window.owlCarousel = require('owl.carousel');
 
 import flatpickr from "flatpickr";
 
 // require('./editor');
+// import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 
 require('./custom');
 require('./contact');

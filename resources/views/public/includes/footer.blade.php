@@ -10,10 +10,9 @@
                         </div>
                         <p>Subscribe to our mailing list to get the updates to your email inbox.</p>
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail">
-                            <span class="input-group-btn">
-                                <button class="btn btn-secondary submit_btn" type="button">Subscribe</button>
-                            </span>
+                            <input type="email" placeholder="E-mail" aria-label="E-mail">
+                            <button class="submit" type="submit">Subscribe</button>
+
                         </div>
                         <ul>
                             <li><a href="#"><i class="fab fa-facebook"></i></a></li>
@@ -30,26 +29,65 @@
                             <h3>Latest Posts</h3>
                         </div>
                         <div class="tweets_feed">
-                            
+                            @foreach($latestPosts as $post)
+                                <a href="{{ route('blog.post', $post->slug) }}">
+                                    <div class="post d-flex align-items-center">
+                                        <div class="image">
+                                            <img src="{{ asset('storage/'.$post->image) }}" alt="{{ $post->title }}" class="img-fluid">
+                                        </div>
+                                        <div class="title">
+                                            <strong>{{ $post->title }}</strong>
+                                            <span class="date last-meta">{{ $post->created_at->diffForHumans() }}</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            @endforeach
                         </div>
                     </aside>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <aside class="f_widget categories_widget">
                         <div class="f_w_title">
-                            <h3>Link Categories</h3>
+                            <h3>Useful Links</h3>
                         </div>
                         <ul>
-                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Agency</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Studio</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Studio</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Blogs</a></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>Artists
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>Studio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('blog') }}">
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>Blog
+                                </a>
+                            </li>
                         </ul>
                         <ul>
-                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Home</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>About</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Services</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Privacy</a></li>
+                            <li>
+                                <a href="{{ route('home') }}">
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('about') }}">
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('services') }}">
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>Privacy
+                                </a>
+                            </li>
                         </ul>
                     </aside>
                 </div>
@@ -59,9 +97,16 @@
                             <h3>Contact Us</h3>
                         </div>
                         <a href="#">27 (71) 234-5678</a>
-                        <a href="#">info@proofdigitalmediagroup.co.za</a>
-                        <p>123 Maunde Street <br />Secunda, SA</p>
-                        <h6>Open hours: 8.00-18.00 Mon-Fri</h6>
+                        <a href="#">
+                            info@proofdigitalmediagroup.co.za
+                        </a>
+                        <p>
+                            123 Maunde Street <br />
+                            Secunda, SA
+                        </p>
+                        <h6>
+                            Open hours: 8.00-18.00 Mon-Fri
+                        </h6>
                     </aside>
                 </div>
             </div>

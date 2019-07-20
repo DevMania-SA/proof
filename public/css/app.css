@@ -18067,47 +18067,36 @@ i[class*=icon-] {
   padding-bottom: 20px;
 }
 
+.subscribe_widget .input-group {
+  position: relative;
+}
+
 .subscribe_widget .input-group input {
-  background: #2b2e3d;
-  border: none;
-  outline: none;
-  box-shadow: none;
+  width: 100%;
   height: 40px;
-  border-radius: 3px;
-  font-size: 12px;
-  color: #b5aec4;
-  font-family: "Poppins", sans-serif;
-  padding: 0px 15px;
+  padding: 0 10px;
+  border: 1px solid #40ee86;
+  font-size: 0.95em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
 }
 
-.subscribe_widget .input-group input.placeholder {
-  font-size: 12px;
-  color: #b5aec4;
-  font-family: "Poppins", sans-serif;
-}
-
-.subscribe_widget .input-group input:-moz-placeholder {
-  font-size: 12px;
-  color: #b5aec4;
-  font-family: "Poppins", sans-serif;
-}
-
-.subscribe_widget .input-group input::-moz-placeholder {
-  font-size: 12px;
-  color: #b5aec4;
-  font-family: "Poppins", sans-serif;
-}
-
-.subscribe_widget .input-group input::-webkit-input-placeholder {
-  font-size: 12px;
-  color: #b5aec4;
-  font-family: "Poppins", sans-serif;
-}
-
-.subscribe_widget .input-group .input-group-btn .btn-secondary {
+.subscribe_widget .input-group .submit {
   height: 40px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
+  padding: 0 10px;
+  line-height: 40px;
+  background: #40ee86;
+  border: 1px solid #40ee86;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.3s;
+}
+
+.subscribe_widget .input-group .submit:hover {
+  opacity: 0.6;
 }
 
 .subscribe_widget ul {
@@ -18143,49 +18132,31 @@ i[class*=icon-] {
   margin-left: 55px;
 }
 
-.twitter_widget .tweets_feed ul .owl-item .tw_content .tweet_text {
-  font-size: 14px;
-  line-height: 26px;
+.twitter_widget .tweets_feed .post .image {
+  min-width: 60px;
+  max-width: 60px;
+  height: 60px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.twitter_widget .tweets_feed .post .title strong {
+  display: block;
+}
+
+.twitter_widget .tweets_feed .post .title .date {
+  font-size: 0.85em;
+  color: #aaa;
+}
+
+.twitter_widget .tweets_feed a {
   color: #b5aec4;
-  font-family: "Poppins", sans-serif;
+  font-size: 0.95em;
+  text-decoration: none;
 }
 
-.twitter_widget .tweets_feed ul .owl-item .tw_content .tweet_text i {
-  padding-right: 5px;
+.twitter_widget .tweets_feed a:hover {
   color: #2bc0a4;
-}
-
-.twitter_widget .tweets_feed ul .owl-item .tw_content .tweet_text a {
-  font-size: 14px;
-  line-height: 26px;
-  color: #b5aec4;
-  font-family: "Poppins", sans-serif;
-  transition: all 0.2s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .twitter_widget .tweets_feed ul .owl-item .tw_content .tweet_text a {
-    transition: none;
-  }
-}
-
-.twitter_widget .tweets_feed ul .owl-item .tw_content .tweet_text a:hover {
-  color: #2bc0a4;
-}
-
-.twitter_widget .tweets_feed ul .owl-item .tw_content .tweet_date {
-  font-size: 14px;
-  line-height: 26px;
-  color: #b5aec4;
-  font-family: "Poppins", sans-serif;
-  padding-top: 15px;
-}
-
-.twitter_widget .tweets_feed ul .owl-item .footer .tweet_time.fright a {
-  font-size: 14px;
-  line-height: 26px;
-  color: #2bc0a4;
-  font-family: "Poppins", sans-serif;
 }
 
 .categories_widget {
@@ -19007,53 +18978,63 @@ section .section-title {
   transition: 0.5s all ease;
 }
 
+#blog-section {
+  background-image: url("/images/about-us.jpg");
+  background-repeat: no-repeat;
+  min-height: 400px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+#blog-section .dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 400px;
+}
+
+#blog-section .blog-inner {
+  padding-top: 200px;
+}
+
 #posts .posts-listing {
   padding-left: 0;
   padding-right: 0;
   /* Latest Posts Section Media Query ------------------------------------- */
 }
 
-#posts .posts-listing .post .post-meta {
+#posts .posts-listing a {
+  text-decoration: none;
+}
+
+#posts .posts-listing a:hover,
+#posts .posts-listing a:focus {
+  text-decoration: none;
+}
+
+#posts .posts-listing .post .post-thumbnail {
+  max-height: 330px;
+}
+
+#posts .posts-listing .post .post-details .post-meta {
   margin: 10px 0;
   font-size: 0.8em;
 }
 
-#posts .posts-listing .post .post-meta .date {
+#posts .posts-listing .post .post-details .post-meta .date {
   text-transform: uppercase;
   font-weight: 400;
 }
 
-#posts .posts-listing .post .post-meta .date::after {
+#posts .posts-listing .post .post-details .post-meta .date::after {
   display: none;
 }
 
-#posts .posts-listing .post p:not(.lead) {
-  font-weight: 400;
-  color: #777;
-  font-size: 0.95em;
-}
-
-#posts .posts-listing .post a {
-  text-decoration: none;
-}
-
-#posts .posts-listing .post a:hover,
-#posts .posts-listing .post a:focus {
-  text-decoration: none;
-}
-
-#posts .posts-listing .post h3 {
-  line-height: 1.1em;
-  color: #222;
-  transition: all 0.3s;
-  margin-bottom: 1rem;
-}
-
-#posts .posts-listing .post h3:hover {
-  color: #555;
-}
-
-#posts .posts-listing .post .category a {
+#posts .posts-listing .post .post-details .post-meta .category a {
   color: #999;
   letter-spacing: 0.05em;
   font-weight: 700;
@@ -19061,74 +19042,62 @@ section .section-title {
   text-decoration: none;
 }
 
-#posts .posts-listing .post .date {
+#posts .posts-listing .post .post-details .title .h4 {
+  color: #222;
+  transition: all 0.3s;
+}
+
+#posts .posts-listing .post .post-details .title .h4:hover {
+  color: #555;
+}
+
+#posts .posts-listing .post .post-details .post-footer {
+  margin-top: 10px;
+  font-size: 0.75em;
+}
+
+#posts .posts-listing .post .post-details .post-footer .avatar {
+  max-width: 30px;
+  min-width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+#posts .posts-listing .post .post-details .post-footer .date {
   letter-spacing: 0.05em;
   font-weight: 400;
   text-transform: uppercase;
   color: #aaa;
 }
 
-#posts .posts-listing .post .avatar {
-  max-width: 40px;
-  min-width: 40px;
-  height: 40px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-#posts .posts-listing .post .title,
-#posts .posts-listing .post .date,
-#posts .posts-listing .post .comments,
-#posts .posts-listing .post .views {
+#posts .posts-listing .post .post-details .post-footer .title,
+#posts .posts-listing .post .post-details .post-footer .date,
+#posts .posts-listing .post .post-details .post-footer .comments,
+#posts .posts-listing .post .post-details .post-footer .views {
   font-weight: 400;
   color: #999;
   text-transform: capitalize;
 }
 
-#posts .posts-listing .post .title i,
-#posts .posts-listing .post .date i,
-#posts .posts-listing .post .comments i,
-#posts .posts-listing .post .views i {
+#posts .posts-listing .post .post-details .post-footer .title i,
+#posts .posts-listing .post .post-details .post-footer .date i,
+#posts .posts-listing .post .post-details .post-footer .comments i,
+#posts .posts-listing .post .post-details .post-footer .views i {
   margin-right: 5px;
   font-size: 1.1em;
 }
 
-#posts .posts-listing .post .title::after,
-#posts .posts-listing .post .date::after,
-#posts .posts-listing .post .comments::after,
-#posts .posts-listing .post .views::after {
+#posts .posts-listing .post .post-details .post-footer .title::after,
+#posts .posts-listing .post .post-details .post-footer .date::after,
+#posts .posts-listing .post .post-details .post-footer .comments::after,
+#posts .posts-listing .post .post-details .post-footer .views::after {
   content: "|";
   display: inline-block;
   margin: 0 7px;
   font-size: 0.9em;
   color: #ccc;
-}
-
-#posts .posts-listing .post .post-tags {
-  margin-top: 30px;
-}
-
-#posts .posts-listing .post .post-tags .tag {
-  padding: 5px 25px;
-  border: 1px solid #ddd;
-  margin: 5px;
-  color: #777;
-  font-size: 0.75em;
-  text-transform: uppercase;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 50px;
-}
-
-#posts .posts-listing .post .post-tags .tag:hover {
-  background: #999;
-  color: #fff;
-  border-color: #999;
-}
-
-#posts .posts-listing .post .meta-last::after {
-  display: none;
 }
 
 @media (max-width: 767px) {
@@ -19188,12 +19157,13 @@ section .section-title {
 }
 
 #single-post .blog-post .post-single .post-details .post-footer a {
-  margin-right: 200px;
+  margin-right: 20px;
+  color: #999;
 }
 
 #single-post .blog-post .post-single .post-details .post-footer a .avatar {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -19204,13 +19174,22 @@ section .section-title {
 }
 
 #single-post .blog-post .post-single .post-details .post-footer a .title {
-  font-size: 1em;
-  font-weight: 400;
+  font-size: 1.05em;
+  font-weight: 600;
+}
+
+#single-post .blog-post .post-single .post-details .post-footer a .title:hover {
+  color: #003;
+}
+
+#single-post .blog-post .post-single .post-details .post-footer .stats .date {
+  margin-right: 10px;
+  font-size: 1.05em;
 }
 
 #single-post .blog-post .post-single .post-details .post-footer .stats .views {
   margin-right: 10px;
-  font-size: 1em;
+  font-size: 1.05em;
 }
 
 #single-post .blog-post .post-single .post-details .post-body {
@@ -19226,142 +19205,54 @@ section .section-title {
 }
 
 #single-post .blog-post .post-single .post-details .post-body p:not(.lead) {
-  font-size: 1em;
-  line-height: 1.7em;
-  color: #555;
-}
-
-#single-post .blog-post .posts-nav {
-  margin-top: 50px;
-  color: #777;
-  font-size: 0.8em;
-}
-
-#single-post .blog-post .posts-nav a {
-  color: inherit;
-  width: calc(50% - 10px);
-  padding: 10px 20px;
-  border: 1px solid #eee;
-  margin-bottom: 15px;
-}
-
-#single-post .blog-post .posts-nav a:hover {
-  border-color: #999;
-}
-
-#single-post .blog-post .posts-nav a:hover .icon {
-  background: #999;
-  color: #fff;
-  border-color: #999;
-}
-
-#single-post .blog-post .icon {
-  min-width: 35px;
-  max-width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  line-height: 32px;
-  border: 1px solid #ddd;
-  color: #aaa;
-  font-size: 1.5em;
-  text-align: center;
-  transition: all 0.2s;
-}
-
-#single-post .blog-post .icon.prev {
-  margin-right: 20px;
-}
-
-#single-post .blog-post .icon.next {
-  margin-left: 20px;
-}
-
-#single-post .blog-post .post-comments {
-  margin-top: 50px;
-}
-
-#single-post .blog-post .post-comments span.no-of-comments {
-  color: #777;
-  font-size: 0.8em;
-  margin-left: 5px;
-  font-weight: 400;
-}
-
-#single-post .blog-post .post-comments header {
-  margin-bottom: 40px;
-}
-
-#single-post .blog-post .post-comments .comment:last-of-type .comment-body {
-  border-bottom: none;
-}
-
-#single-post .blog-post .post-comments .image {
-  margin-right: 15px;
-}
-
-#single-post .blog-post .post-comments .title::after {
-  display: none;
-}
-
-#single-post .blog-post .post-comments img {
-  max-width: 40px;
-  min-width: 40px;
-  height: 40px;
-}
-
-#single-post .blog-post .post-comments strong {
-  display: block;
-  color: #555;
-}
-
-#single-post .blog-post .post-comments span.date {
-  font-size: 0.8em;
-  color: #999;
-}
-
-#single-post .blog-post .post-comments span.date::after {
-  display: none;
-}
-
-#single-post .blog-post .post-comments .comment-body {
-  margin-left: 55px;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
-}
-
-#single-post .blog-post .post-comments p {
-  font-size: 0.95em;
-  color: #555;
-}
-
-#single-post .blog-post .add-comment {
-  margin-top: 50px;
-}
-
-#single-post .blog-post .add-comment header {
-  margin-bottom: 30px;
-}
-
-#single-post .blog-post blockquote {
   font-size: 1.05em;
   line-height: 1.7em;
-  border-color: #999;
+  color: #555;
+}
+
+#single-post .blog-post .post-single .post-details .post-body blockquote {
+  font-size: 1.05em;
+  line-height: 1.7em;
+  border-color: #999 !important;
   border: 1px solid #eee;
   border-left: 6px solid #eee;
   padding: 20px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
-#single-post .blog-post blockquote p {
-  margin-bottom: 15px !important;
+#single-post .blog-post .post-single .post-details .post-body blockquote p {
+  margin-bottom: 5px !important;
+}
+
+#single-post .blog-post .post-single .post-details .post-tags .tag {
+  padding: 5px 25px;
+  border: 1px solid #ddd;
+  margin: 5px;
+  color: #777;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+#single-post .blog-post .post-single .post-details .post-tags .tag:hover {
+  background: #999;
+  color: #ffffff;
+  border-color: #999;
+}
+
+#single-post .blog-post .post-single .post-details .meta-last::after {
+  display: none;
 }
 
 .widget header h3 {
-  font-size: 16px;
+  font-size: 1.125em;
+  font-weight: 700;
+  color: #000000;
+  opacity: 0.7;
 }
 
 .widget.search .form-group {
@@ -19378,6 +19269,7 @@ section .section-title {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   background: none;
+  padding: 0 15px;
 }
 
 .widget.search input::-moz-placeholder {
@@ -19397,7 +19289,7 @@ section .section-title {
 
 .widget.search .submit {
   height: 40px;
-  padding: 0;
+  padding: 0 15px;
   line-height: 40px;
   background: none;
   border: none;
@@ -19437,7 +19329,7 @@ section .section-title {
 }
 
 .widget.latest-posts .views,
-.widget.latest-posts .comments {
+.widget.latest-posts .date {
   font-size: 0.8em;
   font-weight: 400;
   color: #bbb;
@@ -19445,12 +19337,12 @@ section .section-title {
 }
 
 .widget.latest-posts .views i,
-.widget.latest-posts .comments i {
+.widget.latest-posts .date i {
   margin-right: 5px;
 }
 
 .widget.latest-posts .views::after,
-.widget.latest-posts .comments::after {
+.widget.latest-posts .date::after {
   content: "|";
   display: inline-block;
   margin: 0 7px;
@@ -19458,7 +19350,7 @@ section .section-title {
   color: #ccc;
 }
 
-.widget.latest-posts .comments::after {
+.widget.latest-posts .date::after {
   display: none;
 }
 
@@ -19510,6 +19402,10 @@ section .section-title {
 .tags .tag i {
   margin-right: 5px;
 }
+
+/*****************************************************************
+    MEDIA QUERIES
+*****************************************************************/
 
 #contact-section {
   background: url("/images/home.jpg") no-repeat;

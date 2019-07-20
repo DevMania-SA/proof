@@ -13,7 +13,7 @@ class BlogController extends Controller
     public function index()
     {
         $data = [
-            'posts' => Post::latest()->paginate(5),
+            'posts' => Post::latest()->simplePaginate(4),
             'latestPosts' => Post::latest()->limit(3)->get(),
             'categories' => Category::with('posts')->get(),
             'tags' => Tag::all()
@@ -24,8 +24,8 @@ class BlogController extends Controller
     public function singlePost($slug)
     {
         $data = [
-            'post' => Post::where(['slug' => $slug])->first(),
-            'latestPosts' => Post::latest()->limit(3)->get(),
+            'post' => Post::where(['slug' => $slug])->searched()->first(),
+//            'latestPosts' => Post::latest()->limit(3)->get(),
             'categories' => Category::with('posts')->get(),
             'tags' => Tag::all()
         ];
@@ -44,22 +44,28 @@ class BlogController extends Controller
         return view('public.blog.single-post')->with($data);
     }
 
-    public function postByCategory($slug)
+    public function postByCategory(Category $category, $slug)
     {
         // $cats = Category::with('posts')->get();
         // echo "<pre>"; print_r($cats); die;
 
         $data = [
             'category' => Category::where('slug', $slug)->with('posts')->first(),
-            'latestPosts' => Post::latest()->limit(3)->get(),
+            'posts' => $category->posts()->searched()->simplePaginate(4),
             'categories' => Category::with('posts')->get(),
             'tags' => Tag::all()
         ];
         return view('public.blog.categories')->with($data);
     }
 
-    public function postByTag($slug)
+    public function postsByTag($slug)
     {
-        return view('public.blog.tag');
+        $data = [
+            'tag' => Tag::where('slug', $slug)->with('posts')->first(),
+//            'latestPosts' => Post::latest()->limit(3)->get(),
+            'categories' => Category::with('posts')->get(),
+            'tags' => Tag::all()
+        ];
+        return view('public.blog.tag')->with($data);
     }
 }

@@ -7,11 +7,15 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
-    public function search(Request $request)
+    public function search()
     {
-        $query = $request->input('query');
-        $posts = Post::where('title',  'LIKE', "%$query%")->approved()->published()->get();
+        $search = request()->query('search');
+        if ($search) {
+            $posts = Post::where('title', 'LIKE', "%{$search}%")->simplePaginate(3);
+        } else {
+            $posts = Post::latest()->simplePaginate(4);
+        }
 
-        return view('public.blog.search')->with(compact('posts','query'));
+        return $posts;
     }
 }

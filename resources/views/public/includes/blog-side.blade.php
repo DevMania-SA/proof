@@ -4,9 +4,10 @@
         <header>
             <h3 class="h6">Search the blog</h3>
         </header>
-        <form action="#" class="search-form">
+        <form action="" method="GET" class="search-form">
+            @csrf
             <div class="form-group">
-                <input type="search" placeholder="What are you looking for?">
+                <input type="text" name="search" placeholder="What are you looking for?" value="{{ request()->query('search') }}">
                 <button type="submit" class="submit">
                     <i class="icon-search fas fa-search"></i>
                 </button>
@@ -32,8 +33,8 @@
                                 <div class="views">
                                     <i class="icon-eye fas fa-eye"></i> {{ $post->view_count }}
                                 </div>
-                                <div class="comments">
-                                    <i class="icon-comment fas fa-comment"></i> {{ $post->comments()->count() }}
+                                <div class="date">
+                                    <i class="icon-date fas fa-clock"></i> {{ $post->created_at->diffForHumans() }}
                                 </div>
                             </div>
                         </div>

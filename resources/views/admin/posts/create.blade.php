@@ -90,7 +90,21 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/12.3.0/classic/ckeditor.js"></script>
     <script>
         ClassicEditor
-            .create( document.querySelector( '#editor' ) )
+            .create( document.querySelector( '#editor', {
+                // plugins: { EasyImage },
+                // toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' , 'imageUpload' ],
+                // heading: {
+                //     options: [
+                //         { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+                //         { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+                //         { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
+                //     ]
+                // },
+                cloudServices: {
+                    tokenUrl: 'https://40779.cke-cs.com/token/dev/AUiRGwTDfIwo9J4Ya7gxAARkccAJn3JI4ThgevnRQhzqFGYfnigwQf9mawfZ',
+                    uploadUrl: 'https://40779.cke-cs.com/easyimage/upload/'
+                }
+            } ) )
             .catch( error => {
                 console.error( error );
             } );

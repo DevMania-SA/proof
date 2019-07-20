@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d230a12975b13c8284531f1581bdd67",
+    "content-hash": "7e10a855db5dec6aeff88201cb62a224",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.107.1",
+            "version": "3.107.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ccd3d13ae49a45bdf6a394d701f207c276dbf05a"
+                "reference": "37bacdae146326ed8008e3354e9e2c3547646996"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ccd3d13ae49a45bdf6a394d701f207c276dbf05a",
-                "reference": "ccd3d13ae49a45bdf6a394d701f207c276dbf05a",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/37bacdae146326ed8008e3354e9e2c3547646996",
+                "reference": "37bacdae146326ed8008e3354e9e2c3547646996",
                 "shasum": ""
             },
             "require": {
@@ -87,7 +87,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2019-07-12T18:07:41+00:00"
+            "time": "2019-07-19T18:14:22+00:00"
         },
         {
             "name": "aws/aws-sdk-php-laravel",
@@ -597,16 +597,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.9",
+            "version": "2.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "128cc721d771ec2c46ce59698f4ca42b73f71b25"
+                "reference": "a6c8d7101b19a451c1707b1b79bbbc56e4bdb7ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/128cc721d771ec2c46ce59698f4ca42b73f71b25",
-                "reference": "128cc721d771ec2c46ce59698f4ca42b73f71b25",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/a6c8d7101b19a451c1707b1b79bbbc56e4bdb7ec",
+                "reference": "a6c8d7101b19a451c1707b1b79bbbc56e4bdb7ec",
                 "shasum": ""
             },
             "require": {
@@ -616,7 +616,8 @@
             "require-dev": {
                 "dominicsayers/isemail": "dev-master",
                 "phpunit/phpunit": "^4.8.35||^5.7||^6.0",
-                "satooshi/php-coveralls": "^1.0.1"
+                "satooshi/php-coveralls": "^1.0.1",
+                "symfony/phpunit-bridge": "^4.4@dev"
             },
             "suggest": {
                 "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
@@ -650,7 +651,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2019-06-23T10:14:27+00:00"
+            "time": "2019-07-19T20:52:08+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -1236,91 +1237,46 @@
             "time": "2018-04-19T12:24:36+00:00"
         },
         {
-            "name": "kylekatarnls/update-helper",
-            "version": "1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kylekatarnls/update-helper.git",
-                "reference": "b34a46d7f5ec1795b4a15ac9d46b884377262df9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kylekatarnls/update-helper/zipball/b34a46d7f5ec1795b4a15ac9d46b884377262df9",
-                "reference": "b34a46d7f5ec1795b4a15ac9d46b884377262df9",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.1.0",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "codeclimate/php-test-reporter": "dev-master",
-                "composer/composer": "^2.0.x-dev",
-                "phpunit/phpunit": ">=4.8.35 <6.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "UpdateHelper\\ComposerPlugin"
-            },
-            "autoload": {
-                "psr-0": {
-                    "UpdateHelper\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kyle",
-                    "email": "kylekatarnls@gmail.com"
-                }
-            ],
-            "description": "Update helper",
-            "time": "2019-06-05T08:34:23+00:00"
-        },
-        {
             "name": "laravel/framework",
-            "version": "v5.7.28",
+            "version": "v5.8.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "8e69728f1c80a024588adbd24c65c4fcf9aa9192"
+                "reference": "489ae2218c7eb138caac780de584d8df9fe8160b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/8e69728f1c80a024588adbd24c65c4fcf9aa9192",
-                "reference": "8e69728f1c80a024588adbd24c65c4fcf9aa9192",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/489ae2218c7eb138caac780de584d8df9fe8160b",
+                "reference": "489ae2218c7eb138caac780de584d8df9fe8160b",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "^1.1",
                 "dragonmantank/cron-expression": "^2.0",
+                "egulias/email-validator": "^2.0",
                 "erusev/parsedown": "^1.7",
+                "ext-json": "*",
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
-                "laravel/nexmo-notification-channel": "^1.0",
-                "laravel/slack-notification-channel": "^1.0",
                 "league/flysystem": "^1.0.8",
                 "monolog/monolog": "^1.12",
-                "nesbot/carbon": "^1.26.3",
+                "nesbot/carbon": "^1.26.3 || ^2.0",
                 "opis/closure": "^3.1",
                 "php": "^7.1.3",
                 "psr/container": "^1.0",
                 "psr/simple-cache": "^1.0",
                 "ramsey/uuid": "^3.7",
                 "swiftmailer/swiftmailer": "^6.0",
-                "symfony/console": "^4.1",
-                "symfony/debug": "^4.1",
-                "symfony/finder": "^4.1",
-                "symfony/http-foundation": "^4.1",
-                "symfony/http-kernel": "^4.1",
-                "symfony/process": "^4.1",
-                "symfony/routing": "^4.1",
-                "symfony/var-dumper": "^4.1",
+                "symfony/console": "^4.2",
+                "symfony/debug": "^4.2",
+                "symfony/finder": "^4.2",
+                "symfony/http-foundation": "^4.2",
+                "symfony/http-kernel": "^4.2",
+                "symfony/process": "^4.2",
+                "symfony/routing": "^4.2",
+                "symfony/var-dumper": "^4.2",
                 "tijsverkoyen/css-to-inline-styles": "^2.2.1",
-                "vlucas/phpdotenv": "^2.2"
+                "vlucas/phpdotenv": "^3.3"
             },
             "conflict": {
                 "tightenco/collect": "<5.5.33"
@@ -1363,12 +1319,12 @@
                 "league/flysystem-cached-adapter": "^1.0",
                 "mockery/mockery": "^1.0",
                 "moontoast/math": "^1.1",
-                "orchestra/testbench-core": "3.7.*",
-                "pda/pheanstalk": "^3.0|^4.0",
-                "phpunit/phpunit": "^7.5",
+                "orchestra/testbench-core": "3.8.*",
+                "pda/pheanstalk": "^4.0",
+                "phpunit/phpunit": "^7.5|^8.0",
                 "predis/predis": "^1.1.1",
-                "symfony/css-selector": "^4.1",
-                "symfony/dom-crawler": "^4.1",
+                "symfony/css-selector": "^4.2",
+                "symfony/dom-crawler": "^4.2",
                 "true/punycode": "^2.1"
             },
             "suggest": {
@@ -1386,17 +1342,18 @@
                 "league/flysystem-sftp": "Required to use the Flysystem SFTP driver (^1.0).",
                 "moontoast/math": "Required to use ordered UUIDs (^1.1).",
                 "nexmo/client": "Required to use the Nexmo transport (^1.0).",
-                "pda/pheanstalk": "Required to use the beanstalk queue driver (^3.0|^4.0).",
+                "pda/pheanstalk": "Required to use the beanstalk queue driver (^4.0).",
                 "predis/predis": "Required to use the redis cache and queue drivers (^1.0).",
                 "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^3.0).",
-                "symfony/css-selector": "Required to use some of the crawler integration testing tools (^4.1).",
-                "symfony/dom-crawler": "Required to use most of the crawler integration testing tools (^4.1).",
-                "symfony/psr-http-message-bridge": "Required to psr7 bridging features (^1.0)."
+                "symfony/css-selector": "Required to use some of the crawler integration testing tools (^4.2).",
+                "symfony/dom-crawler": "Required to use most of the crawler integration testing tools (^4.2).",
+                "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^1.1).",
+                "wildbit/swiftmailer-postmark": "Required to use Postmark mail driver (^3.0)."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.7-dev"
+                    "dev-master": "5.8-dev"
                 }
             },
             "autoload": {
@@ -1424,64 +1381,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-02-26T15:41:34+00:00"
-        },
-        {
-            "name": "laravel/nexmo-notification-channel",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/nexmo-notification-channel.git",
-                "reference": "03edd42a55b306ff980c9950899d5a2b03260d48"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/nexmo-notification-channel/zipball/03edd42a55b306ff980c9950899d5a2b03260d48",
-                "reference": "03edd42a55b306ff980c9950899d5a2b03260d48",
-                "shasum": ""
-            },
-            "require": {
-                "nexmo/client": "^1.0",
-                "php": "^7.1.3"
-            },
-            "require-dev": {
-                "illuminate/notifications": "~5.7",
-                "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Illuminate\\Notifications\\NexmoChannelServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Notifications\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Nexmo Notification Channel for laravel.",
-            "keywords": [
-                "laravel",
-                "nexmo",
-                "notifications"
-            ],
-            "time": "2018-12-04T12:57:08+00:00"
+            "time": "2019-07-16T14:05:28+00:00"
         },
         {
             "name": "laravel/passport",
@@ -1551,63 +1451,6 @@
                 "passport"
             ],
             "time": "2017-09-24T14:21:39+00:00"
-        },
-        {
-            "name": "laravel/slack-notification-channel",
-            "version": "v1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/slack-notification-channel.git",
-                "reference": "6e164293b754a95f246faf50ab2bbea3e4923cc9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/slack-notification-channel/zipball/6e164293b754a95f246faf50ab2bbea3e4923cc9",
-                "reference": "6e164293b754a95f246faf50ab2bbea3e4923cc9",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.0",
-                "php": "^7.1.3"
-            },
-            "require-dev": {
-                "illuminate/notifications": "~5.7",
-                "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Illuminate\\Notifications\\SlackChannelServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Notifications\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Slack Notification Channel for laravel.",
-            "keywords": [
-                "laravel",
-                "notifications",
-                "slack"
-            ],
-            "time": "2018-12-12T13:12:06+00:00"
         },
         {
             "name": "laravel/socialite",
@@ -1737,35 +1580,35 @@
         },
         {
             "name": "laravelcollective/html",
-            "version": "v5.7.1",
+            "version": "v5.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "777b6d390811ba249255ed5750bf17a019cd88a5"
+                "reference": "0e360143d3476fe4141d267a260c140569fa207b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/777b6d390811ba249255ed5750bf17a019cd88a5",
-                "reference": "777b6d390811ba249255ed5750bf17a019cd88a5",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/0e360143d3476fe4141d267a260c140569fa207b",
+                "reference": "0e360143d3476fe4141d267a260c140569fa207b",
                 "shasum": ""
             },
             "require": {
-                "illuminate/http": "5.7.*",
-                "illuminate/routing": "5.7.*",
-                "illuminate/session": "5.7.*",
-                "illuminate/support": "5.7.*",
-                "illuminate/view": "5.7.*",
+                "illuminate/http": "5.8.*",
+                "illuminate/routing": "5.8.*",
+                "illuminate/session": "5.8.*",
+                "illuminate/support": "5.8.*",
+                "illuminate/view": "5.8.*",
                 "php": ">=7.1.3"
             },
             "require-dev": {
-                "illuminate/database": "5.7.*",
+                "illuminate/database": "5.8.*",
                 "mockery/mockery": "~1.0",
                 "phpunit/phpunit": "~7.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.7-dev"
+                    "dev-master": "5.8-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -1801,7 +1644,7 @@
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "https://laravelcollective.com",
-            "time": "2018-09-05T18:32:53+00:00"
+            "time": "2019-03-01T22:53:41+00:00"
         },
         {
             "name": "lcobucci/jwt",
@@ -2493,34 +2336,36 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.39.0",
+            "version": "2.21.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0"
+                "reference": "58bdbbfab17ccd2ec7347b99e997f18232def4dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0",
-                "reference": "dd62a58af4e0775a45ea5f99d0363d81b7d9a1e0",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/58bdbbfab17ccd2ec7347b99e997f18232def4dc",
+                "reference": "58bdbbfab17ccd2ec7347b99e997f18232def4dc",
                 "shasum": ""
             },
             "require": {
-                "kylekatarnls/update-helper": "^1.1",
-                "php": ">=5.3.9",
-                "symfony/translation": "~2.6 || ~3.0 || ~4.0"
+                "ext-json": "*",
+                "php": "^7.1.8 || ^8.0",
+                "symfony/translation": "^3.4 || ^4.0"
             },
             "require-dev": {
-                "composer/composer": "^1.2",
-                "friendsofphp/php-cs-fixer": "~2",
-                "phpunit/phpunit": "^4.8.35 || ^5.7"
+                "friendsofphp/php-cs-fixer": "^2.14 || ^3.0",
+                "kylekatarnls/multi-tester": "^1.1",
+                "phpmd/phpmd": "^2.6",
+                "phpstan/phpstan": "^0.11",
+                "phpunit/phpunit": "^7.5 || ^8.0",
+                "squizlabs/php_codesniffer": "^3.4"
             },
             "bin": [
-                "bin/upgrade-carbon"
+                "bin/carbon"
             ],
             "type": "library",
             "extra": {
-                "update-helper": "Carbon\\Upgrade",
                 "laravel": {
                     "providers": [
                         "Carbon\\Laravel\\ServiceProvider"
@@ -2529,7 +2374,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "": "src/"
+                    "Carbon\\": "src/Carbon/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2541,6 +2386,10 @@
                     "name": "Brian Nesbitt",
                     "email": "brian@nesbot.com",
                     "homepage": "http://nesbot.com"
+                },
+                {
+                    "name": "kylekatarnls",
+                    "homepage": "http://github.com/kylekatarnls"
                 }
             ],
             "description": "A simple API extension for DateTime.",
@@ -2550,55 +2399,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-06-11T09:07:59+00:00"
-        },
-        {
-            "name": "nexmo/client",
-            "version": "1.8.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Nexmo/nexmo-php.git",
-                "reference": "182d41a02ebd3e4be147baea45458ccfe2f528c4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Nexmo/nexmo-php/zipball/182d41a02ebd3e4be147baea45458ccfe2f528c4",
-                "reference": "182d41a02ebd3e4be147baea45458ccfe2f528c4",
-                "shasum": ""
-            },
-            "require": {
-                "lcobucci/jwt": "^3.2",
-                "php": ">=5.6",
-                "php-http/client-implementation": "^1.0",
-                "php-http/guzzle6-adapter": "^1.0",
-                "zendframework/zend-diactoros": "^1.8.4 || ^2.0"
-            },
-            "require-dev": {
-                "estahn/phpunit-json-assertions": "^1.0.0",
-                "php-http/mock-client": "^0.3.0",
-                "phpunit/phpunit": "^5.7",
-                "squizlabs/php_codesniffer": "^3.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Nexmo\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tim Lytle",
-                    "email": "tim@nexmo.com",
-                    "homepage": "http://twitter.com/tjlytle",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PHP Client for using Nexmo's API.",
-            "time": "2019-05-13T20:27:43+00:00"
+            "time": "2019-07-18T18:47:28+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2762,170 +2563,54 @@
             "time": "2019-01-03T20:59:08+00:00"
         },
         {
-            "name": "php-http/guzzle6-adapter",
-            "version": "v1.1.1",
+            "name": "phpoption/phpoption",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-http/guzzle6-adapter.git",
-                "reference": "a56941f9dc6110409cfcddc91546ee97039277ab"
+                "url": "https://github.com/schmittjoh/php-option.git",
+                "reference": "94e644f7d2051a5f0fcf77d81605f152eecff0ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/guzzle6-adapter/zipball/a56941f9dc6110409cfcddc91546ee97039277ab",
-                "reference": "a56941f9dc6110409cfcddc91546ee97039277ab",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/94e644f7d2051a5f0fcf77d81605f152eecff0ed",
+                "reference": "94e644f7d2051a5f0fcf77d81605f152eecff0ed",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^6.0",
-                "php": ">=5.5.0",
-                "php-http/httplug": "^1.0"
-            },
-            "provide": {
-                "php-http/async-client-implementation": "1.0",
-                "php-http/client-implementation": "1.0"
+                "php": ">=5.3.0"
             },
             "require-dev": {
-                "ext-curl": "*",
-                "php-http/adapter-integration-tests": "^0.4"
+                "phpunit/phpunit": "4.7.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "1.3-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Http\\Adapter\\Guzzle6\\": "src/"
+                "psr-0": {
+                    "PhpOption\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "Apache2"
             ],
             "authors": [
                 {
-                    "name": "Márk Sági-Kazár",
-                    "email": "mark.sagikazar@gmail.com"
-                },
-                {
-                    "name": "David de Boer",
-                    "email": "david@ddeboer.nl"
+                    "name": "Johannes M. Schmitt",
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
-            "description": "Guzzle 6 HTTP Adapter",
-            "homepage": "http://httplug.io",
+            "description": "Option Type for PHP",
             "keywords": [
-                "Guzzle",
-                "http"
+                "language",
+                "option",
+                "php",
+                "type"
             ],
-            "time": "2016-05-10T06:13:32+00:00"
-        },
-        {
-            "name": "php-http/httplug",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-http/httplug.git",
-                "reference": "1c6381726c18579c4ca2ef1ec1498fdae8bdf018"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-http/httplug/zipball/1c6381726c18579c4ca2ef1ec1498fdae8bdf018",
-                "reference": "1c6381726c18579c4ca2ef1ec1498fdae8bdf018",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4",
-                "php-http/promise": "^1.0",
-                "psr/http-message": "^1.0"
-            },
-            "require-dev": {
-                "henrikbjorn/phpspec-code-coverage": "^1.0",
-                "phpspec/phpspec": "^2.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Http\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Eric GELOEN",
-                    "email": "geloen.eric@gmail.com"
-                },
-                {
-                    "name": "Márk Sági-Kazár",
-                    "email": "mark.sagikazar@gmail.com"
-                }
-            ],
-            "description": "HTTPlug, the HTTP client abstraction for PHP",
-            "homepage": "http://httplug.io",
-            "keywords": [
-                "client",
-                "http"
-            ],
-            "time": "2016-08-31T08:30:17+00:00"
-        },
-        {
-            "name": "php-http/promise",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-http/promise.git",
-                "reference": "dc494cdc9d7160b9a09bd5573272195242ce7980"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-http/promise/zipball/dc494cdc9d7160b9a09bd5573272195242ce7980",
-                "reference": "dc494cdc9d7160b9a09bd5573272195242ce7980",
-                "shasum": ""
-            },
-            "require-dev": {
-                "henrikbjorn/phpspec-code-coverage": "^1.0",
-                "phpspec/phpspec": "^2.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Http\\Promise\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Márk Sági-Kazár",
-                    "email": "mark.sagikazar@gmail.com"
-                },
-                {
-                    "name": "Joel Wurtz",
-                    "email": "joel.wurtz@gmail.com"
-                }
-            ],
-            "description": "Promise used for asynchronous HTTP requests",
-            "homepage": "http://httplug.io",
-            "keywords": [
-                "promise"
-            ],
-            "time": "2016-01-26T13:27:02+00:00"
+            "time": "2015-07-25T16:39:46+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -3784,26 +3469,26 @@
         },
         {
             "name": "spatie/laravel-newsletter",
-            "version": "4.2.3",
+            "version": "4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-newsletter.git",
-                "reference": "b6f6b6f7fdac3916e8d6ed3c15ca7ea7b6f2131a"
+                "reference": "e5b351c5bca50cf246acdb402e5bc91d0da4f337"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-newsletter/zipball/b6f6b6f7fdac3916e8d6ed3c15ca7ea7b6f2131a",
-                "reference": "b6f6b6f7fdac3916e8d6ed3c15ca7ea7b6f2131a",
+                "url": "https://api.github.com/repos/spatie/laravel-newsletter/zipball/e5b351c5bca50cf246acdb402e5bc91d0da4f337",
+                "reference": "e5b351c5bca50cf246acdb402e5bc91d0da4f337",
                 "shasum": ""
             },
             "require": {
                 "drewm/mailchimp-api": "^2.4",
-                "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0",
-                "php": "~7.1"
+                "illuminate/support": "~5.8.0",
+                "php": "~7.2"
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "^6.3|^7.0"
+                "phpunit/phpunit": "^8.0"
             },
             "type": "library",
             "extra": {
@@ -3840,7 +3525,7 @@
                 "mailchimp",
                 "newsletter"
             ],
-            "time": "2019-02-27T16:21:30+00:00"
+            "time": "2019-05-21T07:27:27+00:00"
         },
         {
             "name": "spatie/pdf-to-image",
@@ -5376,6 +5061,126 @@
             "time": "2019-06-17T17:37:00+00:00"
         },
         {
+            "name": "thomaswelton/gravatarlib",
+            "version": "0.1.0",
+            "target-dir": "thomaswelton/GravatarLib",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thomaswelton/gravatarlib.git",
+                "reference": "8a4e829c53ca2abb51ef2e514f696938a9bdbd0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thomaswelton/gravatarlib/zipball/8a4e829c53ca2abb51ef2e514f696938a9bdbd0c",
+                "reference": "8a4e829c53ca2abb51ef2e514f696938a9bdbd0c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "twig/twig": ">=1.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "thomaswelton\\GravatarLib\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Thompson",
+                    "email": "sam@emberlabs.org"
+                },
+                {
+                    "name": "Damian Bushong",
+                    "email": "damian@emberlabs.org"
+                },
+                {
+                    "name": "Thomas Welton",
+                    "email": "thomaswelton@me.com",
+                    "homepage": "https://github.com/thomaswelton",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A lightweight PHP 5.3 OOP library providing easy gravatar integration.",
+            "keywords": [
+                "gravatar",
+                "templating",
+                "twig"
+            ],
+            "time": "2014-03-02T18:29:18+00:00"
+        },
+        {
+            "name": "thomaswelton/laravel-gravatar",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thomaswelton/laravel-gravatar.git",
+                "reference": "1d4ef2f18db9f0d3802c312551ffc7204c411589"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thomaswelton/laravel-gravatar/zipball/1d4ef2f18db9f0d3802c312551ffc7204c411589",
+                "reference": "1d4ef2f18db9f0d3802c312551ffc7204c411589",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0",
+                "thomaswelton/gravatarlib": "0.1.x"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Thomaswelton\\LaravelGravatar\\LaravelGravatarServiceProvider"
+                    ],
+                    "aliases": {
+                        "Gravatar": "Thomaswelton\\LaravelGravatar\\Facades\\Gravatar"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Thomaswelton\\LaravelGravatar\\": "src/",
+                    "Thomaswelton\\Tests\\LaravelGravatar\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ThomasWelton",
+                    "email": "thomaswelton@me.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Antoine Augusti",
+                    "email": "antoine.augusti@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel 5 Gravatar helper",
+            "homepage": "https://github.com/thomaswelton/laravel-gravatar",
+            "keywords": [
+                "gravatar",
+                "laravel",
+                "laravel5"
+            ],
+            "time": "2017-09-19T15:44:58+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.1",
             "source": {
@@ -5475,6 +5280,60 @@
             "time": "2018-06-27T15:03:26+00:00"
         },
         {
+            "name": "unisharp/laravel-ckeditor",
+            "version": "4.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UniSharp/laravel-ckeditor.git",
+                "reference": "5c75f3f9128ec8567955913074795deee5869c5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UniSharp/laravel-ckeditor/zipball/5c75f3f9128ec8567955913074795deee5869c5c",
+                "reference": "5c75f3f9128ec8567955913074795deee5869c5c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Unisharp\\Ckeditor\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+",
+                "LGPL-2.1+",
+                "MPL-1.1+"
+            ],
+            "authors": [
+                {
+                    "name": "CKSource",
+                    "homepage": "http://cksource.com"
+                },
+                {
+                    "name": "UniSharp Ltd. (Composer Package Maintainer)",
+                    "homepage": "http://www.unisharp.com"
+                }
+            ],
+            "description": "JavaScript WYSIWYG web text editor (for laravel).",
+            "homepage": "http://ckeditor.com",
+            "keywords": [
+                "CKEditor",
+                "editor",
+                "fckeditor",
+                "html",
+                "javascript",
+                "laravel",
+                "richtext",
+                "text",
+                "wysiwyg"
+            ],
+            "time": "2017-11-01T04:33:40+00:00"
+        },
+        {
             "name": "unisharp/laravel-filemanager",
             "version": "v1.9.2",
             "source": {
@@ -5550,29 +5409,30 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v2.6.1",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "2a7dcf7e3e02dc5e701004e51a6f304b713107d5"
+                "reference": "5084b23845c24dbff8ac6c204290c341e4776c92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/2a7dcf7e3e02dc5e701004e51a6f304b713107d5",
-                "reference": "2a7dcf7e3e02dc5e701004e51a6f304b713107d5",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/5084b23845c24dbff8ac6c204290c341e4776c92",
+                "reference": "5084b23845c24dbff8ac6c204290c341e4776c92",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9",
+                "php": "^5.4 || ^7.0",
+                "phpoption/phpoption": "^1.5",
                 "symfony/polyfill-ctype": "^1.9"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.0"
+                "phpunit/phpunit": "^4.8.35 || ^5.0 || ^6.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -5597,7 +5457,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2019-01-29T11:11:52+00:00"
+            "time": "2019-06-15T22:40:20+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",

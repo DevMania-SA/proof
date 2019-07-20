@@ -1,5 +1,7 @@
 <?php
 
+//use Illuminate\View\View;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +13,10 @@
 |
 */
 
+// Home page
 Route::get('/', 'PagesController@index')->name('home');
 
+// About Page
 Route::get('/about', 'PagesController@about')->name('about');
 
 // Services
@@ -20,30 +24,31 @@ Route::get('/services', 'PagesController@services')->name('services');
 Route::get('/service/{slug}', 'PagesController@service')->name('service.slug');
 
 // Music
-Route::get('/tracks', 'MusicController@index')->name('tracks');
-Route::get('/tracks/{slug}', 'MusicController@show')->name('tracks.song');
+//Route::get('/tracks', 'MusicController@index')->name('tracks');
+//Route::get('/tracks/{slug}', 'MusicController@show')->name('tracks.song');
 
 // Videos
-Route::get('/vids','VideosController@videos')->name('vids');
+//Route::get('/vids','VideosController@videos')->name('vids');
 
 // Artists
-Route::get('/artists', 'PagesController@artists')->name('artists');
-Route::get('/artists/{slug}', 'PagesController@artist')->name('artists.show');
+//Route::get('/artists', 'PagesController@artists')->name('artists');
+//Route::get('/artists/{slug}', 'PagesController@artist')->name('artists.show');
 
 Route::group(['prefix' => 'blog'], function() {
     Route::get('/', 'BlogController@index')->name('blog');
     Route::get('/{slug}','BlogController@singlePost')->name('blog.post')->where('slug', '[\w\d\-\_]+');
     Route::get('/category/{slug}', 'BlogController@postByCategory')->name('blog.category')->where('slug', '[\w\d\-\_]+');
-    Route::get('/tag/{slug}', 'TagController@postByTag')->name('tag.post')->where('slug', '[\w\d\-\_]+');
+    Route::get('/tag/{slug}', 'BlogController@postsByTag')->name('tag.post')->where('slug', '[\w\d\-\_]+');
 });
 
 Route::post('subscriber','SubscriberController@store')->name('subscriber.store');
-
-Route::get('/search','SearchController@search')->name('search');
-
-Route::get('profile/{username}','AuthorController@profile')->name('author.profile');
-
 Route::post('subscriber','SubscriberController@store')->name('subscriber.store');
+
+//Route::get('/search','SearchController@search')->name('search');
+
+//Route::get('profile/{username}','AuthorController@profile')->name('author.profile');
+
+
 
 Route::get('/search','SearchController@search')->name('search');
 
@@ -52,10 +57,12 @@ Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::post('/contact/store', 'PagesController@store')->name('contact.store');
 
 // Social authentiaction
-Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
-Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+//Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+//Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
 
 Auth::routes();
+
+// Admin Panel routes
 
 Route::get('/manage', 'HomeController@index')->name('manage');
 
@@ -80,7 +87,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
     Route::post('/spatie/media/remove', 'Admin\SpatieMediaController@destroy')->name('media.remove');
 
     // Posts Management
-    Route::prefix('manage-posts')->middleware('role:superadministrator|administrator|editor|author')->group(function () {
+    Route::middleware('role:superadministrator|administrator|editor|author')->group(function () {
         Route::get('/', 'Admin\PostsController@redirect');
         Route::resource('posts', 'Admin\PostsController');
         Route::get('trashed-posts', 'Admin\PostsController@trashed')->name('trashed-posts.index');
@@ -119,4 +126,11 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
 
     // Settings
     Route::get('/settings', 'Admin\DashboardController@settings')->name('settings');
+});
+
+// Global Variables
+view()->composer(['*'], function ($view) {
+    $latestPosts = \App\Model\Post::latest()->limit(3)->get();
+
+    $view->with('latestPosts', $latestPosts);
 });

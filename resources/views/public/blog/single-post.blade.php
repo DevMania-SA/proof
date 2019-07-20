@@ -40,7 +40,7 @@
                             <div class="post-details">
                                 <div class="post-meta d-flex justify-content-between">
                                     <div class="category">
-                                        <a href="#">{{ $post->category->name }}</a>
+                                        <a href="{{ route('blog.category', $post->category->slug) }}">{{ $post->category->name }}</a>
                                     </div>
                                 </div>
 
@@ -56,16 +56,12 @@
                                         </div>
                                     </a>
                                     <div class="d-flex align-items-center flex-wrap stats">
-{{--                                        <div class="date">--}}
-{{--                                            <i class="icon-clock fas fa-clock"></i> {{ $post->published_at }}--}}
-{{--                                        </div>--}}
+                                        <div class="date">
+                                            <i class="icon-clock fas fa-clock"></i> {{ $post->created_at->diffForHumans() }}
+                                        </div>
 
                                         <div class="views">
                                             <i class="icon-eye fas fa-eye"></i> {{ $post->view_count }}
-                                        </div>
-
-                                        <div class="comments meta-last">
-                                            <i class="icon-comment fas fa-comment"></i> {{ $post->comments()->count() }}
                                         </div>
                                     </div>
                                 </div>
@@ -74,15 +70,17 @@
                                     {!! $post->body !!}
                                 </div>
 
-                                <div class="d-flex justify-content-between mt-3">
+                                <div class="d-flex my-3">
+                                    <div class="social-share">
+                                        <div class="addthis_inline_share_toolbox"></div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex mb-3">
                                     <div class="post-tags">
                                         @foreach($post->tags as $tag)
                                             <a href="#" class="tag">#{{ $tag->name }}</a>
                                         @endforeach
-                                    </div>
-
-                                    <div class="social-share">
-                                        <div class="addthis_inline_share_toolbox"></div>
                                     </div>
                                 </div>
 
