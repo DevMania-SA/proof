@@ -33,7 +33,7 @@ class PagesController extends Controller
         return view('public.contact')->with($data);
     }
 
-    public function store(Request $request)
+    public function mail(Request $request)
     {
         $this->validate($request, [
             'name' => 'required',
@@ -48,7 +48,7 @@ class PagesController extends Controller
         ], function ($mail) use($request){
             $mail->from($request->email, $request->name);
 
-            $mail->to('info@proofdigitalmedia.co.za')->subject($request->subject);
+            $mail->to('myinbox49@live.com')->subject($request->subject);
         });
 
         return redirect()->back()->with('flash_message', 'Thank you for contacting us, we will get back to you soon!');
@@ -68,10 +68,7 @@ class PagesController extends Controller
 
     public function services()
     {
-        $data = [
-            'services' => Service::all()
-        ];
-        return view('public.services.list-all')->with($data);
+        return view('public.services.list-all');
     }
 
     public function service($slug) {

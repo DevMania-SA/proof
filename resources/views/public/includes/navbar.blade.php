@@ -24,14 +24,11 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right animate slideIn">
-                        <a href="#" class="dropdown-item">DMS</a>
-                        <a href="#" class="dropdown-item">ProofSMS</a>
-                        <a href="#" class="dropdown-item">ProofSMS Mobile</a>
-                        <a href="#" class="dropdown-item">CRM</a>
-                        <a href="#" class="dropdown-item">Sales Strategies</a>
-                        <a href="#" class="dropdown-item">Campaign Management</a>
-                        <a href="#" class="dropdown-item">Omni Channel Brand Management</a>
-                        <a href="#" class="dropdown-item">Digital Marketing Strategies</a>
+                        @foreach($services as $service)
+                            <a href="{{ route('service.slug', $service->slug) }}" class="dropdown-item">
+                                {{ ucfirst($service->name) }}
+                            </a>
+                        @endforeach
                     </div>
                 </li>
                 <li class="nav-item">

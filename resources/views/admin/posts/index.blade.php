@@ -36,7 +36,7 @@
                                         <tr>
                                             <td>{{ $post->id }}</td>
                                             <td>
-                                                <img src="{{ asset('storage/'.$post->image) }}" width="100px" height="60px" class="img-fluid" alt="{{ $post->title }}">
+                                                <img src="{{ asset('storage/'.$post->image) }}" width="60px" height="40px" class="img-fluid" alt="{{ $post->title }}" style="height: 40px !important;">
                                             </td>
                                             <td>{{ $post->title }}</td>
                                             <td>{{ ucfirst($post->category->name) }}</td>

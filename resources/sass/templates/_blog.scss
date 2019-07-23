@@ -36,7 +36,10 @@
 
         .post {
             .post-thumbnail {
-                max-height: 330px;
+                max-height: 250px;
+                img {
+                    height: 250px !important;
+                }
             }
 
             .post-details {
@@ -360,9 +363,9 @@
 }
 
 .widget.latest-posts .image {
-    min-width: 60px;
     max-width: 60px;
-    height: 60px;
+    width: 60px !important;
+    height: 40px !important;
     overflow: hidden;
     margin-right: 20px;
 }

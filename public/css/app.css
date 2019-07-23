@@ -18041,24 +18041,24 @@ i[class*=icon-] {
 /* Footer Area css
 ============================================================================================ */
 
-.footer_widgets_area {
+.footer_area .footer_widgets_area {
   background: #131627;
   overflow: hidden;
   padding: 80px 0px;
 }
 
-.f_w_title {
+.footer_area .f_w_title {
   padding-bottom: 25px;
 }
 
-.f_w_title h3 {
+.footer_area .f_w_title h3 {
   color: #fff;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 16px;
 }
 
-.subscribe_widget p {
+.footer_area .subscribe_widget p {
   font-size: 14px;
   line-height: 26px;
   color: #b5aec4;
@@ -18067,11 +18067,11 @@ i[class*=icon-] {
   padding-bottom: 20px;
 }
 
-.subscribe_widget .input-group {
+.footer_area .subscribe_widget .input-group {
   position: relative;
 }
 
-.subscribe_widget .input-group input {
+.footer_area .subscribe_widget .input-group input {
   width: 100%;
   height: 40px;
   padding: 0 10px;
@@ -18081,7 +18081,7 @@ i[class*=icon-] {
   font-weight: 300;
 }
 
-.subscribe_widget .input-group .submit {
+.footer_area .subscribe_widget .input-group .submit {
   height: 40px;
   padding: 0 10px;
   line-height: 40px;
@@ -18095,81 +18095,81 @@ i[class*=icon-] {
   transition: all 0.3s;
 }
 
-.subscribe_widget .input-group .submit:hover {
+.footer_area .subscribe_widget .input-group .submit:hover {
   opacity: 0.6;
 }
 
-.subscribe_widget ul {
+.footer_area .subscribe_widget ul {
   padding-top: 30px;
 }
 
-.subscribe_widget ul li {
+.footer_area .subscribe_widget ul li {
   display: inline-block;
   margin-right: 32px;
 }
 
-.subscribe_widget ul li a {
+.footer_area .subscribe_widget ul li a {
   font-size: 14px;
   color: #b5aec4;
   transition: all 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .subscribe_widget ul li a {
+  .footer_area .subscribe_widget ul li a {
     transition: none;
   }
 }
 
-.subscribe_widget ul li:hover a {
+.footer_area .subscribe_widget ul li:hover a {
   color: #2bc0a4;
 }
 
-.subscribe_widget ul li:last-child {
+.footer_area .subscribe_widget ul li:last-child {
   margin-right: 0px;
 }
 
-.twitter_widget {
+.footer_area .twitter_widget {
   margin-left: 55px;
 }
 
-.twitter_widget .tweets_feed .post .image {
+.footer_area .twitter_widget .tweets_feed .post .image {
   min-width: 60px;
-  max-width: 60px;
-  height: 60px;
+  max-width: 40px;
+  height: 40px !important;
   overflow: hidden;
   margin-right: 20px;
 }
 
-.twitter_widget .tweets_feed .post .title strong {
+.footer_area .twitter_widget .tweets_feed .post .title strong {
   display: block;
 }
 
-.twitter_widget .tweets_feed .post .title .date {
+.footer_area .twitter_widget .tweets_feed .post .title .date {
   font-size: 0.85em;
   color: #aaa;
 }
 
-.twitter_widget .tweets_feed a {
+.footer_area .twitter_widget .tweets_feed a {
   color: #b5aec4;
   font-size: 0.95em;
   text-decoration: none;
 }
 
-.twitter_widget .tweets_feed a:hover {
+.footer_area .twitter_widget .tweets_feed a:hover {
   color: #2bc0a4;
 }
 
-.categories_widget {
+.footer_area .categories_widget {
   margin-left: 70px;
 }
 
-.categories_widget ul {
+.footer_area .categories_widget ul {
   width: calc(100% / 2);
   float: left;
   margin-top: -4px;
 }
 
-.categories_widget ul li a {
+.footer_area .categories_widget ul li a {
   position: relative;
   font-size: 14px;
   color: #b5aec4;
@@ -18179,12 +18179,12 @@ i[class*=icon-] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .categories_widget ul li a {
+  .footer_area .categories_widget ul li a {
     transition: none;
   }
 }
 
-.categories_widget ul li a i {
+.footer_area .categories_widget ul li a i {
   position: absolute;
   left: 0px;
   top: 50%;
@@ -18194,27 +18194,27 @@ i[class*=icon-] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .categories_widget ul li a i {
+  .footer_area .categories_widget ul li a i {
     transition: none;
   }
 }
 
-.categories_widget ul li:hover a {
+.footer_area .categories_widget ul li:hover a {
   padding-left: 15px;
   color: #2bc0a4;
 }
 
-.categories_widget ul li:hover a i {
+.footer_area .categories_widget ul li:hover a i {
   opacity: 1;
 }
 
-.contact_widget {
+.footer_area .contact_widget {
   margin-left: 50px;
 }
 
-.contact_widget a,
-.contact_widget p,
-.contact_widget h6 {
+.footer_area .contact_widget a,
+.footer_area .contact_widget p,
+.footer_area .contact_widget h6 {
   font-size: 14px;
   color: #b5aec4;
   font-family: "Poppins", sans-serif;
@@ -18222,36 +18222,36 @@ i[class*=icon-] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .contact_widget a,
-  .contact_widget p,
-  .contact_widget h6 {
+  .footer_area .contact_widget a,
+  .footer_area .contact_widget p,
+  .footer_area .contact_widget h6 {
     transition: none;
   }
 }
 
-.contact_widget a:hover,
-.contact_widget p:hover,
-.contact_widget h6:hover {
+.footer_area .contact_widget a:hover,
+.footer_area .contact_widget p:hover,
+.footer_area .contact_widget h6:hover {
   color: #2bc0a4;
 }
 
-.contact_widget p {
+.footer_area .contact_widget p {
   padding: 23px 0px;
 }
 
-.copy_right_area {
+.footer_area .copy_right_area {
   background: #04081d;
   overflow: hidden;
 }
 
-.copy_right_area .float-md-left h5 {
+.footer_area .copy_right_area .float-md-left h5 {
   color: #51545f;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   line-height: 50px;
 }
 
-.copy_right_area .float-md-left h5 a {
+.footer_area .copy_right_area .float-md-left h5 a {
   transition: all 0.2s ease-in-out;
   color: #51545f;
   font-size: 14px;
@@ -18260,20 +18260,20 @@ i[class*=icon-] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .copy_right_area .float-md-left h5 a {
+  .footer_area .copy_right_area .float-md-left h5 a {
     transition: none;
   }
 }
 
-.copy_right_area .float-md-left h5 a:hover {
+.footer_area .copy_right_area .float-md-left h5 a:hover {
   color: #2bc0a4;
 }
 
-.copy_right_area .float-md-right .nav li {
+.footer_area .copy_right_area .float-md-right .nav li {
   margin-right: 35px;
 }
 
-.copy_right_area .float-md-right .nav li a {
+.footer_area .copy_right_area .float-md-right .nav li a {
   padding: 0px;
   line-height: 50px;
   font-size: 14px;
@@ -18282,25 +18282,21 @@ i[class*=icon-] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .copy_right_area .float-md-right .nav li a {
+  .footer_area .copy_right_area .float-md-right .nav li a {
     transition: none;
   }
 }
 
-.copy_right_area .float-md-right .nav li:last-child {
+.footer_area .copy_right_area .float-md-right .nav li:last-child {
   margin-right: 0px;
 }
 
-.copy_right_area .float-md-right .nav li:hover a {
+.footer_area .copy_right_area .float-md-right .nav li:hover a {
   color: #2bc0a4;
 }
 
 /* End Footer Area css
 ============================================================================================ */
-
-/*
-# Footer
- */
 
 .preloader {
   background-color: #857d7d;
@@ -18387,6 +18383,13 @@ i[class*=icon-] {
 
 #home-section .home-inner {
   padding-top: 220px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+#explore-head-section {
+  color: #ffffff;
+  opacity: 0.8;
 }
 
 #explore-section {
@@ -18410,8 +18413,15 @@ i[class*=icon-] {
   font-size: 30px;
 }
 
+#offer-head-section {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
 #offer-section {
   font-size: 16px;
+  color: #ffffff;
+  opacity: 0.8;
 }
 
 #offer-section .fa {
@@ -18424,6 +18434,11 @@ i[class*=icon-] {
 
 #offer-section img {
   margin-top: 90px;
+}
+
+#choose-head-section {
+  color: #ffffff;
+  opacity: 0.8;
 }
 
 #choose-section {
@@ -18828,6 +18843,8 @@ i[class*=icon-] {
 
 #about-section .about-inner {
   padding-top: 200px;
+  color: #ffffff;
+  opacity: 0.9;
 }
 
 .aboutus-section {
@@ -18853,6 +18870,8 @@ i[class*=icon-] {
 
 .actual-offer-section {
   font-size: 16px;
+  color: #ffffff;
+  opacity: 0.9;
 }
 
 .actual-offer-section .fa {
@@ -18871,6 +18890,11 @@ i[class*=icon-] {
   min-height: 300px;
   padding: 20px;
   box-shadow: 0px 25px 82px -31px rgba(0, 0, 0, 0.36);
+}
+
+#vision-mission-section {
+  color: #ffffff;
+  opacity: 0.9;
 }
 
 #service-section {
@@ -19017,7 +19041,11 @@ section .section-title {
 }
 
 #posts .posts-listing .post .post-thumbnail {
-  max-height: 330px;
+  max-height: 250px;
+}
+
+#posts .posts-listing .post .post-thumbnail img {
+  height: 250px !important;
 }
 
 #posts .posts-listing .post .post-details .post-meta {
@@ -19311,9 +19339,9 @@ section .section-title {
 }
 
 .widget.latest-posts .image {
-  min-width: 60px;
   max-width: 60px;
-  height: 60px;
+  width: 60px !important;
+  height: 40px !important;
   overflow: hidden;
   margin-right: 20px;
 }

@@ -1,330 +1,227 @@
 /* Footer Area css
 ============================================================================================ */
 .footer_area {
-    
-}
-
-.footer_widgets_area {
-    background: #131627;
-    overflow: hidden;
-    padding: 80px 0px;
-}
-
-.f_widgets_inner {}
-
-.f_widget {}
-
-.f_w_title {
-    padding-bottom: 25px;
-
-    h3 {
-        color: #fff;
-        font-family: $pop;
-        font-weight: 600;
-        font-size: 16px;
+    .footer_widgets_area {
+        background: #131627;
+        overflow: hidden;
+        padding: 80px 0px;
     }
-}
-.subscribe_widget {
-    p{
-        font-size: 14px;
-        line-height: 26px;
-        color: #b5aec4;
-        font-weight: 300;
-        font-family: $pop;
-        padding-bottom: 20px;
-    }
-    .input-group{
-        position: relative;
 
-        input{
-            width: 100%;
-            height: 40px;
-            padding: 0 10px;
-            border: 1px solid #40ee86;
-            font-size: 0.95em;
-            font-family: "Open Sans", sans-serif;
-            font-weight: 300;
-            //@include placeholder{
-            //    font-size: 12px;
-            //    color: #b5aec4;
-            //    font-family: $pop;
-            //}
-        }
-        .submit {
-            height: 40px;
-            padding: 0 10px;
-            line-height: 40px;
-            background: #40ee86;
-            border: 1px solid #40ee86;
-            color: $white;
-            position: absolute;
-            top: 0;
-            right: 0;
-            font-family: "Open Sans", sans-serif;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
+    .f_widgets_inner {}
 
-            &:hover {
-                opacity: .6;
-            }
-        }
-    }
-    ul{
-        padding-top: 30px;
-        li{
-            display: inline-block;
-            margin-right: 32px;
-            a{
-                font-size: 14px;
-                color: #b5aec4;
-                @include transition;
-            }
-            &:hover{
-                a{
-                    color: #2bc0a4;
-                }
-            }
-            &:last-child{
-                margin-right: 0px;
-            }
-        }
-    }
-}
-.twitter_widget{
-    margin-left: 55px;
-    .tweets_feed{
-        .post {
-            .image {
-                min-width: 60px;
-                max-width: 60px;
-                height: 60px;
-                overflow: hidden;
-                margin-right: 20px;
-            }
+    .f_widget {}
 
-            .title {
-                strong {
-                    display: block;
-                }
+    .f_w_title {
+        padding-bottom: 25px;
 
-                .date {
-                    font-size: 0.85em;
-                    color: #aaa;
-                }
-            }
-        }
-        a {
-            color: #b5aec4;
-            font-size: 0.95em;
-            text-decoration: none;
-
-            &:hover {
-                color: #2bc0a4;
-            }
-        }
-    }
-}
-.categories_widget{
-    margin-left: 70px;
-    ul{
-        width: calc(100% / 2);
-        float: left;
-        margin-top: -4px;
-        li{
-            a{
-                position: relative;
-                font-size: 14px;
-                color: #b5aec4;
-                font-family: $pop;
-                line-height: 36px;
-                @include transition;
-                i{
-                    position: absolute;
-                    left: 0px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    opacity: 0;
-                    @include transition;
-                }
-            }
-            &:hover{
-                a{
-                    padding-left: 15px;
-                    color: #2bc0a4;
-                    i{
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
-}
-.contact_widget{
-    margin-left: 50px;
-    a, p, h6{
-        font-size: 14px;
-        color: #b5aec4;
-        font-family: $pop;
-        @include transition;
-        &:hover{
-            color: #2bc0a4;
-        }
-    }
-    p{
-        padding: 23px 0px;
-    }
-    h6{
-
-    }
-}
-.copy_right_area{
-    background: #04081d;
-    overflow: hidden;
-    .float-md-left{
-        h5{
-            color: #51545f;
-            font-size: 14px;
+        h3 {
+            color: #fff;
             font-family: $pop;
-            line-height: 50px;
-            a{
-                @include transition;
-                color: #51545f;
-                font-size: 14px;
-                font-family: $pop;
-                line-height: 50px;
-                &:hover{
-                    color: #2bc0a4;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+    .subscribe_widget {
+        p{
+            font-size: 14px;
+            line-height: 26px;
+            color: #b5aec4;
+            font-weight: 300;
+            font-family: $pop;
+            padding-bottom: 20px;
+        }
+        .input-group{
+            position: relative;
+
+            input{
+                width: 100%;
+                height: 40px;
+                padding: 0 10px;
+                border: 1px solid #40ee86;
+                font-size: 0.95em;
+                font-family: "Open Sans", sans-serif;
+                font-weight: 300;
+                //@include placeholder{
+                //    font-size: 12px;
+                //    color: #b5aec4;
+                //    font-family: $pop;
+                //}
+            }
+            .submit {
+                height: 40px;
+                padding: 0 10px;
+                line-height: 40px;
+                background: #40ee86;
+                border: 1px solid #40ee86;
+                color: $white;
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-family: "Open Sans", sans-serif;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -ms-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+
+                &:hover {
+                    opacity: .6;
                 }
             }
         }
-    }
-    .float-md-right{
-        .nav{
+        ul{
+            padding-top: 30px;
             li{
-                margin-right: 35px;
+                display: inline-block;
+                margin-right: 32px;
                 a{
-                    padding: 0px;
-                    line-height: 50px;
                     font-size: 14px;
-                    color: #51545f;
+                    color: #b5aec4;
                     @include transition;
-                }
-                &:last-child{
-                    margin-right: 0px;
                 }
                 &:hover{
                     a{
                         color: #2bc0a4;
                     }
                 }
+                &:last-child{
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+
+    .twitter_widget {
+        margin-left: 55px;
+        .tweets_feed{
+            .post {
+                .image {
+                    min-width: 60px;
+                    max-width: 40px;
+                    height: 40px !important;
+                    overflow: hidden;
+                    margin-right: 20px;
+                }
+
+                .title {
+                    strong {
+                        display: block;
+                    }
+
+                    .date {
+                        font-size: 0.85em;
+                        color: #aaa;
+                    }
+                }
+            }
+            a {
+                color: #b5aec4;
+                font-size: 0.95em;
+                text-decoration: none;
+
+                &:hover {
+                    color: #2bc0a4;
+                }
+            }
+        }
+    }
+    .categories_widget{
+        margin-left: 70px;
+        ul{
+            width: calc(100% / 2);
+            float: left;
+            margin-top: -4px;
+            li{
+                a{
+                    position: relative;
+                    font-size: 14px;
+                    color: #b5aec4;
+                    font-family: $pop;
+                    line-height: 36px;
+                    @include transition;
+                    i{
+                        position: absolute;
+                        left: 0px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        opacity: 0;
+                        @include transition;
+                    }
+                }
+                &:hover{
+                    a{
+                        padding-left: 15px;
+                        color: #2bc0a4;
+                        i{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact_widget{
+        margin-left: 50px;
+        a, p, h6{
+            font-size: 14px;
+            color: #b5aec4;
+            font-family: $pop;
+            @include transition;
+            &:hover{
+                color: #2bc0a4;
+            }
+        }
+        p{
+            padding: 23px 0px;
+        }
+        h6{
+
+        }
+    }
+    .copy_right_area{
+        background: #04081d;
+        overflow: hidden;
+        .float-md-left{
+            h5{
+                color: #51545f;
+                font-size: 14px;
+                font-family: $pop;
+                line-height: 50px;
+                a{
+                    @include transition;
+                    color: #51545f;
+                    font-size: 14px;
+                    font-family: $pop;
+                    line-height: 50px;
+                    &:hover{
+                        color: #2bc0a4;
+                    }
+                }
+            }
+        }
+        .float-md-right{
+            .nav{
+                li{
+                    margin-right: 35px;
+                    a{
+                        padding: 0px;
+                        line-height: 50px;
+                        font-size: 14px;
+                        color: #51545f;
+                        @include transition;
+                    }
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+                    &:hover{
+                        a{
+                            color: #2bc0a4;
+                        }
+                    }
+                }
             }
         }
     }
 }
-
 /* End Footer Area css
 ============================================================================================ */
-
-
-/*
-# Footer
- */
-// footer.footer {
-//   padding: 60px 0;
-//   padding-bottom: 0;
-//   background: #555;
-//   color: #fff;
-// }
-
-// footer.footer a {
-//   color: inherit;
-//   color: #eee;
-// }
-
-// footer.footer h4 {
-//   color: #eee;
-//   margin: 10px 0;
-//   text-transform: uppercase;
-//   letter-spacing: 0.1em;
-// }
-
-// footer.footer p {
-//   font-size: 0.9rem;
-//   color: #aaa;
-// }
-
-// footer.footer hr {
-//   border: none;
-//   border-top: 1px solid #ddd;
-//   background: none;
-// }
-
-// footer.footer .footer-blog-list li {
-//   margin-bottom: 20px;
-// }
-
-// footer.footer .image {
-//   width: 40px;
-//   height: 40px;
-//   margin-right: 10px;
-//   -ms-flex-negative: 0;
-//   flex-shrink: 0;
-// }
-
-// footer.footer .text {
-//   text-transform: uppercase;
-//   letter-spacing: 0.1em;
-// }
-
-// footer.footer .text a {
-//   font-size: 0.8rem;
-// }
-
-// footer.footer .photo-stream li {
-//   margin: 0;
-// }
-
-// footer.footer .photo-stream a {
-//   width: 80px;
-//   height: 80px;
-//   padding: 5px;
-//   display: block;
-// }
-
-// footer.footer .copyrights {
-//   padding: 20px 0;
-//   background: #333;
-//   color: #ccc;
-//   margin-top: 20px;
-// }
-
-// footer.footer .copyrights a {
-//   color: #4fbfa8;
-// }
-
-// footer.footer .copyrights p {
-//   color: inherit;
-//   font-size: 0.8rem;
-//   margin-bottom: 0;
-// }
-
-// @media (max-width: 991px) {
-//   footer.footer .photo-stream a {
-//     width: 120px;
-//     height: 120px;
-//   }
-// }
-
-// @media (max-width: 767px) {
-//   footer.footer .photo-stream li {
-//     width: 32%;
-//     margin-bottom: 10px;
-//   }
-//   footer.footer .photo-stream a {
-//     width: 100%;
-//     height: auto;
-//   }
-// }

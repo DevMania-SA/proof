@@ -11,7 +11,7 @@
                         <div class="col-md-12">
                             <div class="d-flex flex-row justify-content-center">
                                 <h1 class="display-4">
-                                    About Us
+                                    @yield('title')
                                 </h1>
                             </div>
                         </div>
@@ -107,25 +107,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <div class="p-5">
+                    <div class="py-3">
                         <h1 class="display-4">
                             Vision &amp; Mission
                         </h1>
 
                         <div class="row mt-3 justify-content-center">
                             <div class="col-md-6">
-                                {{-- <p class="lead">
-                                    Our mission is to use our knowledge of digital and mobile methods to define new markets 
-                                    for digital services and always be at the forefront of the digital revolution in South 
-                                    Africa.
-                                </p> --}}
+                                <p class="lead">
+                                    Our vision is to create value for our clients using Mobile Value Added Service methods
+                                    and content to enhance their core business focus.
+                                </p>
                             </div>
 
                             <div class="col-md-6">
-                                {{-- <p class="lead">
-                                    Our vision is to create value for our clients using Mobile Value Added Service methods 
-                                    and content to enhance their core business focus.
-                                </p> --}}
+                                 <p class="lead">
+                                    Our mission is to use our knowledge of digital and mobile methods to define new markets
+                                    for digital services and always be at the forefront of the digital revolution in South
+                                    Africa.
+                                 </p>
                             </div>
                         </div>
                     </div>

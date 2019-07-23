@@ -54,11 +54,7 @@ Route::get('/search','SearchController@search')->name('search');
 
 // Contact
 Route::get('/contact', 'PagesController@contact')->name('contact');
-Route::post('/contact/store', 'PagesController@store')->name('contact.store');
-
-// Social authentiaction
-//Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
-//Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+Route::post('/contact/mail', 'PagesController@mail')->name('contact.mail');
 
 Auth::routes();
 
@@ -131,6 +127,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
 // Global Variables
 view()->composer(['*'], function ($view) {
     $latestPosts = \App\Model\Post::latest()->limit(3)->get();
+    $services = \App\Model\Service::all();
 
-    $view->with('latestPosts', $latestPosts);
+    $view->with(compact('latestPosts','services'));
 });

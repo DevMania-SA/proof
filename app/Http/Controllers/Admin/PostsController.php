@@ -17,6 +17,7 @@ use Carbon\Carbon;
 use App\Notifications\AuthorPostApproved;
 use App\Notifications\NewPostNotify;
 use App\Model\Subscriber;
+use Illuminate\Support\Str;
 use Image;
 
 class PostsController extends Controller
@@ -73,7 +74,7 @@ class PostsController extends Controller
         // Upload the image to storage
         $image = $request->image->store('posts');
 
-        $slug = str_slug($request->title);
+        $slug = Str::slug($request->title);
 
         // Create the post
         $post = Post::create([
@@ -120,8 +121,6 @@ class PostsController extends Controller
     {
         $post = Post::with('tags', 'category')->where('id', $id)->first();
 
-        //echo "<pre>"; print_r($post); die;
-
         $categories = Category::all();
         $tags = Tag::all();
 
@@ -137,26 +136,27 @@ class PostsController extends Controller
      */
     public function update(UpdatePostRequest $request, $id)
     {
-        $post = Post::where('id', $id)->first();
-
-        $data = $request->only(['title','description', 'published_at', 'body']);
+        $post = Post::where('id', $id)->firstOrFail();
 
         // Check if new image
         if ($request->hasFile('image')) {
-            // Update it
+            Storage::delete($post->image);
+
             $image = $request->image->store('posts');
-
-            // Delete old one
-            $post->deleteImage();
-
-            $data['image'] = $image;
+            $post->image = $image;
         }
 
-        $slug = str_slug($post->title);
-        // Update attributes
-        $post->update([$data]);
+        $slug = Str::slug($post->title);
 
-        // $post->category()->sync($request->categories);
+        // Update attributes
+        $post->category_id = $request->category;
+        $post->title = $request->title;
+        $post->slug = $slug;
+        $post->description = $request->description;
+        $post->body = $request->body;
+        $post->published_at = $request->published_at;
+        $post->save();
+
         $post->tags()->sync($request->tags);
 
         return redirect()->route('posts.index')->with('success', 'Post have successfully been updated');
@@ -178,7 +178,7 @@ class PostsController extends Controller
             return redirect()->back()->with('success', 'Post Successfully Deleted Permanently');
         } else {
             $post->delete();
-            return redirect()->back()->with('success', 'Post Successfully Trashed');
+            return redirect()->back()->with('success', 'Post Successfully been Trashed');
         }
     }
 
